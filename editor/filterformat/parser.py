@@ -30,8 +30,5 @@ class Parser(object):
                     pass
 
 
-
-
-
 if __name__ == '__main__':
     obj = Parser("filter.filter")
