@@ -1,0 +1,165 @@
+
+#===============================================================================================================
+#[WELCOME] TABLE OF CONTENTS + QUICKJUMP TABLE
+#===============================================================================================================
+#
+# [[0100]] OVERRIDE AREA 1 - Override ALL rules here
+# [[0200]] 6 LINKS
+# [[0300]] SHAPER ITEMS
+#   [0301] Exception Handling - Rings, Amulets, Belts
+#   [0302] Shaper Item Layers - T1
+#   [0303] Shaper Item Layers - T2
+#   [0304] Shaper Item Layers - T3
+# [[0400]] ELDER ITEMS
+#   [0401] Exception Handling - Rings, Amulets, Belts
+#   [0402] Elder Item Layers - T1
+#   [0403] Elder Item Layers - T2
+#   [0404] Elder Item Layers - T3
+# [[0500]] Explicit Mod filtering
+#   [0501] League-Specific Magic Items
+#   [0502] Magic Mod Permutations
+#   [0503] Rare Item Permutations
+# [[0600]] Explicit Mod filtering - EXPERIMENTAL
+#   [0601] Rare Item Permutations
+#   [0602] Weapons-Physical (Key: IPD)
+#   [0603] The Suffix Abomination
+#   [0604] Casters
+# [[0700]] Recipes, Magic and Normal items (endgame!)
+#   [0701] Overqualitied Items
+#   [0702] 5-Linked items
+#   [0703] 6-Socket Items
+#   [0704] Exclusive bases: Stygian Vise
+#   [0705] Abyss Jewels (Rare and Magic)
+#   [0706] Exclusive bases: Top Value
+#   [0707] Exclusive bases: Trinkets
+#   [0708] Exclusive bases: Others
+#   [0709] Corrupted Amulets
+#   [0710] Chancing items
+#   [0711] FLASKS (Endgame rules)
+#   [0712] Add your own crafting rules here
+#   [0713] 86+ Endgame crafting rules
+#   [0714] 83/84+ Endgame crafting rules
+#   [0715] 60+ Crafting rules for 60++ trinkets
+#   [0716] Remaining crafting rules - add your own bases here!
+#   [0717] Chisel recipe items
+#   [0718] Fishing Rod
+#   [0719] SRS Crude Bow
+#   [0720] Chromatic recipe items ("RGB Recipe")
+#   [0721] Endgame-start 4-links
+#   [0722] Animate Weapon script - deactivated by default
+#   [0723] W-soc offhand weapons
+#   [0724] Sacrificial Garb
+# [[0800]] HIDE LAYER 1 - MAGIC AND NORMAL ITEMS
+# [[0900]] Currency - PART 1 - Common currency
+# [[1000]] OVERRIDE AREA 2 - Override the default rare rulesets here
+# [[1100]] RARE ITEMS - TRINKETS (ENDGAME)
+#   [1101] Rare trinkets 86+
+#   [1102] Rare trinkets 84+
+#   [1103] Breach Rings
+#   [1104] Rare trinkets "remaining"
+# [[1200]] RARE ITEMS - WEAPONS AND ARMORS (ENDGAME)
+#   [1201] Rare crafting bases 86+
+#   [1202] Rare crafting bases 83+
+#   [1203] T1 rare items
+#   [1204] T2 rare items
+#   [1205] Other Conditions
+#   [1206] 1H Daggers
+#   [1207] 1H Claws
+#   [1208] 1H Wands
+#   [1209] 1H Foils
+#   [1210] 1H Swords
+#   [1211] 1H Maces
+#   [1212] 1H Axes
+#   [1213] 1H Sceptres
+#   [1214] 2H Staves
+#   [1215] 2H Swords, Axes, Maces
+#   [1216] 2H Bows
+#   [1217] AR: Gloves, Boots, Helmets
+#   [1218] AR: Body Armors
+#   [1219] OH: Shields
+#   [1220] OH: Quivers
+# [[1300]] HIDE LAYER 2 - RARE ITEMS (65+ ONLY FOR NON-REGULAR VERSIONS)
+# [[1400]] OVERRIDE AREA 3 - Override Map, Gem and Flask drops here
+# [[1500]] Gems
+#   [1501] Special Gems
+#   [1502] Top Gems
+#   [1503] Quality Gems
+#   [1504] Leveled Gems
+#   [1505] Other gems
+# [[1600]] UTILITY FLASKS (Levelling Rules)
+# [[1700]] HIDE LAYER 3: Random Endgame Flasks
+# [[1800]] Maps, fragments and labyrinth items
+#   [1801] Unique Maps
+#   [1802] Labyrinth items, Offerings
+#   [1803] Shaped Maps
+#   [1804] Top tier maps (T15-16)
+#   [1805] High tier maps(T11-14)
+#   [1806] Mid tier maps (T6-10)
+#   [1807] Low tier maps (T1-T5)
+#   [1808] Map fragments
+# [[1900]] Currency - PART 2 - Rare currency
+#   [1901] Regular Rare Currency
+#   [1902] Harbinger Currency
+#   [1903] Incursion Currency
+#   [1904] Delve Currency - Resonators
+#   [1905] Delve Currency - Fossil
+#   [1906] Bestiary Currency
+#   [1907] Top Currency
+#   [1908] Essence Tier List
+#   [1909] Perandus
+#   [1910] Breach
+#   [1911] Others
+# [[2000]] Currency - PART 3 - Divination cards (yes the strange sorting is intended)
+#   [2001] Exceptions to prevent ident. mistakes
+#   [2002] T1 - Top tier cards
+#   [2003] T2 - Great cards
+#   [2004] T3 - Decent cards
+#   [2005] Special - Special Currency Cards
+#   [2006] T5 - Format trash tier cards... before
+#   [2007] T4 - ...showing the remaining cards
+# [[2100]] Currency - PART 4 - remaining items
+# [[2200]] Leaguestones - Tierlists
+# [[2300]] Uniques!
+#   [2301] Exceptions
+#   [2302] Harbinger - Pieces
+#   [2303] Tier 1 uniques
+#   [2304] Tier 2 uniques
+#   [2305] Multi-Unique bases.
+#   [2306] Special Unique Searches
+#   [2307] Prophecy-Material Uniques
+#   [2308] Random Uniques
+# [[2400]] Quest Items and Shaper Orbs
+# [[2500]] OVERRIDE AREA 4 - Insert your custom Leveling adjustments here
+# [[2600]] Leveling - Flasks
+#   [2601] Hide outdated flasks
+#   [2602] Hybrid flasks (normal)
+#   [2603] Life Flasks - Normal (Kudos to Antnee)
+#   [2604] Mana Flasks - Magic (Kudos to Antnee)
+#   [2605] Show remaining flasks
+# [[2700]] Leveling - Merged Rules
+# [[2800]] Leveling - RGB Recipes
+# [[2900]] Leveling - RARES
+#   [2901] Leveling rares - specific items
+#   [2902] Leveling rares - Progression
+#   [2903] Leveling rares - remaining rules
+# [[3000]] Leveling - Useful items
+#   [3001] Linked gear - 4links
+#   [3002] Linked gear - Caster Weapon Configuration
+#   [3003] Linked gear - 3links
+#   [3004] Extra Highlight: Boots
+#   [3005] Optional Recipes
+#   [3006] Act 1
+#   [3007] Act 2+3
+#   [3008] Act 4+5+6
+#   [3009] Jewellery - Regular Highlight
+#   [3010] Quivers - Progression
+#   [3011] Magic Gear
+#   [3012] 20% quality items for those strange people who want them
+# [[3100]] Leveling - normal and magic item progression
+#   [3101] Progression - Part 1 1-30
+#   [3102] Progression - Part 2 30-40
+#   [3103] Progression - Part 4 40-65
+#   [3104] Normal items - First 12 levels - exceptions
+#   [3105] Magic items - general highlight
+# [[3200]] HIDE LAYER 5 - Remaining Items
+# [[3300]] CATCHALL - if you see pink items - send me a mail please - should never happen

@@ -1,0 +1,132 @@
+{
+  "General": {
+    "Currency": [
+      "Tier 1:",
+      "Tier 2:",
+      "Tier 3:",
+      "Tier 4:",
+      "Tier 5:",
+      "Tier 6:",
+      "Tier 7:"
+    ],
+    "Divination Cards": [
+      "Tier 1:",
+      "Tier 2:",
+      "Tier 3:",
+      "Tier 4:",
+      "Tier 5:"
+    ],
+    "Vendor Recipes": [
+      "Chromatic Orb",
+      "Jeweller Orbs",
+      "Gemcutter's Prism",
+      "Cartographer's Chisel",
+      "Glassblower's Bauble"
+    ],
+    "Unique Items": [
+      "Tier 1:",
+      "Tier 2:",
+      "Tier 3:",
+      "Tier 4:",
+      "Tier 5:",
+      "Tier 6:",
+      "Tier 7:"
+    ],
+    "Valuable linked items": [
+      "6-Linked items",
+      "Leveling 5-Linked items",
+      "Endgame 5-Linked items"
+    ],
+    "Current League: Delve": [
+      "Reliquary Keys",
+      "Delve Mods",
+      "Delve Currency"
+    ]
+  },
+  "Endgame - General": {
+    "Maps": [
+      "Highlight & Hide specific maps",
+      "Highlight map properties",
+      "Tier settings",
+      "Appearance",
+      "Unique Maps"
+    ],
+    "Fragments": [
+      "Breachstones",
+      "Uber-lab Offering",
+      "Fragments, Tier 1:",
+      "Fragments, Tier 2:",
+      "Fragments, Tier 3:",
+      "Fragments, Remaining:"
+    ],
+    "Special bases": [
+      "Content1"
+    ]
+  },
+  "Endgame - Drops": {
+    "Bases": [
+      "Content1"
+    ],
+    "T1 & T2 bases": [
+      "Content1"
+    ],
+    "T3 & T4 bases": [
+      "Content1"
+    ],
+    "Shaper & Elder items": [
+      "Content1"
+    ],
+    "Custom": [
+      "Content1"
+    ]
+  },
+  "Miscellaneous": {
+    "Flasks": [
+      "Utility flasks",
+      "Life flasks",
+      "Mana flasks",
+      "Hybrid flasks"
+    ],
+    "Skill gems": [
+      "Tier 1:",
+      "Tier 2:",
+      "Tier 3:",
+      "Tier 4:",
+      "Tier 5:"
+    ],
+    "Misc. items": [
+      "Melee",
+      "Attacks",
+      "Caster",
+      "Bows",
+      "Supports"
+    ]
+  },
+  "Crafting": {
+    "T1 & T2 bases": [
+      "Content1"
+    ],
+    "Shaper & Elder items": [
+      "Content1"
+    ],
+    "High iLvl T2+ bases": [
+      "Content1"
+    ],
+    "Custom": [
+      "Content1"
+    ]
+  },
+  "League-specific items": {
+    "Abyss League": [
+      "Jewels",
+      "Stygian Vise"
+    ]
+  },
+  "Leveling": {
+    "Item progression": [
+      "Progression 1",
+      "Progression 2",
+      "Progression 3"
+    ]
+  }
+}

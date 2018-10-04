@@ -1,0 +1,137 @@
+html, body {
+  height: 100%; }
+
+body {
+  background-color: #fafafa;
+  margin: 0; }
+
+.menu {
+  width: auto;
+  background-color: #0c1924;
+  text-align: center; }
+  .menu ul {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style-type: none; }
+    .menu ul li a {
+      text-decoration: none;
+      color: #a1abb4;
+      font-size: 24px;
+      -webkit-transition: 0.15s time;
+      -moz-transition: 0.15s time;
+      -ms-transition: 0.15s time;
+      -o-transition: 0.15s time;
+      transition: 0.15s time;
+      padding: 0 1rem; }
+      .menu ul li a:hover {
+        color: #e6eeff; }
+      .menu ul li a.active {
+        background-color: #fafafa;
+        padding: 0 1rem 7px 1rem; }
+        .menu ul li a.active:hover {
+          color: #0b1721; }
+
+.section {
+  background-color: #0b1721;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #eee;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 6px solid #673326;
+  border-bottom: 6px solid #673326;
+  border-left: 5px solid #673326;
+  border-right: 5px solid #673326; }
+
+#container-content {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  border: 5px solid #ddd;
+  height: auto;
+  flex-direction: column;
+  background-color: #15212f; }
+
+.container-group-holder {
+  margin: 1vh 0; }
+
+.container-group {
+  border: 2px solid #d66b27;
+  margin: 0.4rem auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #e3e3e3;
+  width: 90%; }
+
+.group-header {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 1rem;
+  font-size: 24px;
+  background-color: #0b1721;
+  color: #c6c8ca;
+  cursor: pointer; }
+
+.container-group-content {
+  display: none;
+  width: 95%;
+  margin: .2rem auto;
+  border: 2px solid #631e18;
+  background-color: #3a2b28;
+  color: #ddd;
+  padding: 0 auto;
+  flex-direction: column; }
+
+.group-content-header {
+  display: flex;
+  font-size: 20px;
+  background-color: #b3b3b3;
+  color: #333;
+  vertical-align: top;
+  width: 100%; }
+
+.VisualEditor {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  background-color: #2e2e2e;
+  border: 2px solid #b3b3b3;
+  width: auto; }
+
+.ColorPickersBox {
+  display: inline-block;
+  float: left;
+  width: auto;
+  position: relative;
+  margin: 0 auto; }
+  .ColorPickersBox .ColorPickerTxt, .ColorPickersBox .ColorPickerBrd, .ColorPickersBox .ColorPickerBrd {
+    display: flex;
+    padding: 0 auto; }
+    .ColorPickersBox .ColorPickerTxt .ColorPickersLabel, .ColorPickersBox .ColorPickerBrd .ColorPickersLabel, .ColorPickersBox .ColorPickerBrd .ColorPickersLabel {
+      font-size: 18px;
+      float: left; }
+    .ColorPickersBox .ColorPickerTxt .ps-colorpicker, .ColorPickersBox .ColorPickerBrd .ps-colorpicker, .ColorPickersBox .ColorPickerBrd .ps-colorpicker {
+      float: right;
+      position: relative; }
+
+.Showcase {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid #cc0000; }
+  .Showcase .Showcase_Outer {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #00ff00;
+    margin: 0 auto; }
+    .Showcase .Showcase_Outer .Showcase_Inner {
+      margin: 0 auto; }
+      .Showcase .Showcase_Outer .Showcase_Inner .Showcase_Item {
+        display: flex;
+        flex-direction: row; }

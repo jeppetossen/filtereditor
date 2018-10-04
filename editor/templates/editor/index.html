@@ -1,0 +1,47 @@
+{% extends "editor/base.html" %}
+
+{% block containers %}
+    <div id="container-content">
+        {% block general %}
+            {% for section, headers in sections.items %}
+                <label class="section">{{ section }}</label>
+                <div class="container-group-holder">
+                    {% for title, subheader in headers.items %}
+                        <div class="container-group">
+                            <label class="group-header">{{ title }}</label>
+                            {% for item in subheader %}
+                                <div class="container-group-content">
+                                    <label class="group-content-header">{{ item }}</label>
+                                    <div class="VisualEditor">
+                                        <div class="ColorPickersBox">
+                                            <div class="ColorPickerTxt">
+                                                <label class="ColorPickersLabel">Txt:</label>
+                                                <input type="text" class="ps-colorpicker"/>
+                                            </div>
+                                            <div class="ColorPickerBrd">
+                                                <label class="ColorPickersLabel">Brd:</label>
+                                                <input type="text" class="ps-colorpicker"/>
+                                            </div>
+                                            <div class="ColorPickerBg">
+                                                <label class="ColorPickersLabel">Bg:</label>
+                                                <input type="text" class="ps-colorpicker"/>
+                                            </div>
+                                        </div>
+                                        <div class="Showcase">
+                                            <div class="ShowCaseBox">
+                                                <div class="ShowCaseItem">
+                                                    <label class="ItemLabel">Item</label>
+                                                    <div class="SocketsPreview"><label class="SocketsLabel">Sockets</label></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        {% endblock %}
+    </div>
+{% endblock %}

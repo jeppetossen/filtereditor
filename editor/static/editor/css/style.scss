@@ -1,0 +1,182 @@
+$background: #0b1721;
+$background-bright: #e3e3e3;
+$background-group: #3a2b28;
+$foreground: #ddd;
+$foreground-bright: #eee;
+
+$border-section-tb: 6px solid #673326;
+$border-section-lr: 5px solid #673326;
+$border-group: 2px solid #d66b27;
+
+$m-center: 0 auto;
+$p-center: 0 auto;
+
+$fs-section: 28px;
+$fs-gr-head: 24px;
+$fs-gr-ct-head: 20px;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #fafafa;
+  margin: 0;
+}
+
+.menu {
+  width: auto;
+  background-color: #0c1924;
+  text-align: center;
+  ul {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style-type: none;
+    li a {
+      text-decoration: none;
+      color: #a1abb4;
+      font-size: 24px;
+      -webkit-transition: 0.15s time;
+      -moz-transition: 0.15s time;
+      -ms-transition: 0.15s time;
+      -o-transition: 0.15s time;
+      transition: 0.15s time;
+      padding: 0 1rem;
+      &:hover {
+        color: #e6eeff;
+      }
+      &.active {
+        background-color: #fafafa;
+        padding: 0 1rem 7px 1rem;
+        &:hover {
+          color: $background;
+        }
+      }
+    }
+  }
+}
+
+.section {
+  background-color: $background;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: $fs-section;
+  color: $foreground-bright;
+  width: 100%;
+  margin: $m-center;
+  border-top: $border-section-tb;
+  border-bottom: $border-section-tb;
+  border-left: $border-section-lr;
+  border-right: $border-section-lr;
+}
+
+#container-content {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  border: 5px solid #ddd;
+  height: auto;
+  flex-direction: column;
+  background-color: #15212f;
+}
+
+.container-group-holder {
+  margin: 1vh 0;
+}
+
+.container-group {
+  border: $border-group;
+  margin: 0.4rem auto;
+  display: flex;
+  flex-direction: column;
+  background-color: $background-bright;
+  width: 90%;
+}
+
+.group-header {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 1rem;
+  font-size: $fs-gr-head;
+  background-color: $background;
+  color: #c6c8ca;
+  cursor: pointer;
+}
+
+.container-group-content {
+  display: none;
+  width: 95%;
+  margin: .2rem auto;
+  border: 2px solid #631e18;
+  background-color: $background-group;
+  color: $foreground;
+  padding: $p-center;
+  flex-direction: column;
+}
+
+.group-content-header {
+  display: flex;
+  font-size: $fs-gr-ct-head;
+  background-color: #b3b3b3;
+  color: #333;
+  vertical-align: top;
+  width: 100%;
+}
+
+.VisualEditor {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  background-color: #2e2e2e;
+  border: 2px solid #b3b3b3;
+  width: auto;
+}
+
+.ColorPickersBox {
+  display: inline-block;
+  float: left;
+  width: auto;
+  position: relative;
+  margin: 0 auto;
+
+  .ColorPickerTxt, .ColorPickerBrd, .ColorPickerBrd {
+    display: flex;
+    padding: 0 auto;
+    .ColorPickersLabel {
+      font-size: 18px;
+      float: left;
+    }
+    .ps-colorpicker {
+      float: right;
+      position: relative;
+    }
+  }
+}
+
+.Showcase {
+  border: 2px solid #cc0000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .ShowCaseBox {
+    .ShowCaseItem {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #000;
+      .ItemLabel {
+        font-size: 24px;
+      }
+      .SocketsPreview {
+        .SocketsLabel {
+
+        }
+      }
+    }
+  }
+}
