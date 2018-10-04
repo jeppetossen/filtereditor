@@ -14,13 +14,20 @@ class Parser(object):
             f.close()
         return showhide
 
-    def define_block(self):
-        block = "#=\n#\n#="
+    def define_section(self, part):
+        block = "#" + "="*111 + "\n" + "# " + part + "\n" + "#" + "="*111
         return block
 
-    def define_subblock(self):
-        block = "#-\n#\n#-"
+    def define_block(self, part):
+        block = "#" + "-"*36 + "\n" + "# " + part + "\n" + "#" + "-"*36
         return block
+
+    def find_section(self):
+        section = self.define_section()
+        with open(self.filter, "r") as f:
+            for line in f:
+                if line == "#":
+                    pass
 
     def find_block(self):
         block = self.define_block()
@@ -28,7 +35,3 @@ class Parser(object):
             for line in f:
                 if line == "#":
                     pass
-
-
-if __name__ == '__main__':
-    obj = Parser("filter.filter")
