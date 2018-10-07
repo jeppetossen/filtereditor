@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 from django.core.exceptions import ImproperlyConfigured
 import dj_database_url
-
+from dotenv import load_dotenv
+load_dotenv()
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -130,5 +131,5 @@ DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 try:
     from filtereditor.local_settings import *
-except Exception as e:
+except ImportError as e:
     pass
