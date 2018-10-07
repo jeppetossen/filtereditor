@@ -1,4 +1,4 @@
-from editor.content.headers import fetch_header
+from editor.modules.content.headers import fetch_header
 
 
 class FilterHeaders:
