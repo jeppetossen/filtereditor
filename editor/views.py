@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
-from editor.content import headers
+from editor.modules.content import headers
 
 
 # Create your views here.
