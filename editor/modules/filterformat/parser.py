@@ -37,11 +37,14 @@ class Parser(object):
         with open(self.filter, "a") as f:
             f.write(block)
 
+    def write_condition(self, part):
+        pass
+
 
 if __name__ == '__main__':
     obj = Parser("filter.filter")
     # print(obj.find_section("# [[0300]] SHAPER ITEMS"))
     # obj.find_section("# [[0300]] SHAPER ITEMS\n")
     # obj.find_content_section()
-    # obj.write_section("0100")
-    obj.write_block("0301")
+    obj.write_section("0100")
+    # obj.write_block("0301")
