@@ -160,7 +160,15 @@ body {
     }
   }
   .VisualEditorOptionsRightBox {
-    
+    display: inline-block;
+    float: right;
+    position: relative;
+    z-index: 10;
+    .VisualEditorButtons {
+      padding: 5px;
+      width: 51px;
+      margin: 0 0 0 8px;
+    }
   }
 }
 

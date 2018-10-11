@@ -119,6 +119,15 @@ body {
     z-index: 100; }
     .VisualEditor .ColorPickersBox .ColorPickerTxt .ColorPickersLabel, .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickersLabel, .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickersLabel {
       font-size: 18px; }
+  .VisualEditor .VisualEditorOptionsRightBox {
+    display: inline-block;
+    float: right;
+    position: relative;
+    z-index: 10; }
+    .VisualEditor .VisualEditorOptionsRightBox .VisualEditorButtons {
+      padding: 5px;
+      width: 51px;
+      margin: 0 0 0 8px; }
 
 .Showcase {
   border: 2px solid #cc0000;
