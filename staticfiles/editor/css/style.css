@@ -96,42 +96,56 @@ body {
   width: 100%; }
 
 .VisualEditor {
-  display: flex;
+  /*display: flex;
   flex-direction: row;
   margin: 0 auto;
   background-color: #2e2e2e;
   border: 2px solid #b3b3b3;
-  width: auto; }
-
-.ColorPickersBox {
+  width: auto;*/
   display: inline-block;
-  float: left;
-  width: auto;
   position: relative;
-  margin: 0 auto; }
-  .ColorPickersBox .ColorPickerTxt, .ColorPickersBox .ColorPickerBrd, .ColorPickersBox .ColorPickerBrd {
-    display: flex;
-    padding: 0 auto; }
-    .ColorPickersBox .ColorPickerTxt .ColorPickersLabel, .ColorPickersBox .ColorPickerBrd .ColorPickersLabel, .ColorPickersBox .ColorPickerBrd .ColorPickersLabel {
-      font-size: 18px;
-      float: left; }
-    .ColorPickersBox .ColorPickerTxt .ps-colorpicker, .ColorPickersBox .ColorPickerBrd .ps-colorpicker, .ColorPickersBox .ColorPickerBrd .ps-colorpicker {
-      float: right;
-      position: relative; }
+  padding: 5px;
+  z-index: 5; }
+  .VisualEditor .ColorPickersBox {
+    /*display: inline-block;
+    float: left;
+    width: auto;
+    position: relative;
+    margin: 0 auto;*/
+    display: inline-block;
+    float: left;
+    width: 84px;
+    position: relative;
+    z-index: 100; }
+    .VisualEditor .ColorPickersBox .ColorPickerTxt .ColorPickersLabel, .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickersLabel, .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickersLabel {
+      font-size: 18px; }
+  .VisualEditor .VisualEditorOptionsRightBox {
+    display: inline-block;
+    float: right;
+    position: relative;
+    z-index: 10; }
+    .VisualEditor .VisualEditorOptionsRightBox .VisualEditorButtons {
+      padding: 5px;
+      width: 51px;
+      margin: 0 0 0 8px; }
 
 .Showcase {
+  border: 2px solid #cc0000;
   display: flex;
-  align-content: center;
-  justify-content: center;
-  border: 1px solid #cc0000; }
-  .Showcase .Showcase_Outer {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 2px solid #00ff00;
-    margin: 0 auto; }
-    .Showcase .Showcase_Outer .Showcase_Inner {
-      margin: 0 auto; }
-      .Showcase .Showcase_Outer .Showcase_Inner .Showcase_Item {
-        display: flex;
-        flex-direction: row; }
+  align-items: center;
+  justify-content: space-around; }
+  .Showcase .ShowcaseBox .ShowcaseItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000; }
+    .Showcase .ShowcaseBox .ShowcaseItem .ItemLabel {
+      font-size: 24px; }
+    .Showcase .ShowcaseBox .ShowcaseItem .ItemSocketsPreview .ItemSocket {
+      background-color: #ca0d32;
+      width: 4px;
+      height: 4px;
+      position: absolute;
+      top: 0;
+      left: 0; }
