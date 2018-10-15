@@ -5,3 +5,4 @@ local_settings.py
 venv
 __pycache__
 staticfiles
+editor/ttd
