@@ -12,48 +12,54 @@
                             {% for item in subheader %}
                                 <div class="container-group-content">
                                     <label class="group-content-header">{{ item }}</label>
-                                    <div class="VisualEditor">
-                                        <div class="ColorPickersBox">
-                                            <div class="ColorPickerTxt">
-                                                <label class="ColorPickersLabel">Txt:</label>
-                                                <div class="ColorPickerDiv">
-                                                    <input type="text" class="ps-colorpicker"/>
-                                                </div>
-                                            </div>
-                                            <div class="ColorPickerBrd">
-                                                <label class="ColorPickersLabel">Brd:</label>
-                                                <div class="ColorPickerDiv">
-                                                    <input type="text" class="ps-colorpicker"/>
-                                                </div>
-                                            </div>
-                                            <div class="ColorPickerBg">
-                                                <label class="ColorPickersLabel">Bg:</label>
-                                                <div class="ColorPickerDiv">
-                                                    <input type="text" class="ps-colorpicker"/>
-                                                </div>
-                                            </div>
+                                    <div class="VisualEditorOuterContainer">
+                                        <div class="VisualEditor_ShowHide">
+                                                <button class="VisualEditor_Show">Show</button>
+                                                <button class="VisualEditor_Hide">Hide</button>
                                         </div>
-                                        <div class="Showcase">
-                                            <div class="ShowcaseBox">
-                                                <div class="ShowcaseItem">
-                                                    <label class="ItemLabel">Item</label>
-                                                    <div class="ItemSocketsPreview">
-                                                        <div class="ItemSocket"></div>
+                                        <div class="VisualEditor">
+                                            <div class="ColorPickersBox">
+                                                <div class="ColorPickerTxt">
+                                                    <label class="ColorPickersLabel">Txt:</label>
+                                                    <div class="ColorPickerDiv">
+                                                        <input class="ps-colorpicker"/>
+                                                    </div>
+                                                </div>
+                                                <div class="ColorPickerBrd">
+                                                    <label class="ColorPickersLabel">Brd:</label>
+                                                    <div class="ColorPickerDiv">
+                                                        <input class="ps-colorpicker"/>
+                                                    </div>
+                                                </div>
+                                                <div class="ColorPickerBg">
+                                                    <label class="ColorPickersLabel">Bg:</label>
+                                                    <div class="ColorPickerDiv">
+                                                        <input class="ps-colorpicker"/>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="VisualEditorOptionsRightBox">
-                                            <div class="VisualEditor_SizeSlider">
-                                                <div class="SizeSliderHandle"></div>
+                                            <div class="Showcase">
+                                                <div class="ShowcaseBox">
+                                                    <div class="ShowcaseItem">
+                                                        <label class="ItemLabel">Item</label>
+                                                        <div class="ItemSocketsPreview">
+                                                            <div class="ItemSocket"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="VisualEditorButtons">
-                                                <button class="VisualEditor_Copy">Copy</button>
-                                                <button class="VisualEditor_Paste">Paste</button>
-                                                <button class="VisualEditor_Reset">Reset</button>
-                                                <button class="VisualEditor_Sound">Sound</button>
-                                                <button class="VisualEditor_Icon">Icon</button>
-                                                <button class="VisualEditor_Beam">Beam</button>
+                                            <div class="VisualEditorOptionsRightBox">
+                                                <div class="VisualEditor_SizeSlider">
+                                                    <div class="SizeSliderHandle"></div>
+                                                </div>
+                                                <div class="VisualEditorButtons">
+                                                    <button class="VisualEditor_Copy">Copy</button>
+                                                    <button class="VisualEditor_Paste">Paste</button>
+                                                    <button class="VisualEditor_Reset">Reset</button>
+                                                    <button class="VisualEditor_Sound">Sound</button>
+                                                    <button class="VisualEditor_Icon">Icon</button>
+                                                    <button class="VisualEditor_Beam">Beam</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
