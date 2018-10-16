@@ -95,57 +95,77 @@ body {
   vertical-align: top;
   width: 100%; }
 
-.VisualEditor {
-  /*display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  background-color: #2e2e2e;
-  border: 2px solid #b3b3b3;
-  width: auto;*/
+button {
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 16px;
+  padding: .4em 1em; }
+
+.VisualEditorOuterContainer {
   display: inline-block;
   position: relative;
   padding: 5px;
-  z-index: 5; }
-  .VisualEditor .ColorPickersBox {
-    /*display: inline-block;
+  z-index: 5;
+  border: 2px solid #cc0000; }
+  .VisualEditorOuterContainer .VisualEditor_ShowHide {
     float: left;
-    width: auto;
-    position: relative;
-    margin: 0 auto;*/
+    width: 135px;
+    height: 111px;
+    text-align: center; }
+    .VisualEditorOuterContainer .VisualEditor_ShowHide .VisualEditor_Show, .VisualEditorOuterContainer .VisualEditor_ShowHide .VisualEditor_Hide {
+      margin: 11px 0;
+      width: 90px; }
+  .VisualEditorOuterContainer .VisualEditor {
     display: inline-block;
-    float: left;
-    width: 84px;
     position: relative;
-    z-index: 100; }
-    .VisualEditor .ColorPickersBox .ColorPickerTxt .ColorPickersLabel, .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickersLabel, .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickersLabel {
-      font-size: 18px; }
-  .VisualEditor .VisualEditorOptionsRightBox {
-    display: inline-block;
-    float: right;
-    position: relative;
-    z-index: 10; }
-    .VisualEditor .VisualEditorOptionsRightBox .VisualEditorButtons {
-      padding: 5px;
-      width: 51px;
-      margin: 0 0 0 8px; }
-
-.Showcase {
-  border: 2px solid #cc0000;
-  display: flex;
-  align-items: center;
-  justify-content: space-around; }
-  .Showcase .ShowcaseBox .ShowcaseItem {
+    padding: 5px;
+    z-index: 5; }
+    .VisualEditorOuterContainer .VisualEditor .ColorPickersBox {
+      display: inline-block;
+      float: left;
+      width: 84px;
+      position: relative;
+      z-index: 100; }
+      .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerTxt, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd {
+        height: 32px; }
+        .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerTxt .ColorPickersLabel, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickersLabel, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickersLabel {
+          font-size: 18px;
+          width: 30px;
+          font-weight: 700; }
+        .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerTxt .ColorPickerDiv .ps-colorpicker, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickerDiv .ps-colorpicker, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickerDiv .ps-colorpicker {
+          margin: 2px;
+          padding: 4px;
+          vertical-align: middle; }
+      .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerTxt, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd {
+        margin-bottom: 1px; }
+    .VisualEditorOuterContainer .VisualEditor .VisualEditorOptionsRightBox {
+      display: inline-block;
+      float: right;
+      position: relative;
+      z-index: 10; }
+      .VisualEditorOuterContainer .VisualEditor .VisualEditorOptionsRightBox .VisualEditor_SizeSlider {
+        width: 153px;
+        margin: 5px 13px 5px 11px !important; }
+      .VisualEditorOuterContainer .VisualEditor .VisualEditorOptionsRightBox .VisualEditorButtons {
+        padding: 5px;
+        width: 51px;
+        margin: 0 0 0 8px; }
+  .VisualEditorOuterContainer .VisualEditor .Showcase {
+    border: 2px solid #cc0000;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    border: 2px solid #000; }
-    .Showcase .ShowcaseBox .ShowcaseItem .ItemLabel {
-      font-size: 24px; }
-    .Showcase .ShowcaseBox .ShowcaseItem .ItemSocketsPreview .ItemSocket {
-      background-color: #ca0d32;
-      width: 4px;
-      height: 4px;
-      position: absolute;
-      top: 0;
-      left: 0; }
+    justify-content: space-around; }
+    .VisualEditorOuterContainer .VisualEditor .Showcase .ShowcaseBox .ShowcaseItem {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      .VisualEditorOuterContainer .VisualEditor .Showcase .ShowcaseBox .ShowcaseItem .ItemLabel {
+        font-size: 24px; }
+      .VisualEditorOuterContainer .VisualEditor .Showcase .ShowcaseBox .ShowcaseItem .ItemSocketsPreview .ItemSocket {
+        background-color: #ca0d32;
+        width: 4px;
+        height: 4px;
+        position: absolute;
+        top: 0;
+        left: 0; }
