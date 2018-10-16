@@ -54,8 +54,7 @@ class Translator:
             if i + 1 and line == "#" + "="*111:
                 section.insert(2, line)
         del section[-1]
-        if section:
-            return section
+        return section
 
     def find_block(self, part):
         pass
