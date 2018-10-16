@@ -1,7 +1,7 @@
-from translator import Translator
+from .translator import Translator
 
 
-class Parser(object):
+class Parser:
 
     def __init__(self, fname):
         self.filter = fname
