@@ -1,4 +1,4 @@
-class Translator(object):
+class Translator:
 
     def __init__(self, fname):
         self.filter = fname
