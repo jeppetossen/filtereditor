@@ -128,8 +128,3 @@ import django_heroku
 django_heroku.settings(locals())
 
 DATABASES['default'] = dj_database_url.config(conn_max_age=600)
-
-try:
-    from filtereditor.local_settings import *
-except ImportError as e:
-    pass
