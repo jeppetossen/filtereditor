@@ -108,10 +108,9 @@ body {
 }
 
 .container-visual-content {
+  margin: 0;
   display: none;
-  width: 95%;
-  margin: .2rem auto;
-  border: 2px solid #631e18;
+  border: 5px solid #424242;
   background-color: $background-group;
   color: $foreground;
   padding: $p-center;
@@ -165,9 +164,10 @@ button {
       position: relative;
       z-index: 100;
       .ColorPickerTxt, .ColorPickerBrd, .ColorPickerBrd {
+        margin-bottom: 1px;
         height: 32px;
         .ColorPickersLabel {
-          font-size: 18px;
+          display: inline-block;
           width: 30px;
           font-weight: 700;
         }
@@ -178,9 +178,6 @@ button {
             vertical-align: middle;
           }
         }
-      }
-      .ColorPickerTxt, .ColorPickerBrd {
-        margin-bottom: 1px;
       }
     }
     .VisualEditorOptionsRightBox {
@@ -206,7 +203,7 @@ button {
       width: 388px;
       height: 98px;
       display: inline-block;
-      background: url("assets/img/PoEGround.PNG");
+      background: url("assets/img/PoEGround.PNG") no-repeat top center;
       border-radius: 0 1px 1px 0;
       background-size: 100%;
       text-align: center;

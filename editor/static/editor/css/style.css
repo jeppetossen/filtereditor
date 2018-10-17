@@ -78,10 +78,9 @@ body {
   cursor: pointer; }
 
 .container-visual-content {
+  margin: 0;
   display: none;
-  width: 95%;
-  margin: .2rem auto;
-  border: 2px solid #631e18;
+  border: 5px solid #424242;
   background-color: #3a2b28;
   color: #ddd;
   padding: 0 auto;
@@ -127,17 +126,16 @@ button {
       position: relative;
       z-index: 100; }
       .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerTxt, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd {
+        margin-bottom: 1px;
         height: 32px; }
         .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerTxt .ColorPickersLabel, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd .ColorPickersLabel, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd .ColorPickersLabel {
-          font-size: 18px;
+          display: inline-block;
           width: 30px;
           font-weight: 700; }
         .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerTxt .ColorPickerDiv .ps-colorpicker, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd .ColorPickerDiv .ps-colorpicker, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd .ColorPickerDiv .ps-colorpicker {
           margin: 2px;
           padding: 4px;
           vertical-align: middle; }
-      .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerTxt, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd {
-        margin-bottom: 1px; }
     .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox {
       display: inline-block;
       float: right;
@@ -157,7 +155,7 @@ button {
       width: 388px;
       height: 98px;
       display: inline-block;
-      background: url("assets/img/PoEGround.PNG");
+      background: url("assets/img/PoEGround.PNG") no-repeat top center;
       border-radius: 0 1px 1px 0;
       background-size: 100%;
       text-align: center;
