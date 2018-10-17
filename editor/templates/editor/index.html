@@ -10,14 +10,14 @@
                         <div class="container-group">
                             <label class="group-header">{{ title }}</label>
                             {% for item in subheader %}
-                                <div class="container-group-content">
-                                    <label class="group-content-header">{{ item }}</label>
+                                <div class="container-visual-content">
+                                    <label class="visual-content-header">{{ item }}</label>
                                     <div class="VisualEditorOuterContainer">
                                         <div class="VisualEditor_ShowHide">
-                                                <button class="VisualEditor_Show">Show</button>
-                                                <button class="VisualEditor_Hide">Hide</button>
+                                            <button class="VisualEditor_Show">Show</button>
+                                            <button class="VisualEditor_Hide">Hide</button>
                                         </div>
-                                        <div class="VisualEditor">
+                                        <div class="VisualEditor_Container">
                                             <div class="ColorPickersBox">
                                                 <div class="ColorPickerTxt">
                                                     <label class="ColorPickersLabel">Txt:</label>
@@ -39,11 +39,15 @@
                                                 </div>
                                             </div>
                                             <div class="Showcase">
-                                                <div class="ShowcaseBox">
-                                                    <div class="ShowcaseItem">
-                                                        <label class="ItemLabel">Item</label>
-                                                        <div class="ItemSocketsPreview">
-                                                            <div class="ItemSocket"></div>
+                                                <div class="ShowcaseInner">
+                                                    <div class="ShowcaseItem_Container">
+                                                        <div class="ShowCaseItem">
+                                                            <div class="ItemBackground">
+                                                                <label class="ItemLabel">Item</label>
+                                                                <div class="ItemSocketsPreview">
+                                                                    <div class="ItemSocket"></div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -52,14 +56,14 @@
                                                 <div class="VisualEditor_SizeSlider">
                                                     <div class="SizeSliderHandle"></div>
                                                 </div>
-                                                <div class="VisualEditorButtons">
+                                                <!--<div class="VisualEditorButtons">-->
                                                     <button class="VisualEditor_Copy">Copy</button>
                                                     <button class="VisualEditor_Paste">Paste</button>
                                                     <button class="VisualEditor_Reset">Reset</button>
                                                     <button class="VisualEditor_Sound">Sound</button>
                                                     <button class="VisualEditor_Icon">Icon</button>
                                                     <button class="VisualEditor_Beam">Beam</button>
-                                                </div>
+                                                <!--</div>-->
                                             </div>
                                         </div>
                                     </div>

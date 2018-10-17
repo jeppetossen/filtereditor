@@ -49,7 +49,7 @@ body {
 
 #container-content {
   margin: 0 auto;
-  width: 50%;
+  width: 95%;
   display: flex;
   border: 5px solid #ddd;
   height: auto;
@@ -77,7 +77,7 @@ body {
   color: #c6c8ca;
   cursor: pointer; }
 
-.container-group-content {
+.container-visual-content {
   display: none;
   width: 95%;
   margin: .2rem auto;
@@ -87,7 +87,7 @@ body {
   padding: 0 auto;
   flex-direction: column; }
 
-.group-content-header {
+.visual-content-header {
   display: flex;
   font-size: 20px;
   background-color: #b3b3b3;
@@ -115,57 +115,79 @@ button {
     .VisualEditorOuterContainer .VisualEditor_ShowHide .VisualEditor_Show, .VisualEditorOuterContainer .VisualEditor_ShowHide .VisualEditor_Hide {
       margin: 11px 0;
       width: 90px; }
-  .VisualEditorOuterContainer .VisualEditor {
+  .VisualEditorOuterContainer .VisualEditor_Container {
     display: inline-block;
     position: relative;
     padding: 5px;
     z-index: 5; }
-    .VisualEditorOuterContainer .VisualEditor .ColorPickersBox {
+    .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox {
       display: inline-block;
       float: left;
       width: 84px;
       position: relative;
       z-index: 100; }
-      .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerTxt, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd {
+      .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerTxt, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd {
         height: 32px; }
-        .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerTxt .ColorPickersLabel, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickersLabel, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickersLabel {
+        .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerTxt .ColorPickersLabel, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd .ColorPickersLabel, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd .ColorPickersLabel {
           font-size: 18px;
           width: 30px;
           font-weight: 700; }
-        .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerTxt .ColorPickerDiv .ps-colorpicker, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickerDiv .ps-colorpicker, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd .ColorPickerDiv .ps-colorpicker {
+        .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerTxt .ColorPickerDiv .ps-colorpicker, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd .ColorPickerDiv .ps-colorpicker, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd .ColorPickerDiv .ps-colorpicker {
           margin: 2px;
           padding: 4px;
           vertical-align: middle; }
-      .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerTxt, .VisualEditorOuterContainer .VisualEditor .ColorPickersBox .ColorPickerBrd {
+      .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerTxt, .VisualEditorOuterContainer .VisualEditor_Container .ColorPickersBox .ColorPickerBrd {
         margin-bottom: 1px; }
-    .VisualEditorOuterContainer .VisualEditor .VisualEditorOptionsRightBox {
+    .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox {
       display: inline-block;
       float: right;
       position: relative;
       z-index: 10; }
-      .VisualEditorOuterContainer .VisualEditor .VisualEditorOptionsRightBox .VisualEditor_SizeSlider {
+      .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox .VisualEditor_SizeSlider {
         width: 153px;
         margin: 5px 13px 5px 11px !important; }
-      .VisualEditorOuterContainer .VisualEditor .VisualEditorOptionsRightBox .VisualEditorButtons {
+      .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox .VisualEditor_Copy, .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox .VisualEditor_Paste, .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox .VisualEditor_Reset,
+      .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox .VisualEditor_Sound, .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox .VisualEditor_Icon, .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox .VisualEditor_Beam {
         padding: 5px;
         width: 51px;
         margin: 0 0 0 8px; }
-  .VisualEditorOuterContainer .VisualEditor .Showcase {
-    border: 2px solid #cc0000;
-    display: flex;
-    align-items: center;
-    justify-content: space-around; }
-    .VisualEditorOuterContainer .VisualEditor .Showcase .ShowcaseBox .ShowcaseItem {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center; }
-      .VisualEditorOuterContainer .VisualEditor .Showcase .ShowcaseBox .ShowcaseItem .ItemLabel {
-        font-size: 24px; }
-      .VisualEditorOuterContainer .VisualEditor .Showcase .ShowcaseBox .ShowcaseItem .ItemSocketsPreview .ItemSocket {
-        background-color: #ca0d32;
-        width: 4px;
-        height: 4px;
-        position: absolute;
-        top: 0;
-        left: 0; }
+      .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox .VisualEditor_Copy, .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox .VisualEditor_Paste, .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox .VisualEditor_Reset, .VisualEditorOuterContainer .VisualEditor_Container .VisualEditorOptionsRightBox .VisualEditor_Sound {
+        font-size: 13px; }
+    .VisualEditorOuterContainer .VisualEditor_Container .Showcase {
+      width: 388px;
+      height: 98px;
+      display: inline-block;
+      background: url("assets/img/PoEGround.PNG");
+      border-radius: 0 1px 1px 0;
+      background-size: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 5; }
+      .VisualEditorOuterContainer .VisualEditor_Container .Showcase .ShowcaseInner {
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        max-width: 1000px;
+        max-height: 600px;
+        padding: 5px;
+        margin: auto 0 auto 31px;
+        z-index: 10; }
+        .VisualEditorOuterContainer .VisualEditor_Container .Showcase .ShowcaseInner .ShowcaseItem_Container .ShowcaseItem {
+          display: inline-block;
+          vertical-align: middle;
+          text-align: center; }
+          .VisualEditorOuterContainer .VisualEditor_Container .Showcase .ShowcaseInner .ShowcaseItem_Container .ShowcaseItem .ItemBackground {
+            display: inline-flex;
+            border: 1px solid pink;
+            padding: 5px;
+            position: relative;
+            top: 40%; }
+            .VisualEditorOuterContainer .VisualEditor_Container .Showcase .ShowcaseInner .ShowcaseItem_Container .ShowcaseItem .ItemBackground .ItemLabel {
+              font-size: 24px; }
+            .VisualEditorOuterContainer .VisualEditor_Container .Showcase .ShowcaseInner .ShowcaseItem_Container .ShowcaseItem .ItemBackground .ItemSocketsPreview .ItemSocket {
+              background-color: #ca0d32;
+              width: 4px;
+              height: 4px;
+              position: absolute;
+              top: 0;
+              left: 0; }
