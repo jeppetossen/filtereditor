@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $(".group-header").on('click', function (event) {
-        let target_parent = $(event.target).parent().find(".container-group-content");
+        let target_parent = $(event.target).parent().find(".container-visual-content");
         if (target_parent.css("display") === "none") {
             target_parent.css("display", "flex");
         } else {
