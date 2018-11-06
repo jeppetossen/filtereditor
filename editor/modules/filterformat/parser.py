@@ -7,16 +7,6 @@ class Parser:
         self.filter = fname
         self.translator = Translator(fname)
 
-    def show_hide_found(self):
-        with open(self.filter, "r") as f:
-            for line in f:
-                if line == "Show":
-                    showhide = "Show"
-                elif line == "Hide":
-                    showhide = "Hide"
-            f.close()
-        return showhide
-
     def define_section(self, part):
         block = "\n\n#" + "="*111 + "\n" + part + "\n" + "#" + "="*111
         return block
@@ -30,12 +20,14 @@ class Parser:
         section = self.define_section(area)
         with open(self.filter, "a") as f:
             f.write(section)
+            f.close()
 
     def write_block(self, part):
         area = self.translator.find_table_block(part)
         block = self.define_block(area)
         with open(self.filter, "a") as f:
             f.write(block)
+            f.close()
 
     def write_condition(self, part):
         pass
