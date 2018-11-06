@@ -75,7 +75,7 @@ body {
 
 #container-content {
   margin: 0 auto;
-  width: 50%;
+  width: 95%;
   display: flex;
   border: 5px solid #ddd;
   height: auto;
@@ -107,18 +107,17 @@ body {
   cursor: pointer;
 }
 
-.container-group-content {
+.container-visual-content {
+  margin: 0;
   display: none;
-  width: 95%;
-  margin: .2rem auto;
-  border: 2px solid #631e18;
+  border: 5px solid #424242;
   background-color: $background-group;
   color: $foreground;
   padding: $p-center;
   flex-direction: column;
 }
 
-.group-content-header {
+.visual-content-header {
   display: flex;
   font-size: $fs-gr-ct-head;
   background-color: #b3b3b3;
@@ -127,74 +126,124 @@ body {
   width: 100%;
 }
 
-.VisualEditor {
-  /*display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  background-color: #2e2e2e;
-  border: 2px solid #b3b3b3;
-  width: auto;*/
+button {
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 16px;
+  padding: .4em 1em;
+}
+
+.VisualEditorOuterContainer {
   display: inline-block;
   position: relative;
   padding: 5px;
   z-index: 5;
-  .ColorPickersBox {
-    /*display: inline-block;
+  border: 2px solid #cc0000;
+  .VisualEditor_ShowHide {
     float: left;
-    width: auto;
-    position: relative;
-    margin: 0 auto;*/
+    width: 135px;
+    height: 111px;
+    text-align: center;
+    .VisualEditor_Show, .VisualEditor_Hide {
+      margin: 11px 0;
+      width: 90px;
+    }
+    .VisualEditor_Hide {
+
+    }
+  }
+  .VisualEditor_Container {
     display: inline-block;
-    float: left;
-    width: 84px;
     position: relative;
-    z-index: 100;
-    .ColorPickerTxt, .ColorPickerBrd, .ColorPickerBrd {
-      .ColorPickersLabel {
-        font-size: 18px;
-      }
-      .ColorPickerDiv {
-        .ps-colorpicker {
+    padding: 5px;
+    z-index: 5;
+    .ColorPickersBox {
+      display: inline-block;
+      float: left;
+      width: 84px;
+      position: relative;
+      z-index: 100;
+      .ColorPickerTxt, .ColorPickerBrd, .ColorPickerBrd {
+        margin-bottom: 1px;
+        height: 32px;
+        .ColorPickersLabel {
+          display: inline-block;
+          width: 30px;
+          font-weight: 700;
+        }
+        .ColorPickerDiv {
+          .ps-colorpicker {
+            margin: 2px;
+            padding: 4px;
+            vertical-align: middle;
+          }
         }
       }
     }
-  }
-  .VisualEditorOptionsRightBox {
-    display: inline-block;
-    float: right;
-    position: relative;
-    z-index: 10;
-    .VisualEditorButtons {
-      padding: 5px;
-      width: 51px;
-      margin: 0 0 0 8px;
-    }
-  }
-}
-
-.Showcase {
-  border: 2px solid #cc0000;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  .ShowcaseBox {
-    .ShowcaseItem {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid #000;
-      .ItemLabel {
-        font-size: 24px;
+    .VisualEditorOptionsRightBox {
+      display: inline-block;
+      float: right;
+      position: relative;
+      z-index: 10;
+      .VisualEditor_SizeSlider {
+        width: 153px;
+        margin: 5px 13px 5px 11px !important;
       }
-      .ItemSocketsPreview {
-        .ItemSocket {
-          background-color: rgb(202, 13, 50);
-          width: 4px;
-          height: 4px;
-          position: absolute;
-          top: 0;
-          left: 0;
+      .VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset,
+      .VisualEditor_Sound, .VisualEditor_Icon, .VisualEditor_Beam {
+        padding: 5px;
+        width: 51px;
+        margin: 0 0 0 8px;
+      }
+      .VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset, .VisualEditor_Sound {
+        font-size: 13px;
+      }
+    }
+    .Showcase {
+      width: 388px;
+      height: 98px;
+      display: inline-block;
+      background: url("assets/img/PoEGround.PNG") no-repeat top center;
+      border-radius: 0 1px 1px 0;
+      background-size: 100%;
+      text-align: center;
+      position: relative;
+      z-index: 5;
+      .ShowcaseInner {
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        max-width: 1000px;
+        max-height: 600px;
+        padding: 5px;
+        margin: auto 0 auto 31px;
+        z-index: 10;
+        .ShowcaseItem_Container {
+          .ShowcaseItem {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            .ItemBackground {
+              display: inline-flex;
+              border: 1px solid pink;
+              padding: 5px;
+              position: relative;
+              top: 40%;
+              .ItemLabel {
+                font-size: 24px;
+              }
+              .ItemSocketsPreview {
+                .ItemSocket {
+                  background-color: rgb(202, 13, 50);
+                  width: 4px;
+                  height: 4px;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                }
+              }
+            }
+          }
         }
       }
     }

@@ -1,2 +1,4 @@
-class Settings(object):
-    pass
+class Settings:
+
+    def __init__(self):
+        pass
