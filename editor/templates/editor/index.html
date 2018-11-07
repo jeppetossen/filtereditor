@@ -14,6 +14,7 @@
                                     <label class="visual-content-header">{{ item }}</label>
                                     <form action="" method="POST">
                                         {% csrf_token %}
+                                        {{ itemsettingsform }}
                                         <div class="VisualEditorContainer">
                                             <div class="VisualEditor_ShowHide">
                                                 <button class="VisualEditor_Show">Show</button>

@@ -1,8 +1,14 @@
-from django import forms
-from .models import FilterSettings
+from django.forms import ModelForm
+from .models import ItemSettings
 
 
-class FilterSettingsForm(forms.ModelForm):
+class ItemSettingsForm(ModelForm):
     class Meta:
-        model = FilterSettings
-        fields = ["section", "block", "sound", "icon", "beam"]
+        model = ItemSettings
+        fields = {"section": {"block": [
+            "showhide",
+            "rarity",
+            "sound",
+            "icon",
+            "beam"
+        ]}}
