@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 from django.core.exceptions import ImproperlyConfigured
-import dj_database_url
 from dotenv import load_dotenv
 load_dotenv()
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -81,6 +80,11 @@ WSGI_APPLICATION = 'filtereditor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'filtereditor',
+        'USER': os.environ['DB_USER'],
+        'PASSWORD': os.environ['DB_PASS'],
+        'HOST': '',
+        'PORT': '',
     }
 }
 
@@ -127,4 +131,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 import django_heroku
 django_heroku.settings(locals())
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+import dj_database_url
+
+env = os.environ.copy()
+db_url = env.get('DATABASE_URL', False)
+
+if db_url is not False:
+    DATABASES['default'] = dj_database_url.config()
