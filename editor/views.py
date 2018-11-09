@@ -1,17 +1,16 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.shortcuts import get_object_or_404
 
 from editor.modules.content import headers
 from .forms import ItemSettingsForm
+from .models import ItemSettings
 
 
 # Create your views here.
 def index(request):
-    if request.method == "POST":
-        form = ItemSettingsForm(request.POST)
-        if form.is_valid():
-            model_instance = form.save(commit=False)
-            model_instance.save()
+    if (request.method == "post") and ("sound" in request.POST):
+        pass
     else:
         sections = headers.fetch_header()
         return render(request, "editor/index.html", {"sections": sections})
