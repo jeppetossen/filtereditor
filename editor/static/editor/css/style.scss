@@ -75,7 +75,7 @@ body {
 
 #container-content {
   margin: 0 auto;
-  width: 95%;
+  width: 50%;
   display: flex;
   border: 5px solid #ddd;
   height: auto;
@@ -133,12 +133,13 @@ button {
   padding: .4em 1em;
 }
 
-.VisualEditorContainer {
-  display: inline-block;
+.VisualEditorOuterContainer {
+  display: block;
   position: relative;
   padding: 5px;
   z-index: 5;
   border: 2px solid #cc0000;
+  margin: 0 10px 7px 10px;
   .VisualEditor_ShowHide {
     float: left;
     width: 135px;
@@ -152,18 +153,21 @@ button {
 
     }
   }
-  .VisualEditor_Container {
+  .VisualEditorContainer {
     display: inline-block;
     position: relative;
     padding: 5px;
+    border: 2px solid #00ff00;
     z-index: 5;
     .ColorPickersBox {
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
       float: left;
       width: 84px;
       position: relative;
       z-index: 100;
-      .ColorPickerTxt, .ColorPickerBrd, .ColorPickerBrd {
+      .ColorPickerTxt, .ColorPickerBrd, .ColorPickerBg {
+        display: flex;
         margin-bottom: 1px;
         height: 32px;
         .ColorPickersLabel {
@@ -192,12 +196,15 @@ button {
       .VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset,
       .VisualEditor_Sound, .VisualEditor_Icon, .VisualEditor_Beam {
         padding: 5px;
-        width: 51px;
+        width: 61px;
         margin: 0 0 0 8px;
       }
-      .VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset, .VisualEditor_Sound {
-        font-size: 13px;
+      .VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset {
+        margin-bottom: 13px;
       }
+      /*.VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset, .VisualEditor_Sound {
+        font-size: 13px;
+      }*/
     }
     .Showcase {
       width: 388px;

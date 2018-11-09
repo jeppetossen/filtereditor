@@ -12,30 +12,30 @@
                             {% for item in subheader %}
                                 <div class="container-visual-content">
                                     <label class="visual-content-header">{{ item }}</label>
-                                    <form action="" method="POST">
+                                    <form method="post">
                                         {% csrf_token %}
-                                        {{ itemsettingsform }}
-                                        <div class="VisualEditorContainer">
+                                        <!--{{ itemsettingsform }}-->
+                                        <div class="VisualEditorOuterContainer">
                                             <div class="VisualEditor_ShowHide">
                                                 <button class="VisualEditor_Show">Show</button>
                                                 <button class="VisualEditor_Hide">Hide</button>
                                             </div>
-                                            <div class="VisualEditor_Container">
+                                            <div class="VisualEditorContainer">
                                                 <div class="ColorPickersBox">
                                                     <div class="ColorPickerTxt">
-                                                        <label class="ColorPickersLabel">Txt:</label>
+                                                        <label class="ColorPickersLabel">Txt</label>
                                                         <div class="ColorPickerDiv">
                                                             <input type='text' class="ps-colorpicker"/>
                                                         </div>
                                                     </div>
                                                     <div class="ColorPickerBrd">
-                                                        <label class="ColorPickersLabel">Brd:</label>
+                                                        <label class="ColorPickersLabel">Brd</label>
                                                         <div class="ColorPickerDiv">
                                                             <input type='text' class="ps-colorpicker"/>
                                                         </div>
                                                     </div>
                                                     <div class="ColorPickerBg">
-                                                        <label class="ColorPickersLabel">Bg:</label>
+                                                        <label class="ColorPickersLabel">Bg</label>
                                                         <div class="ColorPickerDiv">
                                                             <input type='text' class="ps-colorpicker"/>
                                                         </div>
@@ -59,14 +59,15 @@
                                                     <div class="VisualEditor_SizeSlider">
                                                         <div class="SizeSliderHandle"></div>
                                                     </div>
-                                                    <!--<div class="VisualEditorButtons">-->
-                                                    <button class="VisualEditor_Copy">Copy</button>
-                                                    <button class="VisualEditor_Paste">Paste</button>
-                                                    <button class="VisualEditor_Reset">Reset</button>
-                                                    <button class="VisualEditor_Sound">Sound</button>
-                                                    <button class="VisualEditor_Icon">Icon</button>
-                                                    <button class="VisualEditor_Beam">Beam</button>
-                                                    <!--</div>-->
+                                                    <button class="VisualEditor_Copy" name="copy">Copy</button>
+                                                    <button class="VisualEditor_Paste" name="paste">Paste</button>
+                                                    <button class="VisualEditor_Reset" name="reset">Reset</button>
+                                                    <br>
+                                                    <!--<input class="VisualEditor_Sound" name="sound" type="button" value="Sound">-->
+                                                    <button class="VisualEditor_Sound" name="sound">Sound</button>
+                                                    <button class="VisualEditor_Icon" name="icon">Icon</button>
+                                                    <button class="VisualEditor_Beam" name="beam">Beam</button>
+                                                    <br>
                                                 </div>
                                             </div>
                                         </div>
