@@ -49,7 +49,7 @@ body {
 
 #container-content {
   margin: 0 auto;
-  width: 50%;
+  width: 80%;
   display: flex;
   border: 5px solid #ddd;
   height: auto;
@@ -188,7 +188,8 @@ button {
             position: relative;
             top: 40%; }
             .VisualEditorOuterContainer .VisualEditorContainer .Showcase .ShowcaseInner .ShowcaseItem_Container .ShowcaseItem .ItemBackground .ItemLabel {
-              font-size: 24px; }
+              font-size: 24px;
+              margin: 0 auto; }
             .VisualEditorOuterContainer .VisualEditorContainer .Showcase .ShowcaseInner .ShowcaseItem_Container .ShowcaseItem .ItemBackground .ItemSocketsPreview .ItemSocket {
               background-color: #ca0d32;
               width: 4px;
