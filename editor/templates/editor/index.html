@@ -12,10 +12,9 @@
                             {% for item in subheader %}
                                 <div class="container-visual-content">
                                     <label class="visual-content-header">{{ item }}</label>
-                                    <form method="post">
-                                        {% csrf_token %}
-                                        <!--{{ itemsettingsform }}-->
-                                        <div class="VisualEditorOuterContainer">
+                                    <div class="VisualEditorOuterContainer">
+                                        <form method="post">
+                                            {% csrf_token %}
                                             <div class="VisualEditor_ShowHide">
                                                 <button class="VisualEditor_Show">Show</button>
                                                 <button class="VisualEditor_Hide">Hide</button>
@@ -59,19 +58,19 @@
                                                     <div class="VisualEditor_SizeSlider">
                                                         <div class="SizeSliderHandle"></div>
                                                     </div>
-                                                    <button class="VisualEditor_Copy" name="copy">Copy</button>
-                                                    <button class="VisualEditor_Paste" name="paste">Paste</button>
-                                                    <button class="VisualEditor_Reset" name="reset">Reset</button>
+                                                    <button class="VisualEditor_Copy" name="copy{{ item.id }}">Copy</button>
+                                                    <button class="VisualEditor_Paste" name="paste{{ item.id  }}">Paste</button>
+                                                    <button class="VisualEditor_Reset" name="reset{{ item.id  }}">Reset</button>
                                                     <br>
                                                     <!--<input class="VisualEditor_Sound" name="sound" type="button" value="Sound">-->
-                                                    <button class="VisualEditor_Sound" name="sound">Sound</button>
-                                                    <button class="VisualEditor_Icon" name="icon">Icon</button>
-                                                    <button class="VisualEditor_Beam" name="beam">Beam</button>
+                                                    <button class="VisualEditor_Sound" name="sound{{ item.id  }}">Sound</button>
+                                                    <button class="VisualEditor_Icon" name="icon{{ item.id  }}">Icon</button>
+                                                    <button class="VisualEditor_Beam" name="beam{{ item.id  }}">Beam</button>
                                                     <br>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                             {% endfor %}
                         </div>
