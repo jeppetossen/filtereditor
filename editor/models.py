@@ -2,8 +2,24 @@ from django.db import models
 
 
 # Create your models here.
-class ItemSettings(models.Model):
+class ItemSection(models.Model):
     section = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.section
+
+
+class ItemSubSection(models.Model):
+    subsection = models.CharField(max_length=100)
+    section = models.ForeignKey(ItemSection, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.subsection
+
+
+class ItemSettings(models.Model):
+    section = models.ForeignKey(ItemSection, on_delete=models.CASCADE)
+    subsection = models.ForeignKey(ItemSubSection, on_delete=models.CASCADE)
     block = models.CharField(max_length=100)
     showhide = models.CharField(max_length=100)
     rarity = models.CharField(max_length=100)
@@ -12,4 +28,11 @@ class ItemSettings(models.Model):
     beam = models.CharField(max_length=100)
 
     def __str__(self):
-        return str(self.section)
+        return self.section, \
+               self.subsection, \
+               self.block, \
+               self.showhide, \
+               self.rarity, \
+               self.sound, \
+               self.icon, \
+               self.beam
