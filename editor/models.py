@@ -28,11 +28,6 @@ class ItemSettings(models.Model):
     beam = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.section, \
-               self.subsection, \
-               self.block, \
-               self.showhide, \
-               self.rarity, \
-               self.sound, \
-               self.icon, \
-               self.beam
+        return self.section, self.subsection, self.block, \
+               self.showhide, self.rarity, self.sound, \
+               self.icon, self.beam
