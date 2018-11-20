@@ -15,3 +15,18 @@ class GetEachHeaderTest(TestCase):
                     for k, tier in enumerate(data[head][sub]):
                         pass
             f.close()
+
+    def test_get_block_id(self):
+        filter = "editor/ttd/headers.json"
+        tier_ids = dict()
+
+        with open(filter, "r") as f:
+            data = json.load(f)
+            for head in data:
+                for subhead in data[head]:
+                    for i, tier in enumerate(data[head][subhead]):
+                        for tier_id in data[head][subhead][tier]:
+                            tier_ids[tier] = tier_id
+            f.close()
+        return tier_ids
+
