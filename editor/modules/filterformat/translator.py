@@ -8,9 +8,9 @@ class Translator:
             part = "0{}0{}".format(i, x)
             for line in f:
                 if x == 0 and part in line:
-                    return "[[" + part + "]]"
+                    return "[[{}]]".format(part)
                 elif x is not 0 and part in line:
-                    return "[" + part + "]"
+                    return "[{}]".format(part)
             f.close()
 
     def filter_len(self):
@@ -28,7 +28,7 @@ class Translator:
             f.close()
         return line.replace("\n", "")
 
-    def find_table_block(self, part):
+    def find_table_subsection(self, part):
         with open(self.filter, "r") as f:
             for i, line in enumerate(f):
                 if part in line:
@@ -55,9 +55,9 @@ class Translator:
         del section[-1]
         return section
 
-    def find_block(self, part):
+    def find_subsection(self, part):
         blocks = list()
-        block_line = self.find_table_block(part)
+        block_line = self.find_table_subsection(part)
         with open(self.filter, "r") as f:
             for i, line in enumerate(f):
                 blocks.append([i, line])

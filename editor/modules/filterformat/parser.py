@@ -11,7 +11,7 @@ class Parser:
         block = "\n\n#" + "="*111 + "\n" + part + "\n" + "#" + "="*111
         return block
 
-    def define_block(self, part):
+    def define_subsection(self, part):
         block = "\n\n#" + "-"*36 + "\n" + part + "\n" + "#" + "-"*36
         return block
 
@@ -22,9 +22,9 @@ class Parser:
             f.write(section)
             f.close()
 
-    def write_block(self, part):
-        area = self.translator.find_table_block(part)
-        block = self.define_block(area)
+    def write_subsection(self, part):
+        area = self.translator.find_table_subsection(part)
+        block = self.define_subsection(area)
         with open(self.filter, "a") as f:
             f.write(block)
             f.close()
