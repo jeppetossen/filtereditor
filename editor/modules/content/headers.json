@@ -1,132 +1,266 @@
 {
   "General": {
-    "Currency": [
-      "Tier 1:",
-      "Tier 2:",
-      "Tier 3:",
-      "Tier 4:",
-      "Tier 5:",
-      "Tier 6:",
-      "Tier 7:"
-    ],
-    "Divination Cards": [
-      "Tier 1:",
-      "Tier 2:",
-      "Tier 3:",
-      "Tier 4:",
-      "Tier 5:"
-    ],
-    "Vendor Recipes": [
-      "Chromatic Orb",
-      "Jeweller Orbs",
-      "Gemcutter's Prism",
-      "Cartographer's Chisel",
-      "Glassblower's Bauble"
-    ],
-    "Unique Items": [
-      "Tier 1:",
-      "Tier 2:",
-      "Tier 3:",
-      "Tier 4:",
-      "Tier 5:",
-      "Tier 6:",
-      "Tier 7:"
-    ],
-    "Valuable linked items": [
-      "6-Linked items",
-      "Leveling 5-Linked items",
-      "Endgame 5-Linked items"
-    ],
-    "Current League: Delve": [
-      "Reliquary Keys",
-      "Delve Mods",
-      "Delve Currency"
-    ]
+    "Currency": {
+      "Tier 1:": {
+        "id": "1"
+      },
+      "Tier 2:": {
+        "id": "2"
+      },
+      "Tier 3:": {
+        "id": "3"
+      },
+      "Tier 4:": {
+        "id": "4"
+      },
+      "Tier 5:": {
+        "id": "5"
+      },
+      "Tier 6:": {
+        "id": "6"
+      },
+      "Tier 7:": {
+        "id": "7"
+      }
+    },
+    "Divination Cards": {
+      "Tier 1:": {
+        "id":" 8"
+      },
+      "Tier 2:": {
+        "id":" 9"
+      },
+      "Tier 3:": {
+        "id": "10"
+      },
+      "Tier 4:": {
+        "id": "11"
+      },
+      "Tier 5:": {
+        "id": "12"
+      }
+    },
+    "Vendor Recipes": {
+      "Chromatic Orb": {
+        "id": "13"
+      },
+      "Jeweller Orbs": {
+        "id": "14"
+      },
+      "Gemcutter's Prism": {
+        "id": "15"
+      },
+      "Cartographer's Chisel": {
+        "id": "16"
+      },
+      "Glassblower's Bauble": {
+        "id": "17"
+      }
+    },
+    "Unique Items": {
+      "Tier 1:": {
+        "id": "18"
+      },
+      "Tier 2:": {
+        "id": "19"
+      },
+      "Tier 3:": {
+        "id": "20"
+      },
+      "Tier 4:": {
+        "id": "21"
+      },
+      "Tier 5:": {
+        "id": "22"
+      },
+      "Tier 6:": {
+        "id": "23"
+      },
+      "Tier 7:": {
+        "id": "24"
+      }
+    },
+    "Valuable linked items": {
+      "6-Linked items": {
+        "id": "25"
+      },
+      "Leveling 5-Linked items": {
+        "id": "26"
+      },
+      "Endgame 5-Linked items": {
+        "id": "27"
+      }
+    },
+    "Current League: Delve": {
+      "Reliquary Keys": {
+        "id": "28"
+      },
+      "Delve Mods": {
+        "id": "29"
+      },
+      "Delve Currency": {
+        "id": "30"
+      }
+    }
   },
   "Endgame - General": {
-    "Maps": [
-      "Highlight & Hide specific maps",
-      "Highlight map properties",
-      "Tier settings",
-      "Appearance",
-      "Unique Maps"
-    ],
-    "Fragments": [
-      "Breachstones",
-      "Uber-lab Offering",
-      "Fragments, Tier 1:",
-      "Fragments, Tier 2:",
-      "Fragments, Tier 3:",
-      "Fragments, Remaining:"
-    ],
-    "Special bases": [
-      "Content1"
-    ]
+    "Maps": {
+      "Highlight & Hide specific maps": {
+        "id": "31"
+      },
+      "Highlight map properties": {
+        "id": "32"
+      },
+      "Tier settings": {
+        "id": "33"
+      },
+      "Appearance": {
+        "id": "34"
+      },
+      "Unique Maps": {
+        "id": "35"
+      }
+    },
+    "Fragments": {
+      "Breachstones": {
+        "id": "36"
+      },
+      "Uber-lab Offering": {
+        "id": "37"
+      },
+      "Fragments, Tier 1:": {
+        "id": "38"
+      },
+      "Fragments, Tier 2:": {
+        "id": "39"
+      },
+      "Fragments, Tier 3:": {
+        "id": "40"
+      },
+      "Fragments, Remaining:": {
+        "id": "41"
+      }
+    },
+    "Special bases": {
+      "Content1": {
+        "id": "42"
+      }
+    }
   },
   "Endgame - Drops": {
-    "Bases": [
-      "Content1"
-    ],
-    "T1 & T2 bases": [
-      "Content1"
-    ],
-    "T3 & T4 bases": [
-      "Content1"
-    ],
-    "Shaper & Elder items": [
-      "Content1"
-    ],
-    "Custom": [
-      "Content1"
-    ]
+    "Bases": {
+      "Content1": {
+        "id": "43"
+      }
+    },
+    "T1 & T2 bases": {
+      "Content1": {
+        "id": "44"
+      }
+    },
+    "T3 & T4 bases": {
+      "Content1": {
+        "id": "45"
+      }
+    },
+    "Shaper & Elder items": {
+      "Content1": {
+        "id": "46"
+      }
+    },
+    "Custom": {
+      "Content1": {
+        "id": "47"
+      }
+    }
   },
   "Miscellaneous": {
-    "Flasks": [
-      "Utility flasks",
-      "Life flasks",
-      "Mana flasks",
-      "Hybrid flasks"
-    ],
-    "Skill gems": [
-      "Tier 1:",
-      "Tier 2:",
-      "Tier 3:",
-      "Tier 4:",
-      "Tier 5:"
-    ],
-    "Misc. items": [
-      "Melee",
-      "Attacks",
-      "Caster",
-      "Bows",
-      "Supports"
-    ]
+    "Flasks": {
+      "Utility flasks": {
+        "id": "48"
+      },
+      "Life flasks": {
+        "id": "49"
+      },
+      "Mana flasks": {
+        "id": "50"
+      },
+      "Hybrid flasks": {
+        "id": "51"
+      }
+    },
+    "Skill gems": {
+      "Tier 1:": {
+        "id": "52"
+      },
+      "Tier 2:": {
+        "id": "53"
+      },
+      "Tier 3:": {
+        "id": "54"
+      },
+      "Tier 4:": {
+        "id": "55"
+      },
+      "Tier 5:": {
+        "id": "56"
+      }
+    },
+    "Misc. items": {
+      "Melee": {
+        "id": "57"
+      },
+      "Attacks": {
+        "id": "58"
+      },
+      "Caster": {
+        "id": "59"
+      },
+      "Bows": {
+        "id": "60"
+      },
+      "Supports": {
+        "id": "61"
+      }
+    }
   },
   "Crafting": {
-    "T1 & T2 bases": [
-      "Content1"
-    ],
-    "Shaper & Elder items": [
-      "Content1"
-    ],
-    "High iLvl T2+ bases": [
-      "Content1"
-    ],
-    "Custom": [
-      "Content1"
-    ]
+    "T1 & T2 bases": {
+      "Content1": {
+        "id": "62"
+      }
+    },
+    "Shaper & Elder items": {
+      "Content1": "63"
+    },
+    "High iLvl T2+ bases": {
+      "Content1": "64"
+    },
+    "Custom": {
+      "Content1": "65"
+    }
   },
   "League-specific items": {
-    "Abyss League": [
-      "Jewels",
-      "Stygian Vise"
-    ]
+    "Abyss League": {
+      "Jewels": {
+        "id": "66"
+      },
+      "Stygian Vise": {
+        "id": "67"
+      }
+    }
   },
   "Leveling": {
-    "Item progression": [
-      "Progression 1",
-      "Progression 2",
-      "Progression 3"
-    ]
+    "Item progression": {
+      "Progression 1": {
+        "id": "68"
+      },
+      "Progression 2": {
+        "id": "69"
+      },
+      "Progression 3": {
+        "id": "70"
+      }
+    }
   }
 }
