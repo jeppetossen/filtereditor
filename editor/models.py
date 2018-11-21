@@ -11,15 +11,15 @@ class ItemSection(models.Model):
 
 class ItemSubSection(models.Model):
     subsection = models.CharField(max_length=100)
-    section = models.ForeignKey(ItemSection, on_delete=models.CASCADE)
+    section = models.OneToOneField(ItemSection, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.subsection
 
 
 class ItemSettings(models.Model):
-    section = models.ForeignKey(ItemSection, on_delete=models.CASCADE)
-    subsection = models.ForeignKey(ItemSubSection, on_delete=models.CASCADE)
+    section = models.OneToOneField(ItemSection, on_delete=models.CASCADE, null=True, default=None)
+    subsection = models.OneToOneField(ItemSubSection, on_delete=models.CASCADE, null=True, default=None)
     block = models.CharField(max_length=100)
     showhide = models.CharField(max_length=100)
     rarity = models.CharField(max_length=100)
