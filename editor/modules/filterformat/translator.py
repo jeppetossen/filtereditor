@@ -5,12 +5,12 @@ class Translator:
 
     def find_part(self, i, x=0):
         with open(self.filter, "r") as f:
-            part = "0{}0{}".format(i, x)
+            part = f"0{i}0{x}"
             for line in f:
                 if x == 0 and part in line:
-                    return "[[{}]]".format(part)
+                    return f"[[{part}]]"
                 elif x is not 0 and part in line:
-                    return "[{}]".format(part)
+                    return f"[{part}]"
             f.close()
 
     def filter_len(self):
