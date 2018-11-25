@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
-from editor.modules.content import headers
+from editor.modules.headers import headers
 from .models import ItemSettings
 
 

@@ -2,7 +2,7 @@ import json
 
 
 def fetch_header():
-    # file = "editor/modules/content/headers.json"
+    # file = "editor/modules/headers/headers.json"
     file = "headers.json"
     with open(file, "r") as f:
         data = json.load(f)
