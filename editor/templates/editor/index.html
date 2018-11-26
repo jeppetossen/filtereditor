@@ -19,57 +19,61 @@
                                                 <button class="VisualEditor_Show" name="show{{ items.id }}">Show</button>
                                                 <button class="VisualEditor_Hide" name="hide{{ items.id }}">Hide</button>
                                             </div>
-                                            <div class="VisualEditorContainer">
-                                                <div class="ColorPickersBox">
-                                                    <div class="ColorPickerTxt">
-                                                        <label class="ColorPickersLabel">Txt</label>
-                                                        <div class="ColorPickerDiv">
-                                                            <input type='text' class="ps-colorpicker"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ColorPickerBrd">
-                                                        <label class="ColorPickersLabel">Brd</label>
-                                                        <div class="ColorPickerDiv">
-                                                            <input type='text' class="ps-colorpicker"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ColorPickerBg">
-                                                        <label class="ColorPickersLabel">Bg</label>
-                                                        <div class="ColorPickerDiv">
-                                                            <input type='text' class="ps-colorpicker"/>
-                                                        </div>
+                                        </form>
+                                        <div class="VisualEditorContainer">
+                                            <div class="ColorPickersBox">
+                                                <div class="ColorPickerTxt">
+                                                    <label class="ColorPickersLabel">Txt</label>
+                                                    <div class="ColorPickerDiv">
+                                                        <input type='text' class="ps-colorpicker"/>
                                                     </div>
                                                 </div>
-                                                <div class="Showcase">
-                                                    <div class="ShowcaseInner">
-                                                        <div class="ShowcaseItem_Container">
-                                                            <div class="ShowCaseItem">
-                                                                <div class="ItemBackground">
-                                                                    <label class="ItemLabel">Item</label>
-                                                                    <div class="ItemSocketsPreview">
-                                                                        <div class="ItemSocket"></div>
-                                                                    </div>
+                                                <div class="ColorPickerBrd">
+                                                    <label class="ColorPickersLabel">Brd</label>
+                                                    <div class="ColorPickerDiv">
+                                                        <input type='text' class="ps-colorpicker"/>
+                                                    </div>
+                                                </div>
+                                                <div class="ColorPickerBg">
+                                                    <label class="ColorPickersLabel">Bg</label>
+                                                    <div class="ColorPickerDiv">
+                                                        <input type='text' class="ps-colorpicker"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="Showcase">
+                                                <div class="ShowcaseInner">
+                                                    <div class="ShowcaseItem_Container">
+                                                        <div class="ShowCaseItem">
+                                                            <div class="ItemBackground">
+                                                                <label class="ItemLabel">Item</label>
+                                                                <div class="ItemSocketsPreview">
+                                                                    <div class="ItemSocket"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <form method="POST">
+                                                {% csrf_token %}
                                                 <div class="VisualEditorOptionsRightBox">
                                                     <div class="VisualEditor_SizeSlider">
                                                         <div class="SizeSliderHandle"></div>
                                                     </div>
                                                     <button class="VisualEditor_Copy" name="copy{{ items.id }}">Copy</button>
-                                                    <button class="VisualEditor_Paste" name="paste{{ items.id  }}">Paste</button>
-                                                    <button class="VisualEditor_Reset" name="reset{{ items.id  }}">Reset</button>
+                                                    <button class="VisualEditor_Paste" name="paste{{ items.id }}">Paste</button>
+                                                    <button class="VisualEditor_Reset" name="reset{{ items.id }}">Reset</button>
                                                     <br>
                                                     <!--<input class="VisualEditor_Sound" name="sound" type="button" value="Sound">-->
-                                                    <button class="VisualEditor_Sound" name="sound{{ items.id  }}">Sound</button>
-                                                    <button class="VisualEditor_Icon" name="icon{{ items.id  }}">Icon</button>
-                                                    <button class="VisualEditor_Beam" name="beam{{ items.id  }}">Beam</button>
+                                                    <button class="VisualEditor_Sound" name="sound{{ items.id }}">Sound</button>
+                                                    <button class="VisualEditor_Icon" name="icon{{ items.id }}">Icon</button>
+                                                    <button class="VisualEditor_Beam" name="beam{{ items.id }}">Beam</button>
                                                     <br>
                                                 </div>
-                                            </div>
-                                        </form>
+                                            </form>
+                                        </div>
+                                        <!--</form>-->
                                     </div>
                                 </div>
                             {% endfor %}

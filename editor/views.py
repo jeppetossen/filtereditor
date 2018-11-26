@@ -1,26 +1,32 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.http import HttpResponseRedirect
 
 from editor.modules.headers import headers
 from .models import ItemSettings
+# from .forms import ItemSettingsForm
 
 
 # Create your views here.
 def index(request):
-    header_keys = headers.retrieve_header_id()
-    x = [k for k in header_keys]
+    x = [i for i in headers.retrieve_header_id()]
     if (request.method == "POST") and ("show1" in request.POST):
-        new_show = ItemSettings(id=1, show_hide="show")
+        '''form = ItemSettingsForm(request.POST)
+
+        if form.is_valid():
+            return HttpResponseRedirect('/home/')'''
+
+        new_show = ItemSettings(id=1, show_hide="hide")
         new_show.save()
-    elif (request.method == "POST") and (f"hide{x}" in request.method):
+    elif (request.method == "POST") and ("hide" in request.method):
         pass
-    elif (request.method == "POST") and (f"copy{x}" in request.method):
+    elif (request.method == "POST") and ("copy" in request.method):
         pass
-    elif (request.method == "POST") and (f"paste{x}" in request.method):
+    elif (request.method == "POST") and ("paste" in request.method):
         pass
-    elif (request.method == "POST") and (f"reset{x}" in request.method):
+    elif (request.method == "POST") and ("reset" in request.method):
         pass
-    elif (request.method == "POST") and (f"sound{x}" in request.method):
+    elif (request.method == "POST") and ("sound" in request.method):
         sound = request.POST.get('sound', '')
         # skapa
         new_item_settings = ItemSettings()
@@ -32,9 +38,9 @@ def index(request):
         item_settings.sound = sound
         item_settings.block = "editerad block"
         item_settings.save()'''
-    elif (request.method == "POST") and (f"icon{x}" in request.method):
+    elif (request.method == "POST") and ("icon" in request.method):
         pass
-    elif (request.method == "POST") and (f"beam{x}" in request.method):
+    elif (request.method == "POST") and ("beam" in request.method):
         pass
     else:
         sections = headers.fetch_header()
