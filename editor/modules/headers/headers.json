@@ -25,10 +25,10 @@
     },
     "Divination Cards": {
       "Tier 1:": {
-        "id":" 8"
+        "id": "8"
       },
       "Tier 2:": {
-        "id":" 9"
+        "id": "9"
       },
       "Tier 3:": {
         "id": "10"
@@ -231,13 +231,19 @@
       }
     },
     "Shaper & Elder items": {
-      "Content1": "63"
+      "Content1": {
+        "id": "63"
+      }
     },
     "High iLvl T2+ bases": {
-      "Content1": "64"
+      "Content1": {
+        "id": "64"
+      }
     },
     "Custom": {
-      "Content1": "65"
+      "Content1": {
+        "id": "65"
+      }
     }
   },
   "League-specific items": {

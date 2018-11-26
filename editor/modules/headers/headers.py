@@ -2,8 +2,8 @@ import json
 
 
 def fetch_header():
-    # file = "editor/modules/headers/headers.json"
-    file = "headers.json"
+    file = "editor/modules/headers/headers.json"
+    # file = "headers.json"
     with open(file, "r") as f:
         data = json.load(f)
         f.close()
@@ -11,13 +11,20 @@ def fetch_header():
     return data
 
 
-def create_headers_table():
+def retrieve_header_id():
     headers = fetch_header()
+    header_keys = list()
     for section, header in headers.items():
         for title, subheader in header.items():
             for block, item in subheader.items():
-                print(item)
+                try:
+                    header_keys.append(item['id'])
+                    # header_keys.append(subheader)
+                except KeyError:
+                    return "Failed to retrieve id."
+
+    return header_keys
 
 
 if __name__ == '__main__':
-    create_headers_table()
+    print(retrieve_header_id())

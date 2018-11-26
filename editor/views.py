@@ -7,17 +7,20 @@ from .models import ItemSettings
 
 # Create your views here.
 def index(request):
-    if (request.method == "post") and ("show" in request.POST):
+    header_keys = headers.retrieve_header_id()
+    x = [k for k in header_keys]
+    if (request.method == "POST") and ("show1" in request.POST):
+        new_show = ItemSettings(id=1, show_hide="show")
+        new_show.save()
+    elif (request.method == "POST") and (f"hide{x}" in request.method):
         pass
-    elif (request.method == "post") and ("hide" in request.POST):
+    elif (request.method == "POST") and (f"copy{x}" in request.method):
         pass
-    elif (request.method == "post") and ("copy" in request.POST):
+    elif (request.method == "POST") and (f"paste{x}" in request.method):
         pass
-    elif (request.method == "post") and ("paste" in request.POST):
+    elif (request.method == "POST") and (f"reset{x}" in request.method):
         pass
-    elif (request.method == "post") and ("reset" in request.POST):
-        pass
-    elif (request.method == "post") and ("sound" in request.POST):
+    elif (request.method == "POST") and (f"sound{x}" in request.method):
         sound = request.POST.get('sound', '')
         # skapa
         new_item_settings = ItemSettings()
@@ -29,13 +32,13 @@ def index(request):
         item_settings.sound = sound
         item_settings.block = "editerad block"
         item_settings.save()'''
-    elif (request.method == "post") and ("icon" in request.POST):
+    elif (request.method == "POST") and (f"icon{x}" in request.method):
         pass
-    elif (request.method == "post") and ("beam" in request.POST):
+    elif (request.method == "POST") and (f"beam{x}" in request.method):
         pass
     else:
         sections = headers.fetch_header()
-        return render(request, "editor/index.html", {"sections": sections})
+        return render(request, "editor/index.html", {"headers": sections})
 
 
 class ThemePageView(TemplateView):

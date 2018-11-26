@@ -21,7 +21,7 @@ class ItemSettings(models.Model):
     section = models.OneToOneField(ItemSection, on_delete=models.CASCADE, null=True, default=None)
     subsection = models.OneToOneField(ItemSubSection, on_delete=models.CASCADE, null=True, default=None)
     block = models.CharField(max_length=100)
-    showhide = models.CharField(max_length=100)
+    show_hide = models.CharField(max_length=100)
     rarity = models.CharField(max_length=100)
     sound = models.CharField(max_length=100)
     icon = models.CharField(max_length=100)
@@ -29,5 +29,5 @@ class ItemSettings(models.Model):
 
     def __str__(self):
         return self.section, self.subsection, self.block, \
-               self.showhide, self.rarity, self.sound, \
+               self.show_hide, self.rarity, self.sound, \
                self.icon, self.beam
