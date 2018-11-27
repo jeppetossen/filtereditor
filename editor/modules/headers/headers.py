@@ -19,7 +19,6 @@ def retrieve_header_id():
             for block, item in subheader.items():
                 try:
                     header_keys.append(item['id'])
-                    # header_keys.append(subheader)
                 except KeyError:
                     return "Failed to retrieve id."
 

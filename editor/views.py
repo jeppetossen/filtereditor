@@ -4,20 +4,23 @@ from django.http import HttpResponseRedirect
 
 from editor.modules.headers import headers
 from .models import ItemSettings
-# from .forms import ItemSettingsForm
+from .forms import ItemSettingsForm
 
 
 # Create your views here.
 def index(request):
-    x = [i for i in headers.retrieve_header_id()]
-    if (request.method == "POST") and ("show1" in request.POST):
-        '''form = ItemSettingsForm(request.POST)
-
-        if form.is_valid():
-            return HttpResponseRedirect('/home/')'''
-
-        new_show = ItemSettings(id=1, show_hide="hide")
-        new_show.save()
+    header_keys = headers.retrieve_header_id()
+    shows = list()
+    for i in header_keys:
+        shows.append(f"show{i}")
+    for show in shows:
+        continue
+    if (request.method == "POST") and (show in request.POST):
+        print(show)
+        print(request.POST)
+        show = ItemSettings(id=1, show_hide="show")
+        show.save()
+        return HttpResponseRedirect('')
     elif (request.method == "POST") and ("hide" in request.method):
         pass
     elif (request.method == "POST") and ("copy" in request.method):

@@ -5,4 +5,4 @@ from .models import ItemSettings
 class ItemSettingsForm(ModelForm):
     class Meta:
         model = ItemSettings
-        fields = ['section', 'block', 'showhide', 'rarity', 'sound', 'icon', 'beam']
+        fields = ['section', 'block', 'show_hide', 'rarity', 'sound', 'icon', 'beam']
