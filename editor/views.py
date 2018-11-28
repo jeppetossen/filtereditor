@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from editor.modules.headers import headers
 from .models import ItemSettings
 from .forms import ItemSettingsForm
+from editor.modules.filterformat import settings
 
 
 # Create your views here.
@@ -33,7 +34,7 @@ def index(request):
     elif (request.method == "POST") and (f"paste{number}" in request.method):
         pass
     elif (request.method == "POST") and (f"reset{number}" in request.method):
-        pass
+        settings.reset(number)
     elif (request.method == "POST") and (f"sound{number}" in request.method):
         show = ItemSettings(id=number, sound="")
         show.save()
