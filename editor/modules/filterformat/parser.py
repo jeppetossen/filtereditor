@@ -1,4 +1,4 @@
-from .translator import Translator
+from editor.modules.filterformat.translator import Translator
 
 
 class Parser:
