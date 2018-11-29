@@ -1,10 +1,6 @@
 from editor.models import ItemSettings
 
 
-def sound(data):
-    pass
-
-
 def reset(key):
     settings = ItemSettings
     try:
