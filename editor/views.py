@@ -3,8 +3,8 @@ from django.views.generic import TemplateView
 from django.http import HttpResponseRedirect
 
 from editor.modules.headers import headers
-from .models import ItemSettings
-from .forms import ItemSettingsForm
+from editor import models
+# from .forms import ItemSettingsForm
 from editor.modules.filterformat import settings
 
 
@@ -22,30 +22,34 @@ def index(request):
                 number += str(i)
 
     if (request.method == "POST") and (f"show{number}" in request.POST):
-        show = ItemSettings(id=number, show_hide="show")
+        show = models.ItemSettings(id=number, show_hide="show")
         show.save()
         return HttpResponseRedirect('')
-    elif (request.method == "POST") and (f"hide{number}" in request.method):
-        hide = ItemSettings(id=number, show_hide="hide")
+    elif (request.method == "POST") and (f"hide{number}" in request.POST):
+        hide = models.ItemSettings(id=number, show_hide="hide")
         hide.save()
         return HttpResponseRedirect('')
-    elif (request.method == "POST") and (f"copy{number}" in request.method):
+    elif (request.method == "POST") and (f"copy{number}" in request.POST):
         pass
-    elif (request.method == "POST") and (f"paste{number}" in request.method):
+    elif (request.method == "POST") and (f"paste{number}" in request.POST):
         pass
-    elif (request.method == "POST") and (f"reset{number}" in request.method):
+    elif (request.method == "POST") and (f"reset{number}" in request.POST):
         settings.reset(number)
-    elif (request.method == "POST") and (f"sound{number}" in request.method):
-        show = ItemSettings(id=number, sound="")
-        show.save()
         return HttpResponseRedirect('')
-    elif (request.method == "POST") and (f"icon{number}" in request.method):
-        show = ItemSettings(id=number, icon="")
-        show.save()
+    elif (request.method == "POST") and (f"sound{number}" in request.POST):
+        sound = models.PlayAlertSound(id=number, sound_id=int(), volume=int())
+        sound_apply = models.ItemSettings(id=number, sound=sound)
+        sound_apply.save()
         return HttpResponseRedirect('')
-    elif (request.method == "POST") and (f"beam{number}" in request.method):
-        show = ItemSettings(id=number, beam="")
-        show.save()
+    elif (request.method == "POST") and (f"icon{number}" in request.POST):
+        icon = models.MinimapIcon(id=number, size=int(), color="", shape="")
+        icon_apply = models.ItemSettings(id=number, icon=icon)
+        icon_apply.save()
+        return HttpResponseRedirect('')
+    elif (request.method == "POST") and (f"beam{number}" in request.POST):
+        beam = models.PlayEffect(id=number, color="", temp="")
+        beam_apply = models.ItemSettings(id=number, beam=beam)
+        beam_apply.save()
         return HttpResponseRedirect('')
     else:
         sections = headers.fetch_header()
