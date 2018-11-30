@@ -75,7 +75,7 @@ body {
 
 #container-content {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   display: flex;
   border: 5px solid #ddd;
   height: auto;
@@ -107,24 +107,86 @@ body {
   cursor: pointer;
 }
 
-.container-visual-content {
-  margin: 0;
+.VisualEditorOuterContainer {
+  /*margin: 0;
   display: none;
   border: 5px solid #424242;
   background-color: $background-group;
   color: $foreground;
   padding: $p-center;
-  flex-direction: column;
+  flex-direction: column;*/
+  background-color: rgb(5, 5, 5);
+  border: 1px solid rgb(66, 66, 66);
+  border-radius: 2px;
+  color: rgb(163, 141, 109);
+  margin: 15px 0;
+  padding: 8px;
+  .VisualEditorHeader {
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 7px 10px 5px 12px;
+    text-transform: uppercase;
+  }
 }
 
-.visual-content-header {
+.VisualEditor_ShowHide {
+  color: rgb(163, 141, 109);
+  display: block;
+  float: left;
+  height: 111px;
+  position: relative;
+  text-align: center;
+  width: 135px;
+  .VisualEditor_Show, .VisualEditor_Hide {
+    background: rgb(22, 152, 191) none repeat scroll 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 11px 0;
+    padding: 0.4em 1em;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 90px;
+  }
+}
+
+.VisualEditorContainer {
+  background: rgba(0, 0, 0, 0) url("assets/img/PoEGround.PNG") no-repeat scroll center top /cover;
+  border-radius: 1px;
+  border: 1px solid rgb(163, 141, 109);
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+  z-index: 5;
+}
+
+.VisualEditorOptionsBoxRight {
+    color: rgb(163, 141, 109);
+    display: block;
+    float: right;
+    position: relative;
+    z-index: 10;
+  .VisualEditor_FontSizeSlider {
+    background: rgb(0, 0, 0) none repeat scroll 0 0;
+  }
+}
+
+/*.visual-content-header {
   display: flex;
   font-size: $fs-gr-ct-head;
   background-color: #b3b3b3;
   color: #333;
   vertical-align: top;
   width: 100%;
-}
+}*/
 
 button {
   vertical-align: middle;
@@ -133,7 +195,8 @@ button {
   padding: .4em 1em;
 }
 
-.VisualEditorOuterContainer {
+/*.VisualEditorOuterContainer {
+  color: rgb(163, 141, 109);
   display: block;
   position: relative;
   padding: 5px;
@@ -189,9 +252,33 @@ button {
       float: right;
       position: relative;
       z-index: 10;
-      .VisualEditor_SizeSlider {
+      .VisualEditor_FontSizeSlider {
+        background-color: rgb(0, 0, 0);
+        border: 1px solid rgb(163, 141, 109);
+        display: inline-block;
+        font-size: 16px;
+        height: 12.8px;
+        margin: 5px 13px 5px 11px;
+        position: relative;
+        text-align: left;
         width: 153px;
-        margin: 5px 13px 5px 11px !important;
+        .FontSizeSliderHandle {
+          background-color: rgb(15, 45, 101);
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          border-radius: 3px;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 700;
+          height: 19.2px;
+          left: 102px;
+          margin-left: -9.6px;
+          min-width: 19.2px;
+          padding: 3px;
+          position: absolute;
+          touch-action: none;
+          vertical-align: middle;
+          z-index: 2;
+        }
       }
       .VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset,
       .VisualEditor_Sound, .VisualEditor_Icon, .VisualEditor_Beam {
@@ -202,9 +289,6 @@ button {
       .VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset {
         margin-bottom: 13px;
       }
-      /*.VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset, .VisualEditor_Sound {
-        font-size: 13px;
-      }*/
     }
     .Showcase {
       width: 388px;
@@ -257,3 +341,4 @@ button {
     }
   }
 }
+*/

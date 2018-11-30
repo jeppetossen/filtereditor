@@ -8,21 +8,25 @@
     <meta name=viewport content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="{% static 'editor/css/bootstrap.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'editor/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'editor/css/testing.css' %}">
     <link rel="stylesheet" href="{% static 'editor/css/spectrum.css' %}">
     <script src="{% static 'editor/js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'editor/js/spectrum.js' %}"></script>
     <script src="{% static 'editor/js/main.js' %}"></script>
 </head>
 <body>
-    <nav class="menu">
+    <nav id="NavSelectionButtons">
         {% load activetag %}
-        <ul>
+        <!--<ul>
             <li><a href="{% url 'editor:home' %}" class="{% add_active request 'editor:home' %}">Home</a></li>
             <li><a href="{% url 'editor:theme' %}" class="{% add_active request 'editor:theme' %}">Theme</a></li>
             <li><a href="{% url 'editor:settings' %}" class="{% add_active request 'editor:settings' %}">Settings</a></li>
             <li><a href="{% url 'editor:about' %}" class="{% add_active request 'editor:about' %}">About</a></li>
-        </ul>
+        </ul>-->
+        <button id="ButtonHome" class="NavSelectionButton">HOME</button>
+        <button id="ButtonTheme" class="NavSelectionButton">THEME</button>
+        <button id="ButtonSettings" class="NavSelectionButton">SETTINGS</button>
+        <button id="ButtonAbout" class="NavSelectionButton">ABOUT</button>
     </nav>
 
     {% block containers %}{% endblock %}

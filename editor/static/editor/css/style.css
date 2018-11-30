@@ -49,7 +49,7 @@ body {
 
 #container-content {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   display: flex;
   border: 5px solid #ddd;
   height: auto;
@@ -77,88 +77,181 @@ body {
   color: #c6c8ca;
   cursor: pointer; }
 
-.container-visual-content {
-  margin: 0;
+.VisualEditorOuterContainer {
+  /*margin: 0;
   display: none;
   border: 5px solid #424242;
-  background-color: #3a2b28;
-  color: #ddd;
-  padding: 0 auto;
-  flex-direction: column; }
+  background-color: $background-group;
+  color: $foreground;
+  padding: $p-center;
+  flex-direction: column;*/
+  background-color: #050505;
+  border: 1px solid #424242;
+  border-radius: 2px;
+  color: #a38d6d;
+  margin: 15px 0;
+  padding: 8px; }
+  .VisualEditorOuterContainer .VisualEditorHeader {
+    color: white;
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 7px 10px 5px 12px;
+    text-transform: uppercase; }
 
-.visual-content-header {
+.VisualEditor_ShowHide {
+  color: #a38d6d;
+  display: block;
+  float: left;
+  height: 111px;
+  position: relative;
+  text-align: center;
+  width: 135px; }
+  .VisualEditor_ShowHide .VisualEditor_Show, .VisualEditor_ShowHide .VisualEditor_Hide {
+    background: #1698bf none repeat scroll 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 11px 0;
+    padding: 0.4em 1em;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 90px; }
+
+.VisualEditorContainer {
+  background: rgba(0, 0, 0, 0) url("assets/img/PoEGround.PNG") no-repeat scroll center top/cover;
+  border-radius: 1px;
+  border: 1px solid #a38d6d;
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+  z-index: 5; }
+
+.VisualEditorOptionsBoxRight {
+  color: #a38d6d;
+  display: block;
+  float: right;
+  position: relative;
+  z-index: 10; }
+  .VisualEditorOptionsBoxRight .VisualEditor_FontSizeSlider {
+    background: black none repeat scroll 0 0; }
+
+/*.visual-content-header {
   display: flex;
-  font-size: 20px;
+  font-size: $fs-gr-ct-head;
   background-color: #b3b3b3;
   color: #333;
   vertical-align: top;
-  width: 100%; }
-
+  width: 100%;
+}*/
 button {
   vertical-align: middle;
   cursor: pointer;
   font-size: 16px;
   padding: .4em 1em; }
 
-.VisualEditorOuterContainer {
+/*.VisualEditorOuterContainer {
+  color: rgb(163, 141, 109);
   display: block;
   position: relative;
   padding: 5px;
   z-index: 5;
   border: 2px solid #cc0000;
-  margin: 0 10px 7px 10px; }
-  .VisualEditorOuterContainer .VisualEditor_ShowHide {
+  margin: 0 10px 7px 10px;
+  .VisualEditor_ShowHide {
     float: left;
     width: 135px;
     height: 111px;
-    text-align: center; }
-    .VisualEditorOuterContainer .VisualEditor_ShowHide .VisualEditor_Show, .VisualEditorOuterContainer .VisualEditor_ShowHide .VisualEditor_Hide {
+    text-align: center;
+    .VisualEditor_Show, .VisualEditor_Hide {
       margin: 11px 0;
-      width: 90px; }
-  .VisualEditorOuterContainer .VisualEditorContainer {
+      width: 90px;
+    }
+    .VisualEditor_Hide {
+
+    }
+  }
+  .VisualEditorContainer {
     display: inline-block;
     position: relative;
     padding: 5px;
     border: 2px solid #00ff00;
-    z-index: 5; }
-    .VisualEditorOuterContainer .VisualEditorContainer .ColorPickersBox {
+    z-index: 5;
+    .ColorPickersBox {
       display: flex;
       flex-direction: column;
       float: left;
       width: 84px;
       position: relative;
-      z-index: 100; }
-      .VisualEditorOuterContainer .VisualEditorContainer .ColorPickersBox .ColorPickerTxt, .VisualEditorOuterContainer .VisualEditorContainer .ColorPickersBox .ColorPickerBrd, .VisualEditorOuterContainer .VisualEditorContainer .ColorPickersBox .ColorPickerBg {
+      z-index: 100;
+      .ColorPickerTxt, .ColorPickerBrd, .ColorPickerBg {
         display: flex;
         margin-bottom: 1px;
-        height: 32px; }
-        .VisualEditorOuterContainer .VisualEditorContainer .ColorPickersBox .ColorPickerTxt .ColorPickersLabel, .VisualEditorOuterContainer .VisualEditorContainer .ColorPickersBox .ColorPickerBrd .ColorPickersLabel, .VisualEditorOuterContainer .VisualEditorContainer .ColorPickersBox .ColorPickerBg .ColorPickersLabel {
+        height: 32px;
+        .ColorPickersLabel {
           display: inline-block;
           width: 30px;
-          font-weight: 700; }
-        .VisualEditorOuterContainer .VisualEditorContainer .ColorPickersBox .ColorPickerTxt .ColorPickerDiv .ps-colorpicker, .VisualEditorOuterContainer .VisualEditorContainer .ColorPickersBox .ColorPickerBrd .ColorPickerDiv .ps-colorpicker, .VisualEditorOuterContainer .VisualEditorContainer .ColorPickersBox .ColorPickerBg .ColorPickerDiv .ps-colorpicker {
-          margin: 2px;
-          padding: 4px;
-          vertical-align: middle; }
-    .VisualEditorOuterContainer .VisualEditorContainer .VisualEditorOptionsRightBox {
+          font-weight: 700;
+        }
+        .ColorPickerDiv {
+          .ps-colorpicker {
+            margin: 2px;
+            padding: 4px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .VisualEditorOptionsRightBox {
       display: inline-block;
       float: right;
       position: relative;
       z-index: 10;
-      /*.VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset, .VisualEditor_Sound {
-        font-size: 13px;
-      }*/ }
-      .VisualEditorOuterContainer .VisualEditorContainer .VisualEditorOptionsRightBox .VisualEditor_SizeSlider {
+      .VisualEditor_FontSizeSlider {
+        background-color: rgb(0, 0, 0);
+        border: 1px solid rgb(163, 141, 109);
+        display: inline-block;
+        font-size: 16px;
+        height: 12.8px;
+        margin: 5px 13px 5px 11px;
+        position: relative;
+        text-align: left;
         width: 153px;
-        margin: 5px 13px 5px 11px !important; }
-      .VisualEditorOuterContainer .VisualEditorContainer .VisualEditorOptionsRightBox .VisualEditor_Copy, .VisualEditorOuterContainer .VisualEditorContainer .VisualEditorOptionsRightBox .VisualEditor_Paste, .VisualEditorOuterContainer .VisualEditorContainer .VisualEditorOptionsRightBox .VisualEditor_Reset,
-      .VisualEditorOuterContainer .VisualEditorContainer .VisualEditorOptionsRightBox .VisualEditor_Sound, .VisualEditorOuterContainer .VisualEditorContainer .VisualEditorOptionsRightBox .VisualEditor_Icon, .VisualEditorOuterContainer .VisualEditorContainer .VisualEditorOptionsRightBox .VisualEditor_Beam {
+        .FontSizeSliderHandle {
+          background-color: rgb(15, 45, 101);
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          border-radius: 3px;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 700;
+          height: 19.2px;
+          left: 102px;
+          margin-left: -9.6px;
+          min-width: 19.2px;
+          padding: 3px;
+          position: absolute;
+          touch-action: none;
+          vertical-align: middle;
+          z-index: 2;
+        }
+      }
+      .VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset,
+      .VisualEditor_Sound, .VisualEditor_Icon, .VisualEditor_Beam {
         padding: 5px;
         width: 61px;
-        margin: 0 0 0 8px; }
-      .VisualEditorOuterContainer .VisualEditorContainer .VisualEditorOptionsRightBox .VisualEditor_Copy, .VisualEditorOuterContainer .VisualEditorContainer .VisualEditorOptionsRightBox .VisualEditor_Paste, .VisualEditorOuterContainer .VisualEditorContainer .VisualEditorOptionsRightBox .VisualEditor_Reset {
-        margin-bottom: 13px; }
-    .VisualEditorOuterContainer .VisualEditorContainer .Showcase {
+        margin: 0 0 0 8px;
+      }
+      .VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset {
+        margin-bottom: 13px;
+      }
+    }
+    .Showcase {
       width: 388px;
       height: 98px;
       display: inline-block;
@@ -167,8 +260,8 @@ button {
       background-size: 100%;
       text-align: center;
       position: relative;
-      z-index: 5; }
-      .VisualEditorOuterContainer .VisualEditorContainer .Showcase .ShowcaseInner {
+      z-index: 5;
+      .ShowcaseInner {
         position: relative;
         top: 50%;
         transform: translate(0, -50%);
@@ -176,24 +269,37 @@ button {
         max-height: 600px;
         padding: 5px;
         margin: auto 0 auto 31px;
-        z-index: 10; }
-        .VisualEditorOuterContainer .VisualEditorContainer .Showcase .ShowcaseInner .ShowcaseItem_Container .ShowcaseItem {
-          display: inline-block;
-          vertical-align: middle;
-          text-align: center; }
-          .VisualEditorOuterContainer .VisualEditorContainer .Showcase .ShowcaseInner .ShowcaseItem_Container .ShowcaseItem .ItemBackground {
-            display: inline-flex;
-            border: 1px solid pink;
-            padding: 5px;
-            position: relative;
-            top: 40%; }
-            .VisualEditorOuterContainer .VisualEditorContainer .Showcase .ShowcaseInner .ShowcaseItem_Container .ShowcaseItem .ItemBackground .ItemLabel {
-              font-size: 24px;
-              margin: 0 auto; }
-            .VisualEditorOuterContainer .VisualEditorContainer .Showcase .ShowcaseInner .ShowcaseItem_Container .ShowcaseItem .ItemBackground .ItemSocketsPreview .ItemSocket {
-              background-color: #ca0d32;
-              width: 4px;
-              height: 4px;
-              position: absolute;
-              top: 0;
-              left: 0; }
+        z-index: 10;
+        .ShowcaseItem_Container {
+          .ShowcaseItem {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            .ItemBackground {
+              display: inline-flex;
+              border: 1px solid pink;
+              padding: 5px;
+              position: relative;
+              top: 40%;
+              .ItemLabel {
+                font-size: 24px;
+                margin: 0 auto;
+              }
+              .ItemSocketsPreview {
+                .ItemSocket {
+                  background-color: rgb(202, 13, 50);
+                  width: 4px;
+                  height: 4px;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+*/
