@@ -1,107 +1,20 @@
 {% extends "editor/base.html" %}
-
-{% block containers %}
-    <main id="mainBody">
+{% block main %}
     <section id="VisualOuterDiv">
         <div id="Visual">
             <div id="VisualDiv2">
-                {% for section, header in headers.items %}
-                    <label id="SectionTitle" class="BroadTitle">{{ section }}</label>
-                    <div class="SubSection">
+                {% for section, headers in headings.items %}
+                    <label id="SectionLabel{{ forloop.counter }}" class="BroadTitle">{{ section }}</label>
+                    {% for subsection, tiers in headers.items %}
+                        <div id="SubSection" class="SubSection">
+                            <label id="SubSectionLabel" class="SubSectionLabel">{{ subsection }}</label>
+                        </div>
+                        <div id="Content" class="SubSectionContent">
 
-                    </div>
+                        </div>
+                    {% endfor %}
                 {% endfor %}
             </div>
         </div>
     </section>
-            {% for section, header in headers.items %}
-                <label class="section">{{ section }}</label>
-                <div class="container-group-holder">
-                    {% for title, subheader in header.items %}
-                        <div class="container-group">
-                            <label class="group-header">{{ title }}</label>
-                            {% for block, items in subheader.items %}
-                                <div class="VisualEditorContainer">
-                                    <label class="VisualEditorHeader">{{ block }}</label>
-                                    <div class="VisualEditorOuterContainer">
-                                        <form method="POST">
-                                            {% csrf_token %}
-                                            <div class="VisualEditor_ShowHide">
-                                                <button class="VisualEditor_Show" name="show{{ items.id }}">Show</button>
-                                                <button class="VisualEditor_Hide" name="hide{{ items.id }}">Hide</button>
-                                            </div>
-                                            <!--</form>-->
-                                            <div class="VisualEditorContainer">
-                                                <div class="ColorPickersBox">
-                                                    <div class="ColorPickerTxt">
-                                                        <label class="ColorPickersLabel">Txt</label>
-                                                        <div class="ColorPickerDiv">
-                                                            <input type='text' class="ps-colorpicker"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ColorPickerBrd">
-                                                        <label class="ColorPickersLabel">Brd</label>
-                                                        <div class="ColorPickerDiv">
-                                                            <input type='text' class="ps-colorpicker"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ColorPickerBg">
-                                                        <label class="ColorPickersLabel">Bg</label>
-                                                        <div class="ColorPickerDiv">
-                                                            <input type='text' class="ps-colorpicker"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="Showcase">
-                                                    <div class="ShowcaseInner">
-                                                        <div class="ShowcaseItem_Container">
-                                                            <div class="ShowCaseItem">
-                                                                <div class="ItemBackground">
-                                                                    <label class="ItemLabel">Item</label>
-                                                                    <div class="ItemSocketsPreview">
-                                                                        <div class="ItemSocket"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="VisualEditorOptionsBoxRight">
-                                                            <div class="VisualEditor_FontSizeSlider">
-                                                                <div class="FontSizeSliderHandle"></div>
-                                                            </div>
-                                                            <button class="VisualEditor_Copy" name="copy{{ items.id }}">Copy</button>
-                                                            <button class="VisualEditor_Paste" name="paste{{ items.id }}">Paste</button>
-                                                            <button class="VisualEditor_Reset" name="reset{{ items.id }}">Reset</button>
-                                                            <br>
-                                                            <!--<input class="VisualEditor_Sound" name="sound" type="button" value="Sound">-->
-                                                            <button class="VisualEditor_Sound" name="sound{{ items.id }}">Sound</button>
-                                                            <button class="VisualEditor_Icon" name="icon{{ items.id }}">Icon</button>
-                                                            <button class="VisualEditor_Beam" name="beam{{ items.id }}">Beam</button>
-                                                            <br>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--<div class="VisualEditorOptionsRightBox">
-                                                    <div class="VisualEditor_FontSizeSlider">
-                                                        <div class="FontSizeSliderHandle"></div>
-                                                    </div>
-                                                    <button class="VisualEditor_Copy" name="copy{{ items.id }}">Copy</button>
-                                                    <button class="VisualEditor_Paste" name="paste{{ items.id }}">Paste</button>
-                                                    <button class="VisualEditor_Reset" name="reset{{ items.id }}">Reset</button>
-                                                    <br>
-                                                    <input class="VisualEditor_Sound" name="sound" type="button" value="Sound">
-                                                    <button class="VisualEditor_Sound" name="sound{{ items.id }}">Sound</button>
-                                                    <button class="VisualEditor_Icon" name="icon{{ items.id }}">Icon</button>
-                                                    <button class="VisualEditor_Beam" name="beam{{ items.id }}">Beam</button>
-                                                    <br>
-                                                </div>-->
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            {% endfor %}
-                        </div>
-                    {% endfor %}
-                </div>
-            {% endfor %}
-    </main>
 {% endblock %}

@@ -1,16 +1,14 @@
 body {
   background: #000 no-repeat top center;
-  margin: 0;
-}
+  margin: 0; }
 
 #NavSelectionButtons {
   text-align: center;
   margin: 0 0 15px -25px;
   z-index: 9999999;
-  background: rgb(56, 56, 56) none repeat scroll 0 0;
+  background: #383838 none repeat scroll 0 0;
   white-space: nowrap;
-  display: -moz-box;
-}
+  display: -moz-box; }
 
 .NavSelectionButton {
   display: inline-block;
@@ -19,51 +17,46 @@ body {
   font-weight: 700;
   vertical-align: middle;
   cursor: pointer;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 #ButtonHome {
   border-left: medium none;
   width: 137px;
   height: 40px;
   margin: 0;
-  background: rgb(34, 34, 37) none repeat scroll 0 0;
+  background: #222225 none repeat scroll 0 0;
   border-color: currentcolor;
   border-width: medium medium 1px;
   border-style: none none solid;
-  border-image: none 100% / 1 / 0 stretch;
-}
+  border-image: none 100% / 1 / 0 stretch; }
 
 #ButtonTheme, #ButtonSettings {
   width: 137px;
   height: 40px;
   margin: 0;
-  background: rgb(34, 34, 37) none repeat scroll 0 0;
+  background: #222225 none repeat scroll 0 0;
   border-color: currentcolor;
   border-style: none none solid;
   border-width: medium medium 1px;
   border-image: none 100% / 1 / 0 stretch;
-  border-radius: 0;
-}
+  border-radius: 0; }
 
 #ButtonAbout {
   border-right: medium none;
   width: 137px;
   height: 40px;
   margin: 0;
-  background: rgb(34, 34, 37) none repeat scroll 0 0;
+  background: #222225 none repeat scroll 0 0;
   border-color: currentcolor;
   border-style: none none solid;
   border-width: medium medium 1px;
   border-image: none 100% / 1 / 0 stretch;
-  border-radius: 0;
-}
+  border-radius: 0; }
 
 .NavSelectionButton:hover {
   background-color: #0c1924;
   border-image: none;
-  font-size: 17px;
-}
+  font-size: 17px; }
 
 #mainBody {
   background-color: #0a0a0a;
@@ -74,44 +67,39 @@ body {
   border-radius: 3px;
   color: #a38d6d;
   min-height: 1200px;
-  display: block;
-}
+  display: block; }
 
 #VisualOuterDiv {
   color: #a38d6d;
-  display: block;
-}
+  display: block; }
 
 #Visual {
-  color: #a38d6d;
-}
+  color: #a38d6d; }
 
 #VisualDiv2 {
   border-color: #a38d6d;
   border-image-width: 1;
   margin: 0 !important;
-  padding: 0 !important;
-}
+  padding: 0 !important; }
 
 .BroadTitle {
   font-size: 36px;
   display: block;
   margin: 18px 0;
   font-weight: 700;
-  color: rgb(206, 110, 39);
+  color: #ce6e27;
   text-align: center;
-  border-color: rgb(206, 110, 39);
-  background: rgb(10, 10, 10) none repeat scroll 0 0;
+  border-color: #ce6e27;
+  background: #0a0a0a none repeat scroll 0 0;
   padding: 7px;
   letter-spacing: 2px;
-  border-style: double none;
-}
+  border-style: double none; }
 
 .SubSection {
   margin-bottom: 6px;
-  background: rgb(9, 22, 73) none repeat scroll 0 0;
+  background: #091649 none repeat scroll 0 0;
   border-radius: 2px;
-  color: rgb(254, 192, 118);
+  color: #fec076;
   cursor: pointer;
   border: 1px solid;
   border-color: transparent;
@@ -123,12 +111,10 @@ body {
   -moz-transition: 0.5s ease 0s;
   -ms-transition: 0.5s ease 0s;
   -o-transition: 0.5s ease 0s;
-  transition: 0.5s ease 0s;
-}
+  transition: 0.5s ease 0s; }
 
 .SubSection:hover {
-  background: rgb(9, 24, 132) none repeat scroll 0 0;
-}
+  background: #091884 none repeat scroll 0 0; }
 
 .SubSectionLabel {
   font-size: 26px;
@@ -139,16 +125,14 @@ body {
   vertical-align: middle;
   overflow: hidden;
   white-space: nowrap;
-  color: rgb(255, 255, 255);
-  letter-spacing: 1px;
-}
+  color: white;
+  letter-spacing: 1px; }
 
 .SubSectionContent {
   display: none;
-  background-color: rgb(17, 17, 17);
-  border: 1px solid rgb(58, 58, 58);
-  padding: 0 22px;
-}
+  background-color: #111111;
+  border: 1px solid #3a3a3a;
+  padding: 0 22px; }
 
 /*.SubSectionContent {
   display: block;
