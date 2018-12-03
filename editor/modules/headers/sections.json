@@ -1,0 +1,108 @@
+{
+  "General": {
+    "id": 1,
+    "Subsections": {
+      "Currency": {
+        "id": 1
+      },
+      "Divination Cards": {
+        "id": 2
+      },
+      "Vendor Recipes": {
+        "id": 3
+      },
+      "Unique Items": {
+        "id": 4
+      },
+      "Valuable Linked Items": {
+        "id": 5
+      },
+      "Current League: Delve": {
+        "id": 6
+      }
+    }
+  },
+  "Endgame - General": {
+    "id": 2,
+    "Subsections": {
+      "Maps": {
+        "id": 7
+      },
+      "Fragments": {
+        "id": 8
+      },
+      "Special Bases": {
+        "id": 9
+      }
+    }
+  },
+  "Endgame - Drops": {
+    "id": 3,
+    "Subsections": {
+      "Bases": {
+        "id": 10
+      },
+      "T1 & T2 Bases": {
+        "id": 11
+      },
+      "T3 & T4 Bases": {
+        "id": 12
+      },
+      "Shaper & Elder Items": {
+        "id": 13
+      },
+      "Custom": {
+        "id": 14
+      }
+    }
+  },
+  "Miscellaneous": {
+    "id": 4,
+    "Subsection": {
+      "Flasks": {
+        "id": 15
+      },
+      "Skill Gems": {
+        "id": 16
+      },
+      "Misc. Items": {
+        "id": 17
+      }
+    }
+  },
+  "Crafting": {
+    "id": 5,
+    "Subsections": {
+      "T1 & T2 Bases": {
+        "id": 18
+      },
+      "Shaper & Elder Items": {
+        "id": 19
+      },
+      "High iLvl T2+ Bases": {
+        "id": 20
+      },
+      "Custom": {
+        "id": 21
+      }
+    }
+  },
+  "League-specific Items": {
+    "id": 6,
+    "Subsections": {
+      "Abyss League": {
+        "name": "Abyss League",
+        "id": 22
+      }
+    }
+  },
+  "Leveling": {
+    "id": 7,
+    "Subsections": {
+      "Item Progression": {
+        "name": "Item Progression",
+        "id": 23
+      }
+    }
+  }
+}
