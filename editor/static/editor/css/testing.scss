@@ -107,7 +107,7 @@ body {
   border-style: double none;
 }
 
-.SubSection {
+.Subsection {
   margin-bottom: 6px;
   background: rgb(9, 22, 73) none repeat scroll 0 0;
   border-radius: 2px;
@@ -126,11 +126,11 @@ body {
   transition: 0.5s ease 0s;
 }
 
-.SubSection:hover {
+.Subsection:hover {
   background: rgb(9, 24, 132) none repeat scroll 0 0;
 }
 
-.SubSectionLabel {
+.SubsectionLabel {
   font-size: 26px;
   display: inline-block;
   margin: 5px 10px 5px 5px;
@@ -143,14 +143,14 @@ body {
   letter-spacing: 1px;
 }
 
-.SubSectionContent {
+.SubsectionContent {
   display: none;
   background-color: rgb(17, 17, 17);
   border: 1px solid rgb(58, 58, 58);
   padding: 0 22px;
 }
 
-/*.SubSectionContent {
+/*.SubsectionContent {
   display: block;
   margin-bottom: 40px;
   padding: 22px;
