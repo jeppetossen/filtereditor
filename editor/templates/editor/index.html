@@ -7,7 +7,7 @@
                     <label id="SectionLabel{{ forloop.counter }}" class="BroadTitle">{{ section }}</label>
                     {% for subsection, tiers in headers.items %}
                         <div id="SubSection" class="SubSection">
-                            <label id="SubSectionLabel" class="SubSectionLabel">{{ subsection }}</label>
+                            <label id="SubSectionLabel{{ section }}" class="SubSectionLabel">{{ subsection }}</label>
                         </div>
                         <div id="Content" class="SubSectionContent">
 
