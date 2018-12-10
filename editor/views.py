@@ -52,10 +52,8 @@ def index(request):
         beam_apply.save()
         return HttpResponseRedirect('')
     else:
-        # subsections = headers()
         sections = headers.load_headers()
-        return render(request, "editor/index.html", {"headings": sections,
-                                                     "subsections": ""})
+        return render(request, "editor/index.html", {"headings": sections})
 
 
 class ThemePageView(TemplateView):
