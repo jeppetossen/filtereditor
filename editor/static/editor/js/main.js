@@ -21,7 +21,19 @@
 });*/
 
 $(document).ready(function () {
-    $(".SubSection").on('click', function (event) {
-        let target_parent = $(event.target).parent().find("")
-    })
+    $(".Subsection").on('click', function (event) {
+        let element = event.target.classList;
+        //alert(element);
+        if (element.contains("closed")) {
+            element.remove("closed");
+            element.add("open");
+        } else if (element.contains("open")) {
+            element.remove("open");
+            element.add("closed");
+        }
+    });
+
+    function toggleContentElements(event) {
+
+    }
 });
