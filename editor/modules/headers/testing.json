@@ -1,0 +1,246 @@
+{
+  "Section1": {
+    "id": 1,
+    "name": "General",
+    "Subsections": {
+      "Subsection1": {
+        "id": 1,
+        "name": "Currency",
+        "Blocks": {
+          "Block1": {
+            "id": 1,
+            "name": "Tier 1:"
+          },
+          "Block2": {
+            "id": 2,
+            "name": "Tier 2:"
+          },
+          "Block3": {
+            "id": 3,
+            "name": "Tier 3:"
+          },
+          "Block4": {
+            "id": 4,
+            "name": "Tier 4"
+          },
+          "Block5": {
+            "id": 5,
+            "name": "Tier 5"
+          },
+          "Block6": {
+            "id": 6,
+            "name": "Tier 6"
+          },
+          "Block7": {
+            "id": 7,
+            "name": "Tier 7"
+          }
+        }
+      },
+      "Subsection2": {
+        "id": 2,
+        "name": "Divination Cards",
+        "Blocks": {
+          "Block8": {
+            "id": 8,
+            "name": "Tier 1:"
+          },
+          "Block9": {
+            "id": 9,
+            "name": "Tier 2:"
+          },
+          "Block10": {
+            "id": 10,
+            "name": "Tier 3:"
+          },
+          "Block11": {
+            "id": 11,
+            "name": "Tier 4"
+          },
+          "Block12": {
+            "id": 12,
+            "name": "Tier 5"
+          }
+        }
+      },
+      "Subsection3": {
+        "id": 3,
+        "name": "Vendor Recipes",
+        "Blocks": {
+          "Block13": {
+            "id": 13,
+            "name": "Chromatic Orb"
+          },
+          "Block14": {
+            "id": 14,
+            "name": "Jeweller Orbs"
+          },
+          "Block15": {
+            "id": 15,
+            "name": "Gemcutter's Prism"
+          },
+          "Block16": {
+            "id": 16,
+            "name": "Cartographer's Chisel"
+          },
+          "Block17": {
+            "id": 17,
+            "name": "Glassblower's Bauble"
+          }
+        }
+      },
+      "Subsection4": {
+        "id": 4,
+        "name": "Unique Items",
+        "Blocks": {
+          "Block18": {
+            "id": 18,
+            "name": "Tier 1:"
+          },
+          "Block19": {
+            "id": 19,
+            "name": "Tier 2:"
+          },
+          "Block20": {
+            "id": 20,
+            "name": "Tier 3:"
+          },
+          "Block21": {
+            "id": 21,
+            "name": "Tier 4:"
+          },
+          "Block22": {
+            "id": 22,
+            "name": "Tier 5:"
+          },
+          "Block23": {
+            "id": 23,
+            "name": "Tier 6:"
+          }
+        }
+      },
+      "Subsection5": {
+        "id": 5,
+        "name": "Current League: Delve",
+        "Blocks": {
+          "Block24": {
+            "id": 24,
+            "name": "Reliquary Keys"
+          },
+          "Block25": {
+            "id": 25,
+            "name": "Delve Mods"
+          },
+          "Block26": {
+            "id": 26,
+            "name": "Delve Currency"
+          }
+        }
+      }
+    }
+  },
+  "Section2": {
+    "id": 2,
+    "name": "Endgame - General",
+    "Subsections": {
+      "Subsection1": {
+        "id": 6,
+        "name": "Maps"
+      },
+      "Subsection2": {
+        "id": 7,
+        "name": "Fragments"
+      },
+      "Subsection3": {
+        "id": 8,
+        "name": "Special Bases"
+      }
+    }
+  },
+  "Section3": {
+    "id": 3,
+    "name": "Endgame - Drops",
+    "Subsections": {
+      "Subsection1": {
+        "id": 9,
+        "name": "Bases"
+      },
+      "Subsection2": {
+        "id": 10,
+        "name": "T1 & T2 Bases"
+      },
+      "Subsection3": {
+        "id": 11,
+        "name": "T3 & T4 Bases"
+      },
+      "Subsection4": {
+        "id": 12,
+        "name": "Shaper & Elder Items"
+      },
+      "Subsection5": {
+        "id": 13,
+        "name": "Custom"
+      }
+    }
+  },
+  "Section4": {
+    "id": 4,
+    "name": "Miscellaneous",
+    "Subsections": {
+      "Subsection1": {
+        "id": 14,
+        "name": "Flasks"
+      },
+      "Subsection2": {
+        "id": 15,
+        "name": "Skill Gems"
+      },
+      "Subsection3": {
+        "id": 16,
+        "name": "Misc. Items"
+      }
+    }
+  },
+  "Section5": {
+    "id": 5,
+    "name": "Crafting",
+    "Subsections": {
+      "Subsection1": {
+        "id": 17,
+        "name": "T1 & T2 Bases"
+      },
+      "Subsection2": {
+        "id": 18,
+        "name": "Shaper & Elder Items"
+      },
+      "Subsection3": {
+        "id": 19,
+        "name": "High iLvl T2+ Bases"
+      },
+      "Subsection4": {
+        "id": 20,
+        "name": "Custom"
+      }
+    }
+  },
+  "Section6": {
+    "id": 6,
+    "name": "League-Specific Items",
+    "Subsections": {
+      "Subsection1": {
+        "id": 21,
+        "name": "Abyss League"
+      }
+    }
+  },
+  "Section7": {
+    "id": 7,
+    "name": "Leveling",
+    "Subsections": {
+      "Subsection1": {
+        "id": 22,
+        "name": "Item Progression"
+      }
+    }
+  }
+}
