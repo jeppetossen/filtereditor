@@ -2,7 +2,7 @@ import json
 
 
 def load_headers():
-    file = "editor/modules/headers/sections.json"
+    file = "editor/modules/headers/testing.json"
     # file = "headers.json"
     with open(file, "r") as f:
         data = json.load(f)
