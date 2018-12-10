@@ -3,15 +3,19 @@
     <section id="VisualOuterDiv">
         <div id="Visual">
             <div id="VisualDiv2">
-                {% for section, headers in headings.items %}
-                    <label id="SectionLabel{{ forloop.counter }}" class="BroadTitle">{{ section }}</label>
-                    {% for subsection, tiers in headers.items %}
-                        <div id="SubSection" class="SubSection">
-                            <label id="SubSectionLabel{{ section }}" class="SubSectionLabel">{{ subsection }}</label>
-                        </div>
-                        <div id="Content" class="SubSectionContent">
+                {% for section, sections in headings.items %}
+                    <label id="SectionLabel_{{ sections.id }}" class="BroadTitle">{{ sections.name }}</label>
+                    {% for property, properties in sections.items %}
+                        {% for subsection, subsections in properties.items %}
+                            <div id="Subsection_{{ subsections.id }}" class="Subsection closed">
+                                <label id="SubsectionLabel_{{ subsections.id }}" class="SubsectionLabel">{{ subsections.name }}</label>
+                            </div>
+                            <div id="SubsectionContent_{{ subsections.id }}" class="SubsectionContent">
+                                <div class="AccordionButtonBlock">
 
-                        </div>
+                                </div>
+                            </div>
+                        {% endfor %}
                     {% endfor %}
                 {% endfor %}
             </div>
