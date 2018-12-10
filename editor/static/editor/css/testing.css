@@ -95,7 +95,7 @@ body {
   letter-spacing: 2px;
   border-style: double none; }
 
-.Subsection {
+.Subsection:not(.open) {
   margin-bottom: 6px;
   background: #091649 none repeat scroll 0 0;
   border-radius: 2px;
@@ -113,7 +113,23 @@ body {
   -o-transition: 0.5s ease 0s;
   transition: 0.5s ease 0s; }
 
-.Subsection:hover {
+.Subsection:not(.closed) {
+  background: #050505 none repeat scroll 0 0;
+  border-radius: 6px 6px 0 0;
+  color: #a38d6d;
+  cursor: pointer;
+  border: 1px solid;
+  outline: currentColor none 0;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 16px;
+  -webkit-transition: 0.5s ease 0s;
+  -moz-transition: 0.5s ease 0s;
+  -ms-transition: 0.5s ease 0s;
+  -o-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s; }
+
+.Subsection:not(.open):hover {
   background: #091884 none repeat scroll 0 0; }
 
 .SubsectionLabel {
@@ -134,10 +150,30 @@ body {
   border: 1px solid #3a3a3a;
   padding: 0 22px; }
 
-/*.SubsectionContent {
+.SubsectionContent {
+  background-color: #111111;
   display: block;
   margin-bottom: 40px;
   padding: 22px;
-  border: 1px solid rgb(58, 58, 58);
-  border-radius: 0 0 6px 6px;
-}*/
+  border: 1px solid #3a3a3a;
+  border-radius: 0 0 6px 6px; }
+
+.AccordionButtonBlock {
+  background: #091649 none repeat scroll 0 0;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  padding: 8px;
+  color: #fec076;
+  border-color: transparent;
+  cursor: pointer;
+  border: 1px solid;
+  letter-spacing: 1px;
+  font-weight: 700;
+  -webkit-transition: border-color 0.5s ease 0s;
+  -moz-transition: border-color 0.5s ease 0s;
+  -ms-transition: border-color 0.5s ease 0s;
+  -o-transition: border-color 0.5s ease 0s;
+  transition: border-color 0.5s ease 0s; }
+
+.AccordionButtonBlock:hover {
+  background: #091884 none repeat scroll 0 0; }

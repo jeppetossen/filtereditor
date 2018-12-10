@@ -107,7 +107,7 @@ body {
   border-style: double none;
 }
 
-.Subsection {
+.Subsection:not(.open) {
   margin-bottom: 6px;
   background: rgb(9, 22, 73) none repeat scroll 0 0;
   border-radius: 2px;
@@ -126,7 +126,24 @@ body {
   transition: 0.5s ease 0s;
 }
 
-.Subsection:hover {
+.Subsection:not(.closed) {
+  background: rgb(5, 5, 5) none repeat scroll 0 0;
+  border-radius: 6px 6px 0 0;
+  color: rgb(163, 141, 109);
+  cursor: pointer;
+  border: 1px solid;
+  outline: currentColor none 0;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 16px;
+  -webkit-transition: 0.5s ease 0s;
+  -moz-transition: 0.5s ease 0s;
+  -ms-transition: 0.5s ease 0s;
+  -o-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+}
+
+.Subsection:not(.open):hover {
   background: rgb(9, 24, 132) none repeat scroll 0 0;
 }
 
@@ -150,10 +167,34 @@ body {
   padding: 0 22px;
 }
 
-/*.SubsectionContent {
+// Blocks
+.SubsectionContent {
+  background-color: rgb(17, 17, 17);
   display: block;
   margin-bottom: 40px;
   padding: 22px;
   border: 1px solid rgb(58, 58, 58);
   border-radius: 0 0 6px 6px;
-}*/
+}
+
+.AccordionButtonBlock {
+  background: rgb(9, 22, 73) none repeat scroll 0 0;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  padding: 8px;
+  color: rgb(254, 192, 118);
+  border-color: transparent;
+  cursor: pointer;
+  border: 1px solid;
+  letter-spacing: 1px;
+  font-weight: 700;
+  -webkit-transition: border-color 0.5s ease 0s;
+  -moz-transition: border-color 0.5s ease 0s;
+  -ms-transition: border-color 0.5s ease 0s;
+  -o-transition: border-color 0.5s ease 0s;
+  transition: border-color 0.5s ease 0s;
+}
+
+.AccordionButtonBlock:hover {
+  background: rgb(9, 24, 132) none repeat scroll 0 0;
+}
