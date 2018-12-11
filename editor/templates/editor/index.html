@@ -5,16 +5,20 @@
             <div id="VisualDiv2">
                 {% for section, sections in headings.items %}
                     <label id="SectionLabel_{{ sections.id }}" class="BroadTitle">{{ sections.name }}</label>
-                    {% for property, properties in sections.items %}
-                        {% for subsection, subsections in properties.items %}
-                            <div id="Subsection_{{ subsections.id }}" class="Subsection closed">
-                                <label id="SubsectionLabel_{{ subsections.id }}" class="SubsectionLabel">{{ subsections.name }}</label>
-                            </div>
-                            <div id="SubsectionContent_{{ subsections.id }}" class="SubsectionContent">
-                                <div class="AccordionButtonBlock">
+                    {% for subprop, subprops in sections.items %}
+                        {% for subsection, subsections in subprops.items %}
+                            {% for blockprop, blockprops in subsections.items %}
+                                {% for block, blocks in blockprops.items %}
+                                    <div id="Subsection_{{ subsections.id }}" class="Subsection closed">
+                                        <label id="SubsectionLabel_{{ subsections.id }}" class="SubsectionLabel">{{ subsections.name }}</label>
+                                    </div>
+                                    <div id="SubsectionBlock_{{ subsections.id }}" class="SubsectionBlock">
+                                        <div class="AccordionButtonBlock">
 
-                                </div>
-                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% endfor %}
                         {% endfor %}
                     {% endfor %}
                 {% endfor %}

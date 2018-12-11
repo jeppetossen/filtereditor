@@ -144,13 +144,13 @@ body {
   color: white;
   letter-spacing: 1px; }
 
-.SubsectionContent {
+.SubsectionBlock:not(.open) {
   display: none;
   background-color: #111111;
   border: 1px solid #3a3a3a;
   padding: 0 22px; }
 
-.SubsectionContent {
+.SubsectionBlock:not(.closed) {
   background-color: #111111;
   display: block;
   margin-bottom: 40px;

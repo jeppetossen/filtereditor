@@ -160,7 +160,7 @@ body {
   letter-spacing: 1px;
 }
 
-.SubsectionContent {
+.SubsectionBlock:not(.open) {
   display: none;
   background-color: rgb(17, 17, 17);
   border: 1px solid rgb(58, 58, 58);
@@ -168,7 +168,7 @@ body {
 }
 
 // Blocks
-.SubsectionContent {
+.SubsectionBlock:not(.closed) {
   background-color: rgb(17, 17, 17);
   display: block;
   margin-bottom: 40px;
