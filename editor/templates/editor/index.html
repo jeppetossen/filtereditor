@@ -3,23 +3,19 @@
     <section id="VisualOuterDiv">
         <div id="Visual">
             <div id="VisualDiv2">
-                {% for section, sections in headings.items %}
-                    <label id="SectionLabel_{{ sections.id }}" class="BroadTitle">{{ sections.name }}</label>
-                    {% for subprop, subprops in sections.items %}
-                        {% for subsection, subsections in subprops.items %}
-                            {% for blockprop, blockprops in subsections.items %}
-                                {% for block, blocks in blockprops.items %}
-                                    <div id="Subsection_{{ subsections.id }}" class="Subsection closed">
-                                        <label id="SubsectionLabel_{{ subsections.id }}" class="SubsectionLabel">{{ subsections.name }}</label>
-                                    </div>
-                                    <div id="SubsectionBlock_{{ subsections.id }}" class="SubsectionBlock">
-                                        <div class="AccordionButtonBlock">
-
-                                        </div>
-                                    </div>
-                                {% endfor %}
+                {% for section in sections %}
+                    <label id="SectionLabel_{{ section.id }}" class="BroadTitle">{{ section.name }}</label>
+                    {% for subsection in section.Subsections %}
+                        <div id="Subsection_{{ subsection.id }}" class="Subsection closed">
+                            <label id="SubsectionLabel_{{ subsection.id }}" class="SubsectionLabel">{{ subsection.name }}</label>
+                        </div>
+                        <div class="SubsectionBlockContent">
+                            {% for blocksub in subsection.BlockSections %}
+                                <div class="AccordionButtonBlock">
+                                    <label id="BlockSubsectionLabel_{{ blocksub.id }}" class="BlockSubsectionLabel">{{ blocksub.name }}</label>
+                                </div>
                             {% endfor %}
-                        {% endfor %}
+                        </div>
                     {% endfor %}
                 {% endfor %}
             </div>
