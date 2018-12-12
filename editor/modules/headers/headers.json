@@ -1,5 +1,458 @@
 {
-  "Sections": {
-    
-  }
+  "Sections": [
+    {
+      "name": "General",
+      "id": 1,
+      "Subsections": [
+        {
+          "name": "Currency",
+          "id": 1,
+          "BlockSections": [
+            {
+              "name": "Tier 1:",
+              "id": 1
+            },
+            {
+              "name": "Tier 2:",
+              "id": 2
+            },
+            {
+              "name": "Tier 3:",
+              "id": 3
+            },
+            {
+              "name": "Tier 4:",
+              "id": 4
+            },
+            {
+              "name": "Tier 5:",
+              "id": 5
+            },
+            {
+              "name": "Tier 6:",
+              "id": 6
+            },
+            {
+              "name": "Tier 7:",
+              "id": 7
+            }
+          ]
+        },
+        {
+          "name": "Divination Cards",
+          "id": 2,
+          "BlockSections": [
+            {
+              "name": "Tier 1:",
+              "id": 8
+            },
+            {
+              "name": "Tier 2:",
+              "id": 9
+            },
+            {
+              "name": "Tier 3:",
+              "id": 10
+            },
+            {
+              "name": "Tier 4:",
+              "id": 11
+            },
+            {
+              "name": "Tier 5:",
+              "id": 12
+            }
+          ]
+        },
+        {
+          "name": "Vendor Recipes",
+          "id": 3,
+          "BlockSections": [
+            {
+              "name": "Chromatic Orb",
+              "id": 13
+            },
+            {
+              "name": "Jeweller Orbs",
+              "id": 14
+            },
+            {
+              "name": "Gemcutter's Prism",
+              "id": 15
+            },
+            {
+              "name": "Cartographer's Chisel",
+              "id": 16
+            },
+            {
+              "name": "Glassblower's Bauble",
+              "id": 17
+            }
+          ]
+        },
+        {
+          "name": "Unique Items",
+          "id": 4,
+          "BlockSections": [
+            {
+              "name": "Tier 1:",
+              "id": 18
+            },
+            {
+              "name": "Tier 2:",
+              "id": 19
+            },
+            {
+              "name": "Tier 3:",
+              "id": 20
+            },
+            {
+              "name": "Tier 4:",
+              "id": 21
+            },
+            {
+              "name": "Tier 5:",
+              "id": 22
+            },
+            {
+              "name": "Tier 6:",
+              "id": 23
+            }
+          ]
+        },
+        {
+          "name": "Current League: Abyssal",
+          "id": 5,
+          "BlockSections": [
+            {
+              "name": "Veiled Mods",
+              "id": 24
+            },
+            {
+              "name": "Scarabs",
+              "id": 25
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Endgame - General",
+      "id": 2,
+      "Subsections": [
+        {
+          "name": "Maps",
+          "id": 6,
+          "BlockSections": [
+            {
+              "name": "Specific Maps",
+              "id": 26
+            },
+            {
+              "name": "Map Properties",
+              "id": 27
+            },
+            {
+              "name": "Tier Specific Settings",
+              "id": 28
+            },
+            {
+              "name": "Appearance",
+              "id": 29
+            },
+            {
+              "name": "Unique Maps",
+              "id": 30
+            }
+          ]
+        },
+        {
+          "name": "Fragments",
+          "id": 7,
+          "BlockSections": [
+            {
+              "name": "Breachstones",
+              "id": 31
+            },
+            {
+              "name": "Uber Lab Offering",
+              "id": 32
+            },
+            {
+              "name": "Fragments, Tier 1:",
+              "id": 33
+            },
+            {
+              "name": "Fragments, Tier 2:",
+              "id": 34
+            },
+            {
+              "name": "Fragments, Tier 3:",
+              "id": 35
+            },
+            {
+              "name": "Fragments, Remaining",
+              "id": 36
+            }
+          ]
+        },
+        {
+          "name": "Special Bases",
+          "id": 8,
+          "BlockSections": [
+            {
+              "name": "Block37",
+              "id": 37
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Endgame - Drops",
+      "id": 3,
+      "Subsections": [
+        {
+          "name": "Bases",
+          "id": 9,
+          "BlockSections": [
+            {
+              "name": "Block38",
+              "id": 38
+            }
+          ]
+        },
+        {
+          "name": "T1 & T2 Bases",
+          "id": 10,
+          "BlockSections": [
+            {
+              "name": "Block39",
+              "id": 39
+            }
+          ]
+        },
+        {
+          "name": "T3 & T4 Bases",
+          "id": 11,
+          "BlockSections": [
+            {
+              "name": "Block40",
+              "id": 40
+            }
+          ]
+        },
+        {
+          "name": "Shaper & Elder Items",
+          "id": 12,
+          "BlockSections": [
+            {
+              "name": "Block41",
+              "id": 41
+            }
+          ]
+        },
+        {
+          "name": "Custom",
+          "id": 13,
+          "BlockSections": [
+            {
+              "name": "Block42",
+              "id": 42
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Miscellaneous",
+      "id": 4,
+      "Subsections": [
+        {
+          "name": "Flasks",
+          "id": 14,
+          "BlockSections": [
+            {
+              "name": "Utility Flasks",
+              "id": 43
+            },
+            {
+              "name": "Life Flasks",
+              "id": 44
+            },
+            {
+              "name": "Mana Flasks",
+              "id": 45
+            },
+            {
+              "name": "Hybrid Flasks",
+              "id": 46
+            }
+          ]
+        },
+        {
+          "name": "Skill Gems",
+          "id": 15,
+          "BlockSections": [
+            {
+              "name": "Top Gems",
+              "id": 47
+            },
+            {
+              "name": "Gem Tiers",
+              "id": 48
+            },
+            {
+              "name": "Leveled Gems",
+              "id": 49
+            }
+          ]
+        },
+        {
+          "name": "Misc. Items",
+          "id": 16,
+          "BlockSections": [
+            {
+              "name": "Labyrinth Items",
+              "id": 50
+            },
+            {
+              "name": "Random Quest Items",
+              "id": 51
+            },
+            {
+              "name": "Shaper Orb",
+              "id": 52
+            }
+          ]
+        },
+        {
+          "name": "Valuable Linked Items",
+          "id": 17,
+          "BlockSections": [
+            {
+              "name": "6-Linked Items",
+              "id": 53
+            },
+            {
+              "name": "Leveling 5-Linked Items",
+              "id": 54
+            },
+            {
+              "name": "Endgame 5-Linked Items",
+              "id": 55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Crafting",
+      "id": 5,
+      "Subsections": [
+        {
+          "name": "T1 & T2 Bases",
+          "id": 18,
+          "BlockSections": [
+            {
+              "name": "Block56",
+              "id": 56
+            }
+          ]
+        },
+        {
+          "name": "Shaper & Elder Items",
+          "id": 19,
+          "BlockSections": [
+            {
+              "name": "Block57",
+              "id": 57
+            }
+          ]
+        },
+        {
+          "name": "High iLvl T2+ Bases",
+          "id": 20,
+          "BlockSections": [
+            {
+              "name": "Block58",
+              "id": 58
+            }
+          ]
+        },
+        {
+          "name": "Custom",
+          "id": 21,
+          "BlockSections": [
+            {
+              "name": "Block59",
+              "id": 59
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "League-Specific Items",
+      "id": 6,
+      "Subsections": [
+        {
+          "name": "Abyss League",
+          "id": 22,
+          "BlockSections": [
+            {
+              "name": "Jewels",
+              "id": 60
+            },
+            {
+              "name": "Stygian Vise",
+              "id": 61
+            }
+          ]
+        },
+        {
+          "name": "Delve League",
+          "id": 23,
+          "BlockSections": [
+            {
+              "name": "Resonators",
+              "id": 62
+            },
+            {
+              "name": "Fossils",
+              "id": 63
+            },
+            {
+              "name": "Delve Mods",
+              "id": 64
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Leveling",
+      "id": 7,
+      "Subsections": [
+        {
+          "name": "Item Progression",
+          "id": 24,
+          "BlockSections": [
+            {
+              "name": "Progression 1",
+              "id": 65
+            },
+            {
+              "name": "Progression 2",
+              "id": 66
+            },
+            {
+              "name": "Progression 3",
+              "id": 67
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
