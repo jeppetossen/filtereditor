@@ -2,23 +2,24 @@ import json
 
 
 def load_headers():
-    # file = "editor/modules/headers/testing.json"
-    file = "testing.json"
+    file = "editor/modules/headers/headers.json"
+    # file = "headers.json"
     with open(file, "r") as f:
         data = json.load(f)
         f.close()
 
-    return data
+    sections = None
+    for k, v in data.items():
+        sections = v
+
+    return sections
 
 
 def get_sections():
     data = load_headers()
     section_names = list()
-    for item in data:
-        # sections.append(item)
-        for prop in data[item]:
-            if prop == "name":
-                section_names.append(data[item]["name"])
+    for k in data:
+        section_names.append(k["name"])
 
     return section_names
 
@@ -26,19 +27,24 @@ def get_sections():
 def get_subsections():
     data = load_headers()
     subsection_names = list()
-    for item in data:
-        for section_prop in data[item]:
-            for subsection in data[item]["Subsections"]:
-                for subsection_name in data[item]["Subsections"][subsection]:
-                    if subsection_name == "name":
-                        subsection_names.append(data[item]["Subsections"][subsection][subsection_name])
-
+    for k in data:
+        for v in k["Subsections"]:
+            subsection_names.append(v["name"])
     return subsection_names
 
 
+def get_block_sections():
+    data = load_headers()
+    blocksection_names = list()
+    for k in data:
+        for v in k["Subsections"]:
+            for h in v["BlockSections"]:
+                blocksection_names.append(h["name"])
+    return blocksection_names
+
+
 if __name__ == '__main__':
-    print(test())
+    print(load_headers())
     # print(get_sections())
-    #print(len(get_subsections()))
-    # print(retrieve_header_id())
-    # print(str(len(retrieve_header_id()[1])))
+    # print(get_subsections())
+    # print(get_block_sections())
