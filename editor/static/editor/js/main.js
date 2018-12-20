@@ -13,6 +13,7 @@
 });*/
 
 $(document).ready(function () {
+    // TODO: Clean up and make it less repeatable code
     $(".Subsection").on('click', function (event) {
         let element = event.target;
         let elementClist = element.classList;
