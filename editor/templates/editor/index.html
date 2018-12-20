@@ -9,7 +9,7 @@
                         <div id="Subsection_{{ subsection.id }}" class="Subsection closed">
                             <label id="SubsectionLabel_{{ subsection.id }}" class="SubsectionLabel">{{ subsection.name }}</label>
                         </div>
-                        <div class="SubsectionBlockContent">
+                        <div id="SubsectionBlockContent_{{ subsection.id }}" class="SubsectionBlockContent closed">
                             {% for blocksub in subsection.BlockSections %}
                                 <div class="AccordionButtonBlock">
                                     <label id="BlockSubsectionLabel_{{ blocksub.id }}" class="BlockSubsectionLabel">{{ blocksub.name }}</label>
