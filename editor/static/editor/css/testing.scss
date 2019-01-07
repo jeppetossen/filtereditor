@@ -185,7 +185,7 @@ body {
   color: rgb(254, 192, 118);
   border-color: transparent;
   cursor: pointer;
-  border: 1px solid;
+  // border: 1px solid;
   letter-spacing: 1px;
   font-weight: 700;
   -webkit-transition: border-color 0.5s ease 0s;
@@ -197,4 +197,31 @@ body {
 
 .AccordionButtonBlock:hover {
   background: rgb(9, 24, 132) none repeat scroll 0 0;
+}
+
+.BlockSubsectionLabel {
+  display: inline-block;
+  font-size: 24px;
+  margin: 5px 10px 5px 5px;
+  cursor: pointer;
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffffff;
+}
+
+.AccordionBlockContent:not(.open) {
+  display: none;
+}
+
+.AccordionBlockContent:not(.closed) {
+  display: block;
+}
+
+.VisualEditorDiv {
+
+}
+
+.VisualEditorLabel {
+
 }

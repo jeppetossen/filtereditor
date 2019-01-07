@@ -12,7 +12,12 @@
                         <div id="SubsectionBlockContent_{{ subsection.id }}" class="SubsectionBlockContent closed">
                             {% for blocksub in subsection.BlockSections %}
                                 <div class="AccordionButtonBlock">
-                                    <label id="BlockSubsectionLabel_{{ blocksub.id }}" class="BlockSubsectionLabel">{{ blocksub.name }}</label>
+                                    <label id="BlockSubsectionLabel_{{ blocksub.id }}" class="BlockSubsectionLabel {{ subsection.editor }}">{{ blocksub.name }}</label>
+                                </div>
+                                <div class="AccordionBlockContent closed">
+                                    <div class="VisualEditorDiv">
+                                        <label class="VisualEditorLabel"></label>
+                                    </div>
                                 </div>
                             {% endfor %}
                         </div>
