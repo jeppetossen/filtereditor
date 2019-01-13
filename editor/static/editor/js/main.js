@@ -32,6 +32,24 @@ $(document).ready(function () {
         }
     });
 
+    $(".BlockSubsection").on('click', function (event) {
+        let element = event.target;
+        let elementClist = element.classList;
+        let elementIdNumber = element.id.split("_")[1];
+        let subContent = targetElementByIdBlock(elementIdNumber).classList;
+        if (elementClist.contains("closed")) {
+            subContent.remove("closed");
+            subContent.add("open");
+            elementClist.remove("closed");
+            elementClist.add("open");
+        } else if (elementClist.contains("open")) {
+            subContent.remove("open");
+            subContent.add("closed");
+            elementClist.remove("open");
+            elementClist.add("closed");
+        }
+    });
+
     function targetId(element) {
         return element.id;
     }
@@ -41,18 +59,11 @@ $(document).ready(function () {
         return elementSplit[1];
     }
 
+    // TODO: Make a cleaner solution
     function targetElementById(elementId) {
-        let element = document.getElementById("SubsectionBlockContent_" + elementId);
-        return element;
+        return document.getElementById("SubsectionBlockContent_" + elementId);
     }
-
-    function toggleSubsectionBlocks(element) {
-        if (element.contains("closed")) {
-            element.remove("closed");
-            element.add("open");
-        } else if (element.contains("open")) {
-            element.remove("open");
-            element.add("closed");
-        }
+    function targetElementByIdBlock(elementId) {
+        return document.getElementById("BlockSubsectionContent_" + elementId);
     }
 });
