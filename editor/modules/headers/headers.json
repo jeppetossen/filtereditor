@@ -1202,7 +1202,7 @@
         {
           "name": "Breach League",
           "id": 16,
-          "editor": "True",
+          "editor": "False",
           "BlockSections": [
             {
               "name": "Splinters",
@@ -1590,7 +1590,7 @@
           "name": "Valuable Linked Items",
           "id": 23,
           "editor": "True",
-          "BlockSections": [
+          "Blocks": [
             {
               "name": "6-Linked Items",
               "id": 237
@@ -1614,7 +1614,7 @@
           "BlockSections": [
             {
               "name": "Progression 1",
-              "id": 101,
+              "id": 109,
               "Blocks": [
                 {
                   "name": "Item Progression Editor",
@@ -1624,7 +1624,7 @@
             },
             {
               "name": "Progression 2",
-              "id": 102,
+              "id": 110,
               "Blocks": [
                 {
                   "name": "Item Progression Editor",
@@ -1634,7 +1634,7 @@
             },
             {
               "name": "Progression 3",
-              "id": 103,
+              "id": 111,
               "Blocks": [
                 {
                   "name": "Item Progression Editor",
@@ -1651,7 +1651,7 @@
           "BlockSections": [
             {
               "name": "Chromatic Recipe Items",
-              "id": 104,
+              "id": 112,
               "Blocks": [
                 {
                   "name": "Leveling: Small (2X2)",
@@ -1673,7 +1673,7 @@
             },
             {
               "name": "Desired Socketgroups",
-              "id": 105,
+              "id": 113,
               "Blocks": [
                 {
                   "name": "Desired Socketgroups",
@@ -1683,7 +1683,7 @@
             },
             {
               "name": "4-Linked: Chromatic",
-              "id": 106,
+              "id": 114,
               "Blocks": [
                 {
                   "name": "4-Links: Chromatic",
@@ -1693,7 +1693,7 @@
             },
             {
               "name": "4-Linked: General",
-              "id": 107,
+              "id": 115,
               "Blocks": [
                 {
                   "name": "Minimum Color Requirements",
@@ -1711,7 +1711,7 @@
             },
             {
               "name": "3-Linked: General",
-              "id": 108,
+              "id": 116,
               "Blocks": [
                 {
                   "name": "Minimum Color Requirements",
@@ -1729,7 +1729,7 @@
             },
             {
               "name": "3-Linked: Caster",
-              "id": 109,
+              "id": 117,
               "Blocks": [
                 {
                   "name": "Caster Weapons: Normal And Magic",
@@ -1746,7 +1746,7 @@
           "BlockSections": [
             {
               "name": "Jewellery",
-              "id": 110,
+              "id": 118,
               "Blocks": [
                 {
                   "name": "Rare Jewellery",
@@ -1756,7 +1756,7 @@
             },
             {
               "name": "Boots",
-              "id": 111,
+              "id": 119,
               "Blocks": [
                 {
                   "name": "Early Rare Boots",
@@ -1766,7 +1766,7 @@
             },
             {
               "name": "Small Armours",
-              "id": 112,
+              "id": 120,
               "Blocks": [
                 {
                   "name": "Small Rare Armours",
@@ -1776,7 +1776,7 @@
             },
             {
               "name": "Caster Weapons",
-              "id": 113,
+              "id": 121,
               "Blocks": [
                 {
                   "name": "Rare Caster Weapons",
@@ -1793,7 +1793,7 @@
           "BlockSections": [
             {
               "name": "Act 1",
-              "id": 114,
+              "id": 122,
               "Blocks": [
                 {
                   "name": "Lvl 1-16: Defensive And Recipe Trinkets",
@@ -1815,7 +1815,7 @@
             },
             {
               "name": "Act 2, 3",
-              "id": 115,
+              "id": 123,
               "Blocks": [
                 {
                   "name": "Lvl 12-32: Top Jewellery",
@@ -1825,7 +1825,7 @@
             },
             {
               "name": "Act 4, 5, 6",
-              "id": 116,
+              "id": 124,
               "Blocks": [
                 {
                   "name": "Act 4-6 Rings (Norm and Magic)",
@@ -1835,7 +1835,7 @@
             },
             {
               "name": "Highlight: Early Boots",
-              "id": 117,
+              "id": 125,
               "Blocks": [
                 {
                   "name": "Boots: Lvl 1-12",
@@ -1845,7 +1845,7 @@
             },
             {
               "name": "Quiver Progression",
-              "id": 118,
+              "id": 126,
               "Blocks": [
                 {
                   "name": "Quivers: Lvl 1-8",
@@ -1867,7 +1867,7 @@
             },
             {
               "name": "First Levels: Normal Items",
-              "id": 119,
+              "id": 127,
               "Blocks": [
                 {
                   "name": "Lvl 1-4: Small Items",
@@ -1885,7 +1885,7 @@
             },
             {
               "name": "Early Levels: Magic Items",
-              "id": 120,
+              "id": 128,
               "Blocks": [
                 {
                   "name": "Lvl 1-3",
