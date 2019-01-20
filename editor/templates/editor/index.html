@@ -10,16 +10,97 @@
                             <label id="SubsectionLabel_{{ subsection.id }}" class="SubsectionLabel">{{ subsection.name }}</label>
                         </div>
                         <div id="SubsectionBlockContent_{{ subsection.id }}" class="SubsectionBlockContent closed">
-                            {% for blocksub in subsection.BlockSections %}
+                            {% if subsection.editor == "False" %}
+                                {% for blocksub in subsection.BlockSections %}
                                 <div id="BlockSubsection_{{ blocksub.id }}" class="BlockSubsection closed">
                                     <label id="BlockSubsectionLabel_{{ blocksub.id }}" class="BlockSubsectionLabel">{{ blocksub.name }}</label>
                                 </div>
                                 <div id="BlockSubsectionContent_{{ blocksub.id }}" class="BlockSubsectionContent closed">
-                                    <div class="VisualEditorDiv">
-                                        <label class="VisualEditorLabel"></label>
+                                    <div id="VisualEditorDiv_{{ blocksub.id }}" class="VisualEditorDiv">
+                                        <label id="VisalEditorLabel_{{ blocksub.id }}" class="VisualEditorLabel">{{ blocksub.name }}</label>
+                                        <div id="VisualEditorOuterMainContainer_{{ blocksub.id }}">
+                                            <div id="VisualEditorShowHideDiv_{{ blocksub.id }}" class="VisualEditorShowHideDiv">
+                                                <button id="VisualEditorShow_{{ blocksub.id }}" class="VisualEditorShow">Show</button>
+                                                <button id="VisualEditorHide_{{ blocksub.id }}" class="VisualEditorHide">Hide</button>
+                                            </div>
+                                            <div id="VisualEditorContainerDiv_{{ blocksub.id }}" class="VisualEditorContainerDiv">
+                                                <div id="VisualEditor_ComboBoxRight_{{ blocksub.id }}" class="VisualEditor_ComboBoxRight">
+
+                                                </div>
+                                                <div id="VisualEditor_ComboBoxLeft_{{ blocksub.id }}" class="VisualEditor_ComboBoxLeft">
+                                                    <div id="VisualEditor_ComboBoxText_{{ blocksub.id }}" class="VisualEditor_ComboBoxColorPickerDiv">
+                                                        <div id="VisualEditor_EnabledTextColor_{{ blocksub.id }}" class="VisualEditor_ComboBoxEnabledColor selectedSocket"></div>
+                                                        <label class="VisualEditor_ComboBoxLeftLabel">TX</label>
+                                                        <input id="VisualEditor_TextColorPicker_{{ blocksub.id }}" type="text" class="SpectrumColorPicker" style="display: none;">
+                                                        <div class="sp-replacer sp-light">
+                                                            <div class="sp-preview">
+                                                                <div class="sp-preview-inner"></div>
+                                                            </div>
+                                                            <div class="sp-dd">▼</div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="VisualEditor_ComboBoxBorder_{{ blocksub.id }}" class="VisualEditor_ComboBoxColorPickerDiv">
+                                                        <div id="VisualEditor_EnabledTextColor_{{ blocksub.id }}" class="VisualEditor_ComboBoxEnabledColor selectedSocket"></div>
+                                                        <label class="VisualEditor_ComboBoxLeftLabel">BD</label>
+                                                        <input id="VisualEditor_BorderColorPicker_{{ blocksub.id }}" class="SpectrumColorPicker" style="display: none;">
+                                                        <div class="sp-replacer sp-light">
+                                                            <div class="sp-preview">
+                                                                <div class="sp-preview-inner"></div>
+                                                            </div>
+                                                            <div class="sp-dd">▼</div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="VisualEditor_ComboBoxBackground_{{ blocksub.id }}" class="VisualEditor_ComboBoxColorPickerDiv">
+                                                        <div id="VisualEditor_EnabledTextColor_{{ blocksub.id }}" class="VisualEditor_ComboBoxEnabledColor selectedSocket"></div>
+                                                        <label class="VisualEditor_ComboBoxLeftLabel">BG</label>
+                                                        <input id="VisualEditor_BackgroundColorPicker_{{ blocksub.id }}" class="SpectrumColorPicker" style="display: none;">
+                                                        <div class="sp-replacer sp-light">
+                                                            <div class="sp-preview">
+                                                                <div class="sp-preview-inner"></div>
+                                                            </div>
+                                                            <div class="sp-dd">▼</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="VisualEditorShowCaseDiv">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br id="VisualEditorBreak_{{ blocksub.id }}">
                                     </div>
                                 </div>
-                            {% endfor %}
+                                {% endfor %}
+                            {% elif subsection.editor == "True" %}
+                                {% for blocksub in subsection.Blocks %}
+                                <div id="BlockSubsection_{{ blocksub.id }}" class="BlockSubsection closed">
+                                    <label id="BlockSubsectionLabel_{{ blocksub.id }}" class="BlockSubsectionLabel">{{ blocksub.name }}</label>
+                                </div>
+                                <div id="BlockSubsectionContent_{{ blocksub.id }}" class="BlockSubsectionContent closed">
+                                    <div id="VisualEditorDiv_{{ blocksub.id }}" class="VisualEditorDiv">
+                                        <label id="VisalEditorLabel_{{ blocksub.id }}" class="VisualEditorLabel">{{ blocksub.name }}</label>
+                                        <div id="VisualEditorOuterMainContainer_{{ blocksub.id }}">
+                                            <div id="VisualEditorShowHideDiv_{{ blocksub.id }}" class="VisualEditorShowHideDiv">
+                                                <button id="VisualEditorShow_{{ blocksub.id }}" class="VisualEditorShow">Show</button>
+                                                <button id="VisualEditorHide_{{ blocksub.id }}" class="VisualEditorHide">Hide</button>
+                                            </div>
+                                            <div id="VisualEditorContainerDiv_{{ blocksub.id }}" class="VisualEditorContainerDiv">
+                                                <div id="VisualEditor_ComboBoxRight_{{ blocksub.id }}" class="VisualEditor_ComboBoxRight">
+
+                                                </div>
+                                                <div id="VisualEditor_ComboBoxLeft_{{ blocksub.id }}" class="VisualEditor_ComboBoxLeft">
+
+                                                </div>
+                                                <div class="VisualEditorShowCaseDiv">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br id="VisualEditorBreak_{{ blocksub.id }}">
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% endif %}
                         </div>
                     {% endfor %}
                 {% endfor %}
