@@ -1,344 +1,343 @@
-$background: #0b1721;
-$background-bright: #e3e3e3;
-$background-group: #3a2b28;
-$foreground: #ddd;
-$foreground-bright: #eee;
-
-$border-section-tb: 6px solid #673326;
-$border-section-lr: 5px solid #673326;
-$border-group: 2px solid #d66b27;
-
-$m-center: 0 auto;
-$p-center: 0 auto;
-
-$fs-section: 28px;
-$fs-gr-head: 24px;
-$fs-gr-ct-head: 20px;
-
-html, body {
-  height: 100%;
-}
-
 body {
-  background-color: #fafafa;
+  background: #000 no-repeat top center;
   margin: 0;
 }
 
-.menu {
-  width: auto;
-  background-color: #0c1924;
+#NavSelectionButtons {
   text-align: center;
-  ul {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: row;
-    list-style-type: none;
-    li a {
-      text-decoration: none;
-      color: #a1abb4;
-      font-size: 24px;
-      -webkit-transition: 0.15s time;
-      -moz-transition: 0.15s time;
-      -ms-transition: 0.15s time;
-      -o-transition: 0.15s time;
-      transition: 0.15s time;
-      padding: 0 1rem;
-      &:hover {
-        color: #e6eeff;
-      }
-      &.active {
-        background-color: #fafafa;
-        padding: 0 1rem 7px 1rem;
-        &:hover {
-          color: $background;
-        }
-      }
-    }
-  }
+  margin: 0 0 15px -25px;
+  z-index: 9999999;
+  background: rgb(56, 56, 56) none repeat scroll 0 0;
+  white-space: nowrap;
+  display: -moz-box;
 }
 
-.section {
-  background-color: $background;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  font-size: $fs-section;
-  color: $foreground-bright;
-  width: 100%;
-  margin: $m-center;
-  border-top: $border-section-tb;
-  border-bottom: $border-section-tb;
-  border-left: $border-section-lr;
-  border-right: $border-section-lr;
-}
-
-#container-content {
-  margin: 0 auto;
-  width: 90%;
-  display: flex;
-  border: 5px solid #ddd;
-  height: auto;
-  flex-direction: column;
-  background-color: #15212f;
-}
-
-.container-group-holder {
-  margin: 1vh 0;
-}
-
-.container-group {
-  border: $border-group;
-  margin: 0.4rem auto;
-  display: flex;
-  flex-direction: column;
-  background-color: $background-bright;
-  width: 90%;
-}
-
-.group-header {
-  display: flex;
-  width: 100%;
-  margin: 0;
-  padding: 1.5rem 1rem;
-  font-size: $fs-gr-head;
-  background-color: $background;
-  color: #c6c8ca;
-  cursor: pointer;
-}
-
-.VisualEditorOuterContainer {
-  /*margin: 0;
-  display: none;
-  border: 5px solid #424242;
-  background-color: $background-group;
-  color: $foreground;
-  padding: $p-center;
-  flex-direction: column;*/
-  background-color: rgb(5, 5, 5);
-  border: 1px solid rgb(66, 66, 66);
-  border-radius: 2px;
-  color: rgb(163, 141, 109);
-  margin: 15px 0;
-  padding: 8px;
-  .VisualEditorHeader {
-    color: rgb(255, 255, 255);
-    display: block;
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin: 7px 10px 5px 12px;
-    text-transform: uppercase;
-  }
-}
-
-.VisualEditor_ShowHide {
-  color: rgb(163, 141, 109);
-  display: block;
-  float: left;
-  height: 111px;
-  position: relative;
-  text-align: center;
-  width: 135px;
-  .VisualEditor_Show, .VisualEditor_Hide {
-    background: rgb(22, 152, 191) none repeat scroll 0 0;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 3px;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 700;
-    margin: 11px 0;
-    padding: 0.4em 1em;
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-    width: 90px;
-  }
-}
-
-.VisualEditorContainer {
-  background: rgba(0, 0, 0, 0) url("assets/img/PoEGround.PNG") no-repeat scroll center top /cover;
-  border-radius: 1px;
-  border: 1px solid rgb(163, 141, 109);
+.NavSelectionButton {
   display: inline-block;
-  padding: 5px;
-  position: relative;
-  z-index: 5;
-}
-
-.VisualEditorOptionsBoxRight {
-    color: rgb(163, 141, 109);
-    display: block;
-    float: right;
-    position: relative;
-    z-index: 10;
-  .VisualEditor_FontSizeSlider {
-    background: rgb(0, 0, 0) none repeat scroll 0 0;
-  }
-}
-
-/*.visual-content-header {
-  display: flex;
-  font-size: $fs-gr-ct-head;
-  background-color: #b3b3b3;
-  color: #333;
-  vertical-align: top;
-  width: 100%;
-}*/
-
-button {
+  padding: 0.4em 1em;
+  color: #ffffff;
+  font-weight: 700;
   vertical-align: middle;
   cursor: pointer;
   font-size: 16px;
-  padding: .4em 1em;
 }
 
-/*.VisualEditorOuterContainer {
-  color: rgb(163, 141, 109);
+#ButtonHome {
+  border-left: medium none;
+  width: 137px;
+  height: 40px;
+  margin: 0;
+  background: rgb(34, 34, 37) none repeat scroll 0 0;
+  border-color: currentcolor;
+  border-width: medium medium 1px;
+  border-style: none none solid;
+  border-image: none 100% / 1 / 0 stretch;
+}
+
+#ButtonTheme, #ButtonSettings {
+  width: 137px;
+  height: 40px;
+  margin: 0;
+  background: rgb(34, 34, 37) none repeat scroll 0 0;
+  border-color: currentcolor;
+  border-style: none none solid;
+  border-width: medium medium 1px;
+  border-image: none 100% / 1 / 0 stretch;
+  border-radius: 0;
+}
+
+#ButtonAbout {
+  border-right: medium none;
+  width: 137px;
+  height: 40px;
+  margin: 0;
+  background: rgb(34, 34, 37) none repeat scroll 0 0;
+  border-color: currentcolor;
+  border-style: none none solid;
+  border-width: medium medium 1px;
+  border-image: none 100% / 1 / 0 stretch;
+  border-radius: 0;
+}
+
+.NavSelectionButton:hover {
+  background-color: #0c1924;
+  border-image: none;
+  font-size: 17px;
+}
+
+#mainBody {
+  background-color: #0a0a0a;
+  width: 910px;
+  margin: 25px auto 20px;
+  border: 1px solid #a38d6d;
+  padding: 25px;
+  border-radius: 3px;
+  color: #a38d6d;
+  min-height: 1200px;
   display: block;
+}
+
+#VisualOuterDiv {
+  color: #a38d6d;
+  display: block;
+}
+
+#Visual {
+  color: #a38d6d;
+}
+
+#VisualDiv2 {
+  border-color: #a38d6d;
+  border-image-width: 1;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.BroadTitle {
+  font-size: 36px;
+  display: block;
+  margin: 18px 0;
+  font-weight: 700;
+  color: rgb(206, 110, 39);
+  text-align: center;
+  border-color: rgb(206, 110, 39);
+  background: rgb(10, 10, 10) none repeat scroll 0 0;
+  padding: 7px;
+  letter-spacing: 2px;
+  border-style: double none;
+}
+
+.Subsection:not(.open) {
+  margin-bottom: 6px;
+  background: rgb(9, 22, 73) none repeat scroll 0 0;
+  border-radius: 2px;
+  color: rgb(254, 192, 118);
+  cursor: pointer;
+  border: 1px solid;
+  border-color: transparent;
+  outline: currentColor none 0;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 16px;
+  -webkit-transition: 0.5s ease 0s;
+  -moz-transition: 0.5s ease 0s;
+  -ms-transition: 0.5s ease 0s;
+  -o-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+}
+
+.Subsection:not(.closed) {
+  background: rgb(5, 5, 5) none repeat scroll 0 0;
+  border-radius: 6px 6px 0 0;
+  color: rgb(163, 141, 109);
+  cursor: pointer;
+  border: 1px solid;
+  outline: currentColor none 0;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 16px;
+  -webkit-transition: 0.5s ease 0s;
+  -moz-transition: 0.5s ease 0s;
+  -ms-transition: 0.5s ease 0s;
+  -o-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+}
+
+.Subsection:not(.open):hover {
+  background: rgb(9, 24, 132) none repeat scroll 0 0;
+}
+
+.SubsectionLabel {
+  font-size: 26px;
+  display: inline-block;
+  margin: 5px 10px 5px 5px;
+  font-weight: 700;
+  cursor: pointer;
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+}
+
+// Blocks
+.SubsectionBlockContent:not(.open) {
+  display: none;
+  background-color: rgb(17, 17, 17);
+  border: 1px solid rgb(58, 58, 58);
+  padding: 0 22px;
+}
+
+.SubsectionBlockContent:not(.closed) {
+  background-color: rgb(17, 17, 17);
+  display: block;
+  margin-bottom: 40px;
+  padding: 22px;
+  border: 1px solid rgb(58, 58, 58);
+  border-radius: 0 0 6px 6px;
+}
+
+.BlockSubsection {
+  background: rgb(9, 22, 73) none repeat scroll 0 0;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  padding: 8px;
+  color: rgb(254, 192, 118);
+  border-color: transparent;
+  cursor: pointer;
+  // border: 1px solid;
+  letter-spacing: 1px;
+  font-weight: 700;
+  -webkit-transition: border-color 0.5s ease 0s;
+  -moz-transition: border-color 0.5s ease 0s;
+  -ms-transition: border-color 0.5s ease 0s;
+  -o-transition: border-color 0.5s ease 0s;
+  transition: border-color 0.5s ease 0s;
+}
+
+.BlockSubsection:hover {
+  background: rgb(9, 24, 132) none repeat scroll 0 0;
+}
+
+.BlockSubsectionLabel {
+  display: inline-block;
+  font-size: 24px;
+  margin: 5px 10px 5px 5px;
+  cursor: pointer;
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #ffffff;
+}
+
+.BlockSubsectionContent:not(.open) {
+  display: none;
+}
+
+.BlockSubsectionContent:not(.closed) {
+  display: block;
+  background-color: rgb(28, 28, 28);
+  padding: 22px;
+  margin-bottom: 40px;
+  border: 1px solid rgb(58, 58, 58);
+  border-radius: 0 0 6px 6px;
+}
+
+.VisualEditorDiv {
+  background: rgb(5, 5, 5) none repeat, scroll 0 0;
+  padding: 8px;
+  border: 1px solid rgb(66, 66, 66);
+  border-radius: 2px;
+  margin: 15px 0;
+}
+
+.VisualEditorLabel {
+  font-size: 26px;
+  display: block;
+  margin: 7px 10px 12px 5px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.VisualEditorShowHideDiv {
+  display: inline-block;
+  float: left;
+  width: 135px;
+  height: 111px;
+  text-align: center;
+  position: relative;
+}
+
+.VisualEditorShow, .VisualEditorHide {
+  margin: 11px 0;
+  width: 90px;
+  position: relative;
+  display: inline-block;
+  background: rgb(22, 152, 191) none repeat scroll 0 0;
+  padding: 0.4em 1em;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.VisualEditorContainerDiv {
   position: relative;
   padding: 5px;
+  border: 1px solid rgb(163, 141, 109);
+  display: inline-block;
   z-index: 5;
-  border: 2px solid #cc0000;
-  margin: 0 10px 7px 10px;
-  .VisualEditor_ShowHide {
-    float: left;
-    width: 135px;
-    height: 111px;
-    text-align: center;
-    .VisualEditor_Show, .VisualEditor_Hide {
-      margin: 11px 0;
-      width: 90px;
-    }
-    .VisualEditor_Hide {
-
-    }
-  }
-  .VisualEditorContainer {
-    display: inline-block;
-    position: relative;
-    padding: 5px;
-    border: 2px solid #00ff00;
-    z-index: 5;
-    .ColorPickersBox {
-      display: flex;
-      flex-direction: column;
-      float: left;
-      width: 84px;
-      position: relative;
-      z-index: 100;
-      .ColorPickerTxt, .ColorPickerBrd, .ColorPickerBg {
-        display: flex;
-        margin-bottom: 1px;
-        height: 32px;
-        .ColorPickersLabel {
-          display: inline-block;
-          width: 30px;
-          font-weight: 700;
-        }
-        .ColorPickerDiv {
-          .ps-colorpicker {
-            margin: 2px;
-            padding: 4px;
-            vertical-align: middle;
-          }
-        }
-      }
-    }
-    .VisualEditorOptionsRightBox {
-      display: inline-block;
-      float: right;
-      position: relative;
-      z-index: 10;
-      .VisualEditor_FontSizeSlider {
-        background-color: rgb(0, 0, 0);
-        border: 1px solid rgb(163, 141, 109);
-        display: inline-block;
-        font-size: 16px;
-        height: 12.8px;
-        margin: 5px 13px 5px 11px;
-        position: relative;
-        text-align: left;
-        width: 153px;
-        .FontSizeSliderHandle {
-          background-color: rgb(15, 45, 101);
-          border: 1px solid rgba(255, 255, 255, 0.5);
-          border-radius: 3px;
-          cursor: pointer;
-          font-size: 16px;
-          font-weight: 700;
-          height: 19.2px;
-          left: 102px;
-          margin-left: -9.6px;
-          min-width: 19.2px;
-          padding: 3px;
-          position: absolute;
-          touch-action: none;
-          vertical-align: middle;
-          z-index: 2;
-        }
-      }
-      .VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset,
-      .VisualEditor_Sound, .VisualEditor_Icon, .VisualEditor_Beam {
-        padding: 5px;
-        width: 61px;
-        margin: 0 0 0 8px;
-      }
-      .VisualEditor_Copy, .VisualEditor_Paste, .VisualEditor_Reset {
-        margin-bottom: 13px;
-      }
-    }
-    .Showcase {
-      width: 388px;
-      height: 98px;
-      display: inline-block;
-      background: url("assets/img/PoEGround.PNG") no-repeat top center;
-      border-radius: 0 1px 1px 0;
-      background-size: 100%;
-      text-align: center;
-      position: relative;
-      z-index: 5;
-      .ShowcaseInner {
-        position: relative;
-        top: 50%;
-        transform: translate(0, -50%);
-        max-width: 1000px;
-        max-height: 600px;
-        padding: 5px;
-        margin: auto 0 auto 31px;
-        z-index: 10;
-        .ShowcaseItem_Container {
-          .ShowcaseItem {
-            display: inline-block;
-            vertical-align: middle;
-            text-align: center;
-            .ItemBackground {
-              display: inline-flex;
-              border: 1px solid pink;
-              padding: 5px;
-              position: relative;
-              top: 40%;
-              .ItemLabel {
-                font-size: 24px;
-                margin: 0 auto;
-              }
-              .ItemSocketsPreview {
-                .ItemSocket {
-                  background-color: rgb(202, 13, 50);
-                  width: 4px;
-                  height: 4px;
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+  background: rgba(0, 0, 0, 0) url("assets/img/PoEGround.PNG") no-repeat scroll center top / cover;
 }
-*/
+
+.VisualEditorShowCaseDiv {
+  width: 388px;
+  height: 98px;
+  display: inline-block;
+  border-radius: 0 1px 1px 0;
+  background-size: 100% auto;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+.VisualEditor_ComboBoxRight {
+  display: inline-block;
+  float: right;
+  position: relative;
+  z-index: 10;
+}
+
+.VisualEditor_ComboBoxLeft {
+  display: inline-block;
+  float: left;
+  width: 84px;
+  position: relative;
+  z-index: 100;
+}
+
+.disabledElement {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.55;
+}
+
+.VisualEditor_ComboBoxColorPickerDiv {
+  margin-bottom: 1px;
+  height: 32px;
+}
+
+.VisualEditor_ComboBoxLeftLabel {
+  display: inline-block;
+  width: 30px;
+  font-weight: 700;
+  color: #fff;
+  font-size: 16px;
+
+}
+
+.SpectrumColorPicker {
+  margin: 2px;
+  padding: 4px;
+  vertical-align: middle;
+}
+
+.VisualEditor_ComboBoxEnabledColor {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  position: absolute;
+  left: 86px;
+  margin-top: 1px;
+  vertical-align: middle;
+  pointer-events: all;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0) url("assets/img/icons/socketEnabled.png") no-repeat scroll center top / contain;
+  z-index: 5;
+}
