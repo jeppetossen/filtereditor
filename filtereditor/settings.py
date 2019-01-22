@@ -81,11 +81,14 @@ WSGI_APPLICATION = 'filtereditor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('DB_NAME', ''),
-        'USER': os.environ.get('DB_USER', ''),
-        'PASSWORD': os.environ.get('DB_PASS', ''),
+        'NAME': os.environ['DB_NAME'],
+        'USER': os.environ['DB_USER'],
+        'PASSWORD': os.environ['DB_PASS'],
         'HOST': '',
         'PORT': '',
+    },
+    'heroku': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2'
     }
 }
 
@@ -138,4 +141,4 @@ env = os.environ.copy()
 db_url = env.get('DATABASE_URL', False)
 
 if db_url is not False:
-    DATABASES['default'] = dj_database_url.config()
+    DATABASES['heroku'] = dj_database_url.config()
