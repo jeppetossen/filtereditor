@@ -141,4 +141,4 @@ env = os.environ.copy()
 db_url = env.get('DATABASE_URL', False)
 
 if db_url is not False:
-    DATABASES['heroku'] = dj_database_url.config()
+    DATABASES['default'] = dj_database_url.config()
