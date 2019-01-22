@@ -144,7 +144,9 @@ import psycopg2
 # if db_url is not False:
 #     DATABASES['default'] = dj_database_url.config()
 
-DATABASE_URL = os.environ['DATABASE_URL']
-if DATABASE_URL is not (None or False):
+try:
+    DATABASE_URL = os.environ['DATABASE_URL']
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
     DATABASES['heroku'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+except KeyError:
+    pass
