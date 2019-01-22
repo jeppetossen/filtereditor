@@ -136,9 +136,15 @@ import django_heroku
 django_heroku.settings(locals())
 
 import dj_database_url
+import psycopg2
 
-env = os.environ.copy()
-db_url = env.get('DATABASE_URL', False)
+# env = os.environ.copy()
+# db_url = env.get('DATABASE_URL', False)
 
-if db_url is not False:
-    DATABASES['default'] = dj_database_url.config()
+# if db_url is not False:
+#     DATABASES['default'] = dj_database_url.config()
+
+DATABASE_URL = os.environ['DATABASE_URL']
+if DATABASE_URL is not (None or False):
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    DATABASES['heroku'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
