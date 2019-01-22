@@ -300,5 +300,5 @@ body {
   vertical-align: middle;
   pointer-events: all;
   cursor: pointer;
-  background: rgba(0, 0, 0, 0) url("assets/img/Icons/socketActive.png") no-repeat scroll center top/contain;
+  background: rgba(0, 0, 0, 0) url("assets/img/icons/socketEnabled.png") no-repeat scroll center top/contain;
   z-index: 5; }
