@@ -36,6 +36,93 @@
                                                      class="VisualEditorContainerDiv">
                                                     <div id="VisualEditor_ComboBoxRight_{{ blocksub.id }}"
                                                          class="VisualEditor_ComboBoxRight">
+                                                        <div id="VisualEditor_FontSizeSlider_{{ blocksub.id }}" class="VisualEditor_ComboBoxFontSizeSlider">
+                                                            <div id="FontSizeSliderHandle_{{ blocksub.id }}" class="FontSizeSliderHandle">36</div>
+                                                        </div>
+                                                        <br>
+                                                        <button id="VisualEditor_Copy_{{ blocksub.id }}" class="VisualEditor_ComboBoxRight_Button">Copy</button>
+                                                        <button id="VisualEditor_Paste_{{ blocksub.id }}" class="VisualEditor_ComboBoxRight_Button">Paste</button>
+                                                        <button id="VisualEditor_Reset_{{ blocksub.id }}" class="VisualEditor_ComboBoxRight_Button">Reset</button>
+                                                        <br>
+                                                        <input  id="VisualEditor_Sound_{{ blocksub.id }}" class="VisualEditor_ComboBoxRight_Button" type="button" value="Sound">
+                                                        <button id="VisualEditor_MapIcon_{{ blocksub.id }}" class="VisualEditor_ComboBoxRight_Button">Icon</button>
+                                                        <button id="VisualEditor_MapIcon_{{ blocksub.id }}" class="VisualEditor_ComboBoxRight_Button">Beam</button>
+                                                    </div>
+                                                    <div id="VisualEditor_ComboBoxLeft_{{ blocksub.id }}"
+                                                         class="VisualEditor_ComboBoxLeft">
+                                                        <div id="VisualEditor_ComboBoxText_{{ blocksub.id }}"
+                                                             class="VisualEditor_ComboBoxColorPickerDiv">
+                                                            <div id="VisualEditor_EnabledTextColor_{{ blocksub.id }}"
+                                                                 class="VisualEditor_ComboBoxEnabledColor selectedSocket"></div>
+                                                            <label class="VisualEditor_ComboBoxLeftLabel">TX</label>
+                                                            <input id="VisualEditor_TextColorPicker_{{ blocksub.id }}"
+                                                                   type="text" class="SpectrumColorPicker"
+                                                                   style="display: none;">
+                                                            <div class="sp-replacer sp-light">
+                                                                <div class="sp-preview">
+                                                                    <div class="sp-preview-inner"></div>
+                                                                </div>
+                                                                <div class="sp-dd">▼</div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="VisualEditor_ComboBoxBorder_{{ blocksub.id }}"
+                                                             class="VisualEditor_ComboBoxColorPickerDiv">
+                                                            <div id="VisualEditor_EnabledTextColor_{{ blocksub.id }}"
+                                                                 class="VisualEditor_ComboBoxEnabledColor selectedSocket"></div>
+                                                            <label class="VisualEditor_ComboBoxLeftLabel">BD</label>
+                                                            <input id="VisualEditor_BorderColorPicker_{{ blocksub.id }}"
+                                                                   class="SpectrumColorPicker" style="display: none;">
+                                                            <div class="sp-replacer sp-light">
+                                                                <div class="sp-preview">
+                                                                    <div class="sp-preview-inner"></div>
+                                                                </div>
+                                                                <div class="sp-dd">▼</div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="VisualEditor_ComboBoxBackground_{{ blocksub.id }}"
+                                                             class="VisualEditor_ComboBoxColorPickerDiv">
+                                                            <div id="VisualEditor_EnabledTextColor_{{ blocksub.id }}"
+                                                                 class="VisualEditor_ComboBoxEnabledColor selectedSocket"></div>
+                                                            <label class="VisualEditor_ComboBoxLeftLabel">BG</label>
+                                                            <input id="VisualEditor_BackgroundColorPicker_{{ blocksub.id }}"
+                                                                   class="SpectrumColorPicker" style="display: none;">
+                                                            <div class="sp-replacer sp-light">
+                                                                <div class="sp-preview">
+                                                                    <div class="sp-preview-inner"></div>
+                                                                </div>
+                                                                <div class="sp-dd">▼</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="VisualEditorShowCaseDiv">
+                                                        <div id="VisualEditor_InnerItem_{{ blocksub.id }}" class="VisualEditor_InnerItem">
+                                                            <div id="InnerItemContainer_{{ blocksub.id }}" class="InnerItemContainer">
+                                                                <div id="ItemDiv_{{ blocksub.id }}" class="ItemDiv">
+                                                                    <label id="ItemTextLabel_{{ blocksub.id }}" class="ItemTextLabel">Item Name</label>
+                                                                    <!--<div id="ItemSocketsDiv_{{ blocksub.id }}" class="ItemSocketsDiv">
+
+                                                                    </div>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br id="VisualEditorBreak_{{ blocksub.id }}">
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% elif subsection.editor == "True" %}
+                                {% for blocksub in subsection.Blocks %}
+                                    <div id="VisualEditorDiv_{{ blocksub.id }}" class="VisualEditorDiv">
+                                        <label id="VisalEditorLabel_{{ blocksub.id }}" class="VisualEditorLabel">{{ blocksub.name }}</label>
+                                        <div id="VisualEditorOuterMainContainer_{{ blocksub.id }}">
+                                            <div id="VisualEditorShowHideDiv_{{ blocksub.id }}" class="VisualEditorShowHideDiv">
+                                                <button id="VisualEditorShow_{{ blocksub.id }}" class="VisualEditorShow">Show</button>
+                                                <button id="VisualEditorHide_{{ blocksub.id }}" class="VisualEditorHide">Hide</button>
+                                                </div>
+                                                <div id="VisualEditorContainerDiv_{{ blocksub.id }}" class="VisualEditorContainerDiv">
+                                                    <div id="VisualEditor_ComboBoxRight_{{ blocksub.id }}" class="VisualEditor_ComboBoxRight">
 
                                                     </div>
                                                     <div id="VisualEditor_ComboBoxLeft_{{ blocksub.id }}"
@@ -91,82 +178,6 @@
                                             </div>
                                             <br id="VisualEditorBreak_{{ blocksub.id }}">
                                         </div>
-                                    </div>
-                                {% endfor %}
-                            {% elif subsection.editor == "True" %}
-                                {% for blocksub in subsection.Blocks %}
-                                    <div id="VisualEditorDiv_{{ blocksub.id }}" class="VisualEditorDiv">
-                                        <label id="VisalEditorLabel_{{ blocksub.id }}"
-                                               class="VisualEditorLabel">{{ blocksub.name }}</label>
-                                        <div id="VisualEditorOuterMainContainer_{{ blocksub.id }}">
-                                            <div id="VisualEditorShowHideDiv_{{ blocksub.id }}"
-                                                 class="VisualEditorShowHideDiv">
-                                                <button id="VisualEditorShow_{{ blocksub.id }}"
-                                                        class="VisualEditorShow">Show
-                                                </button>
-                                                <button id="VisualEditorHide_{{ blocksub.id }}"
-                                                        class="VisualEditorHide">Hide
-                                                </button>
-                                            </div>
-                                            <div id="VisualEditorContainerDiv_{{ blocksub.id }}"
-                                                 class="VisualEditorContainerDiv">
-                                                <div id="VisualEditor_ComboBoxRight_{{ blocksub.id }}"
-                                                     class="VisualEditor_ComboBoxRight">
-
-                                                </div>
-                                                <div id="VisualEditor_ComboBoxLeft_{{ blocksub.id }}"
-                                                     class="VisualEditor_ComboBoxLeft">
-                                                    <div id="VisualEditor_ComboBoxText_{{ blocksub.id }}"
-                                                         class="VisualEditor_ComboBoxColorPickerDiv">
-                                                        <div id="VisualEditor_EnabledTextColor_{{ blocksub.id }}"
-                                                             class="VisualEditor_ComboBoxEnabledColor selectedSocket"></div>
-                                                        <label class="VisualEditor_ComboBoxLeftLabel">TX</label>
-                                                        <input id="VisualEditor_TextColorPicker_{{ blocksub.id }}"
-                                                               type="text" class="SpectrumColorPicker"
-                                                               style="display: none;">
-                                                        <div class="sp-replacer sp-light">
-                                                            <div class="sp-preview">
-                                                                <div class="sp-preview-inner"></div>
-                                                            </div>
-                                                            <div class="sp-dd">▼</div>
-                                                        </div>
-                                                    </div>
-                                                    <div id="VisualEditor_ComboBoxBorder_{{ blocksub.id }}"
-                                                         class="VisualEditor_ComboBoxColorPickerDiv">
-                                                        <div id="VisualEditor_EnabledTextColor_{{ blocksub.id }}"
-                                                             class="VisualEditor_ComboBoxEnabledColor selectedSocket"></div>
-                                                        <label class="VisualEditor_ComboBoxLeftLabel">BD</label>
-                                                        <input id="VisualEditor_BorderColorPicker_{{ blocksub.id }}"
-                                                               class="SpectrumColorPicker" style="display: none;">
-                                                        <div class="sp-replacer sp-light">
-                                                            <div class="sp-preview">
-                                                                <div class="sp-preview-inner"></div>
-                                                            </div>
-                                                            <div class="sp-dd">▼</div>
-                                                        </div>
-                                                    </div>
-                                                    <div id="VisualEditor_ComboBoxBackground_{{ blocksub.id }}"
-                                                         class="VisualEditor_ComboBoxColorPickerDiv">
-                                                        <div id="VisualEditor_EnabledTextColor_{{ blocksub.id }}"
-                                                             class="VisualEditor_ComboBoxEnabledColor selectedSocket"></div>
-                                                        <label class="VisualEditor_ComboBoxLeftLabel">BG</label>
-                                                        <input id="VisualEditor_BackgroundColorPicker_{{ blocksub.id }}"
-                                                               class="SpectrumColorPicker" style="display: none;">
-                                                        <div class="sp-replacer sp-light">
-                                                            <div class="sp-preview">
-                                                                <div class="sp-preview-inner"></div>
-                                                            </div>
-                                                            <div class="sp-dd">▼</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="VisualEditorShowCaseDiv">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <br id="VisualEditorBreak_{{ blocksub.id }}">
-                                    </div>
                                 {% endfor %}
                             {% endif %}
                         </div>

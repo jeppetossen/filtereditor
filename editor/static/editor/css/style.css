@@ -1,6 +1,12 @@
+@font-face {
+  font-family: 'Fontin';
+  src: url("fonts/poefont/Fontin-Regular.ttf") format("truetype"); }
+
 body {
   background: #000 no-repeat top center;
-  margin: 0; }
+  margin: 0;
+  color: #a38d6d;
+  font-family: "Fontin"; }
 
 #NavSelectionButtons {
   text-align: center;
@@ -199,8 +205,7 @@ body {
   border-radius: 0 0 6px 6px; }
 
 .VisualEditorDiv {
-  background: #050505 none repeat, scroll 0 0;
-  padding: 8px;
+  background: #050505 none repeat scroll 0 0;
   border: 1px solid #424242;
   border-radius: 2px;
   margin: 15px 0; }
@@ -256,6 +261,43 @@ body {
   position: relative;
   z-index: 5; }
 
+.VisualEditor_InnerItem {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  max-width: 1000px;
+  max-height: 600px;
+  padding: 5px;
+  margin: auto 0 auto 31px;
+  z-index: 10;
+  text-align: center; }
+
+.InnerItemContainer {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center; }
+
+.ItemDiv {
+  background-color: #4b4b4b;
+  display: inline-flex;
+  border: 1px solid rgba(150, 150, 150, 0.8);
+  padding: 5px;
+  position: relative;
+  top: 40%;
+  text-align: center; }
+
+.ItemTextLabel {
+  font-size: 24px;
+  color: #888888;
+  z-index: 1;
+  vertical-align: sub;
+  white-space: nowrap;
+  text-align: center;
+  font-family: Fontin; }
+
+/*.ItemSocketsDiv {
+
+}*/
 .VisualEditor_ComboBoxRight {
   display: inline-block;
   float: right;
@@ -265,7 +307,7 @@ body {
 .VisualEditor_ComboBoxLeft {
   display: inline-block;
   float: left;
-  width: 84px;
+  width: 88px;
   position: relative;
   z-index: 100; }
 
@@ -283,9 +325,12 @@ body {
   width: 30px;
   font-weight: 700;
   color: #fff;
-  font-size: 16px; }
+  font-size: 16px;
+  text-transform: uppercase; }
 
 .SpectrumColorPicker {
+  background: #1a1a1a none repeat scroll 0 0;
+  border: 1px solid #a38d6d;
   margin: 2px;
   padding: 4px;
   vertical-align: middle; }
@@ -302,3 +347,60 @@ body {
   cursor: pointer;
   background: rgba(0, 0, 0, 0) url("assets/img/icons/socketEnabled.png") no-repeat scroll center top/contain;
   z-index: 5; }
+
+.VisualEditor_ComboBoxRight {
+  display: inline-block;
+  float: right;
+  position: relative;
+  z-index: 10;
+  color: #a38d6d; }
+
+.VisualEditor_ComboBoxFontSizeSlider {
+  background: #000 none repeat scroll 0 0;
+  border: 1px solid #a38d6d;
+  color: #a38d6d;
+  width: 153px;
+  margin: 5px 13px 5px 11px !important;
+  display: inline-block;
+  border-radius: 1px;
+  font-size: 1em;
+  height: 0.8em;
+  position: relative;
+  text-align: left; }
+
+.FontSizeSliderHandle {
+  left: 66.6667%;
+  margin-left: -0.6em;
+  position: absolute;
+  min-width: 1.2em;
+  height: 1.2em;
+  touch-action: none;
+  z-index: 2;
+  text-align: center;
+  padding: 3px;
+  top: -7px !important;
+  font-weight: 700 !important;
+  background: #0f2d65 none repeat scroll 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff; }
+
+.VisualEditor_ComboBoxRight button, input {
+  filter: drop-shadow(2px 2px 6px #000);
+  font-size: 13px;
+  margin-left: 8px;
+  margin-top: 7px;
+  padding: 5px;
+  width: 51px;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  background: #0f2965 none repeat scroll 0 0;
+  font-weight: 700;
+  border-radius: 3px;
+  vertical-align: middle;
+  cursor: pointer; }
