@@ -53,7 +53,7 @@ def index(request):
         return HttpResponseRedirect('')
     else:
         sections = headers.load_headers()
-        return render(request, "editor/testing.html", {"sections": sections})
+        return render(request, "editor/index.html", {"sections": sections})
 
 
 class ThemePageView(TemplateView):
