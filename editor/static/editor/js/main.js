@@ -13,6 +13,17 @@
 });*/
 
 $(document).ready(function () {
+    $(".SpectrumColorPicker").spectrum({
+        preferredFormat: "rgb",
+        showInput: true,
+        allowEmpty: true,
+        showAlpha: true,
+        clickoutFiresChange: true,
+        move: function (tinycolor) {
+            $(this).val( tinycolor.toRgbString() );
+        }
+    });
+
     // TODO: Clean up and make it less repeatable code
     $(".Subsection").on('click', function (event) {
         let element = event.target;
