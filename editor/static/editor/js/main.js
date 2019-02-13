@@ -27,6 +27,7 @@ $(document).ready(function () {
     // TODO: Clean up and make it less repeatable code
     $(".Subsection").on('click', function (event) {
         let element = event.target;
+
         let elementClist = element.classList;
         let elementIdNumber = element.id.split("_")[1];
         let subsectionContent = targetElementById(elementIdNumber).classList;
@@ -45,6 +46,7 @@ $(document).ready(function () {
 
     $(".BlockSubsection").on('click', function (event) {
         let element = event.target;
+        //alert(element);
         let elementClist = element.classList;
         let elementIdNumber = element.id.split("_")[1];
         let subContent = targetElementByIdBlock(elementIdNumber).classList;
@@ -60,6 +62,12 @@ $(document).ready(function () {
             elementClist.add("closed");
         }
     });
+
+    function RemoveChildClass(element) {
+        let id = targetIdNumber(targetId(element));
+        let child = document.getElementById("");
+
+    }
 
     function targetId(element) {
         return element.id;
