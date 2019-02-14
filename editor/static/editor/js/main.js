@@ -27,7 +27,7 @@ $(document).ready(function () {
     // TODO: Clean up and make it less repeatable code
     $(".Subsection").on('click', function (event) {
         let element = event.target;
-
+        RemoveChildClass(element);
         let elementClist = element.classList;
         let elementIdNumber = element.id.split("_")[1];
         let subsectionContent = targetElementById(elementIdNumber).classList;
@@ -65,8 +65,13 @@ $(document).ready(function () {
 
     function RemoveChildClass(element) {
         let id = targetIdNumber(targetId(element));
-        let child = document.getElementById("");
-
+        let content = targetElementById(id);
+        for (let i = 0; i < content.childNodes.length; i++)
+        {
+            
+        }
+        //element.parentNode.parentNode.removeChild(element.parentNode);
+        console.log(contentChildren)
     }
 
     function targetId(element) {
