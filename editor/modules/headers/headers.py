@@ -38,13 +38,34 @@ def get_block_sections():
     blocksection_names = list()
     for k in data:
         for v in k["Subsections"]:
-            for h in v["BlockSections"]:
-                blocksection_names.append(h["name"])
+            if v["editor"] == "False":
+                for h in v["BlockSections"]:
+                    blocksection_names.append([h["name"], h["id"]])
     return blocksection_names
 
 
+def get_blocks():
+    data = load_headers()
+    blocks = {"name": list(), "id": list()}
+    for k in data:
+        for v in k["Subsections"]:
+            if v["editor"] == "True":
+                for l in v["Blocks"]:
+                    blocks["name"] += [l["name"]]
+                    blocks["id"] += [l["id"]]
+                    pass
+            elif v["editor"] == "False":
+                for j in v["BlockSections"]:
+                    for h in j["Blocks"]:
+                        blocks["name"] += [h["name"]]
+                        blocks["id"] += [h["id"]]
+
+    return blocks
+
+
 if __name__ == '__main__':
-    print(load_headers())
+    # print(load_headers())
     # print(get_sections())
     # print(get_subsections())
     # print(get_block_sections())
+    print(get_blocks())
