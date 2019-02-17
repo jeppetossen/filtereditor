@@ -1,18 +1,5 @@
-/*$(document).ready(function () {
-
-    $(".ps-colorpicker").spectrum({
-        preferredFormat: "rgb",
-        showInput: true,
-        allowEmpty: true,
-        showAlpha: true,
-        clickoutFiresChange: true,
-        move: function (tinycolor) {
-            $(this).val( tinycolor.toRgbString() );
-        }
-    });
-});*/
-
-$(document).ready(function () {
+$(document).ready(function ()
+{
     $(".SpectrumColorPicker").spectrum({
         preferredFormat: "rgb",
         showInput: true,
@@ -24,70 +11,56 @@ $(document).ready(function () {
         }
     });
 
-    // TODO: Clean up and make it less repeatable code
-    $(".Subsection").on('click', function (event) {
+    $(".Subsection").on('click', function (event)
+    {
         let element = event.target;
-        RemoveChildClass(element);
         let elementClist = element.classList;
         let elementIdNumber = element.id.split("_")[1];
         let subsectionContent = targetElementById(elementIdNumber).classList;
+
         if (elementClist.contains("closed")) {
-            subsectionContent.remove("closed");
-            subsectionContent.add("open");
-            elementClist.remove("closed");
-            elementClist.add("open");
+            subsectionContent.replace("closed", "open", );
+            elementClist.replace("closed", "open", );
         } else if (elementClist.contains("open")) {
-            subsectionContent.remove("open");
-            subsectionContent.add("closed");
-            elementClist.remove("open");
-            elementClist.add("closed");
+            subsectionContent.replace("open", "closed");
+            elementClist.replace("open", "closed");
         }
     });
 
-    $(".BlockSubsection").on('click', function (event) {
+    $(".BlockSubsection").on('click', function (event)
+    {
         let element = event.target;
-        //alert(element);
         let elementClist = element.classList;
         let elementIdNumber = element.id.split("_")[1];
         let subContent = targetElementByIdBlock(elementIdNumber).classList;
+
         if (elementClist.contains("closed")) {
-            subContent.remove("closed");
-            subContent.add("open");
-            elementClist.remove("closed");
-            elementClist.add("open");
+            subContent.replace("closed", "open");
+            elementClist.replace("closed", "open");
         } else if (elementClist.contains("open")) {
-            subContent.remove("open");
-            subContent.add("closed");
-            elementClist.remove("open");
-            elementClist.add("closed");
+            subContent.replace("open", "closed");
+            elementClist.replace("open", "closed");
         }
     });
 
-    function RemoveChildClass(element) {
-        let id = targetIdNumber(targetId(element));
-        let content = targetElementById(id);
-        for (let i = 0; i < content.childNodes.length; i++)
-        {
-            
-        }
-        //element.parentNode.parentNode.removeChild(element.parentNode);
-        console.log(contentChildren)
-    }
-
-    function targetId(element) {
+    function targetId(element)
+    {
         return element.id;
     }
 
-    function targetIdNumber(elementId) {
+    function targetIdNumber(elementId)
+    {
         let elementSplit = elementId.split("_");
         return elementSplit[1];
     }
 
     // TODO: Make a cleaner solution
-    function targetElementById(elementId) {
+    function targetElementById(elementId)
+    {
         return document.getElementById("SubsectionBlockContent_" + elementId);
     }
-    function targetElementByIdBlock(elementId) {
+    function targetElementByIdBlock(elementId)
+    {
         return document.getElementById("BlockSubsectionContent_" + elementId);
     }
 });
