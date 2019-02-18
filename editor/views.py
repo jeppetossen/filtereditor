@@ -41,16 +41,19 @@ def index(request):
         return HttpResponseRedirect('')
     elif (request.method == "POST") and (f"sound_{number}" in request.POST):
         sound = models.PlayAlertSound(id=number, sound_id=int(), volume=int())
+        sound.save()
         sound_apply = models.ItemSettings(id=number, sound=sound)
         sound_apply.save()
         return HttpResponseRedirect('')
     elif (request.method == "POST") and (f"icon_{number}" in request.POST):
         icon = models.MinimapIcon(id=number, size=int(), color="", shape="")
+        icon.save()
         icon_apply = models.ItemSettings(id=number, icon=icon)
         icon_apply.save()
         return HttpResponseRedirect('')
     elif (request.method == "POST") and (f"beam_{number}" in request.POST):
         beam = models.PlayEffect(id=number, color="", temp="")
+        beam.save()
         beam_apply = models.ItemSettings(id=number, beam=beam)
         beam_apply.save()
         return HttpResponseRedirect('')
