@@ -6,3 +6,7 @@ venv
 __pycache__
 staticfiles
 editor/ttd
+editor/modules/headers/headers.json.bk
+editor/static/editor/css/old.css
+editor/static/editor/js/old.js
+editor/templates/editor/testing.html
