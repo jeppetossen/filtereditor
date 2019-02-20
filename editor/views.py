@@ -9,7 +9,6 @@ from editor.modules.filterformat import settings
 
 # Create your views here.
 def index(request):
-    # header_keys = headers.retrieve_header_id()
     name = str()
     number = str()
     if request.method == "POST":
