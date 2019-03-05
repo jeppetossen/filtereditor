@@ -20,15 +20,15 @@ def index(request):
                 number += str(i)
 
     if (request.method == "POST") and (f"show_{number}" in request.POST):
-        show = models.ItemSettings(id=number, show_hide="show")
+        show = models.Block(id=number, show_hide="show")
         show.save()
         return HttpResponseRedirect('')
     elif (request.method == "POST") and (f"hide_{number}" in request.POST):
-        hide = models.ItemSettings(id=number, show_hide="hide")
+        hide = models.Block(id=number, show_hide="hide")
         hide.save()
         return HttpResponseRedirect('')
     elif (request.method == "POST") and (f"disable_{number}" in request.POST):
-        disable = models.ItemSettings(id=number, show_hide="disable")
+        disable = models.Block(id=number, show_hide="disable")
         disable.save()
         return HttpResponseRedirect('')
     elif (request.method == "POST") and (f"copy_{number}" in request.POST):
@@ -41,19 +41,19 @@ def index(request):
     elif (request.method == "POST") and (f"sound_{number}" in request.POST):
         sound = models.PlayAlertSound(id=number, sound_id=int(), volume=int())
         sound.save()
-        sound_apply = models.ItemSettings(id=number, sound=sound)
+        sound_apply = models.Block(id=number, sound=sound)
         sound_apply.save()
         return HttpResponseRedirect('')
     elif (request.method == "POST") and (f"icon_{number}" in request.POST):
         icon = models.MinimapIcon(id=number, size=int(), color="", shape="")
         icon.save()
-        icon_apply = models.ItemSettings(id=number, icon=icon)
+        icon_apply = models.Block(id=number, icon=icon)
         icon_apply.save()
         return HttpResponseRedirect('')
     elif (request.method == "POST") and (f"beam_{number}" in request.POST):
         beam = models.PlayEffect(id=number, color="", temp="")
         beam.save()
-        beam_apply = models.ItemSettings(id=number, beam=beam)
+        beam_apply = models.Block(id=number, beam=beam)
         beam_apply.save()
         return HttpResponseRedirect('')
     else:
