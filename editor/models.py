@@ -2,16 +2,16 @@ from django.db import models
 
 
 # Create your models here.
-class ItemSection(models.Model):
+class Section(models.Model):
     section = models.CharField(max_length=100)
 
     def __str__(self):
         return self.section
 
 
-class ItemSubSection(models.Model):
+class SubSection(models.Model):
     subsection = models.CharField(max_length=100)
-    section = models.OneToOneField(ItemSection, on_delete=models.CASCADE)
+    section = models.OneToOneField(Section, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.subsection
@@ -116,9 +116,9 @@ class PlayEffect(models.Model):
     temp = models.BooleanField(default=None)
 
 
-class ItemSettings(models.Model):
-    section = models.OneToOneField(ItemSection, on_delete=models.CASCADE, null=True, default=None)
-    subsection = models.OneToOneField(ItemSubSection, on_delete=models.CASCADE, null=True, default=None)
+class Block(models.Model):
+    section = models.OneToOneField(Section, on_delete=models.CASCADE, null=True, default=None)
+    subsection = models.OneToOneField(SubSection, on_delete=models.CASCADE, null=True, default=None)
     # block_id = models.PositiveSmallIntegerField()
     show_hide = models.CharField(max_length=100)
     item_class = models.CharField(max_length=100, null=True, default=None)
