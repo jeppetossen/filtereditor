@@ -1,8 +1,8 @@
 from django.forms import ModelForm
-from .models import ItemSettings
+from .models import Block
 
 
-class ItemSettingsForm(ModelForm):
+class BlockForm(ModelForm):
     class Meta:
-        model = ItemSettings
+        model = Block
         fields = ['section', 'block', 'show_hide', 'rarity', 'sound', 'icon', 'beam']

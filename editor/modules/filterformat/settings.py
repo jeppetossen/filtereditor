@@ -1,8 +1,8 @@
-from editor.models import ItemSettings
+from editor.models import Block
 
 
 def reset(key):
-    settings = ItemSettings
+    settings = Block
     try:
         settings.objects.get(id=key).delete()
     except settings.DoesNotExist:
