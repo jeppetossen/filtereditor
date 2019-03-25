@@ -7,6 +7,6 @@ from editor import models
 from editor.modules.filterformat import settings
 
 
+# Create your views here.
 def index(request):
-    sections = headers.load_headers()
-    return render(request, "editor/index.html", {"sections": sections})
+    pass
