@@ -2,13 +2,17 @@ import json
 
 
 def load_headers():
-    file = "editor/modules/headers/old_headers.json"
+    file = "editor/data/headers.json"
     # file = "headers.json"
     with open(file, "r") as f:
         data = json.load(f)
         f.close()
 
-    return data
+    sections = None
+    for k, v in data.items():
+        sections = v
+
+    return sections
 
 
 def get_sections():
@@ -23,7 +27,7 @@ def get_sections():
 def get_subsections():
     data = load_headers()
     subsection_names = list()
-    for k in data["Sections"]:
+    for k in data:
         for v in k["Subsections"]:
             subsection_names.append(v["name"])
     return subsection_names
@@ -32,7 +36,7 @@ def get_subsections():
 def get_block_sections():
     data = load_headers()
     blocksection_names = list()
-    for k in data["Sections"]:
+    for k in data:
         for v in k["Subsections"]:
             if v["editor"] == "False":
                 for h in v["BlockSections"]:
@@ -43,7 +47,7 @@ def get_block_sections():
 def get_blocks():
     data = load_headers()
     blocks = {"name": list(), "id": list()}
-    for k in data["Sections"]:
+    for k in data:
         for v in k["Subsections"]:
             if v["editor"] == "True":
                 for l in v["Blocks"]:
