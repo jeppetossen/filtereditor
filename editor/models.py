@@ -3,14 +3,14 @@ from django.db import models
 
 # Create your models here.
 class Section(models.Model):
-    section = models.CharField(max_length=100)
+    section = models.CharField(max_length=100, null=True, default=None)
 
     def __str__(self):
         return self.section
 
 
 class SubSection(models.Model):
-    subsection = models.CharField(max_length=100)
+    subsection = models.CharField(max_length=100, null=True, default=None)
     section = models.OneToOneField(Section, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -80,6 +80,9 @@ class SetBorderColor(models.Model):
     blue = models.PositiveSmallIntegerField()
     alpha = models.PositiveSmallIntegerField(default=255)
 
+    def __str__(self):
+        return [self.red, self.green, self.blue, self.alpha]
+
 
 class SetTextColor(models.Model):
     red = models.PositiveSmallIntegerField()
@@ -87,12 +90,18 @@ class SetTextColor(models.Model):
     blue = models.PositiveSmallIntegerField()
     alpha = models.PositiveSmallIntegerField(default=255)
 
+    def __str__(self):
+        return [self.red, self.green, self.blue, self.alpha]
+
 
 class SetBackgroundColor(models.Model):
     red = models.PositiveSmallIntegerField()
     green = models.PositiveSmallIntegerField()
     blue = models.PositiveSmallIntegerField()
     alpha = models.PositiveSmallIntegerField(default=255)
+
+    def __str__(self):
+        return [self.red, self.green, self.blue, self.alpha]
 
 
 class PlayAlertSound(models.Model):
@@ -107,20 +116,20 @@ class PlayAlertSoundPositional(models.Model):
 
 class MinimapIcon(models.Model):
     size = models.PositiveSmallIntegerField()
-    color = models.CharField(max_length=100)
-    shape = models.CharField(max_length=100)
+    color = models.CharField(max_length=100, null=True, default=None)
+    shape = models.CharField(max_length=100, null=True, default=None)
 
 
-class PlayEffect(models.Model):
-    color = models.CharField(max_length=100)
+class BeamEffect(models.Model):
+    color = models.CharField(max_length=100, null=True, default=None)
     temp = models.BooleanField(default=None)
 
 
 class Block(models.Model):
-    section = models.OneToOneField(Section, on_delete=models.CASCADE, null=True, default=None)
+    '''section = models.OneToOneField(Section, on_delete=models.CASCADE, null=True, default=None)
     subsection = models.OneToOneField(SubSection, on_delete=models.CASCADE, null=True, default=None)
-    # block_id = models.PositiveSmallIntegerField()
-    show_hide = models.CharField(max_length=100)
+    block = models.CharField(max_length=100, null=True, default=None)
+    show_hide = models.CharField(max_length=100, null=True, default=None)
     item_class = models.CharField(max_length=100, null=True, default=None)
     base_type = models.CharField(max_length=100, null=True, default=None)
     rarity = models.OneToOneField(Rarity, on_delete=models.CASCADE, null=True, default=None)
@@ -146,9 +155,40 @@ class Block(models.Model):
     font_size = models.PositiveSmallIntegerField(default=32)
     sound = models.OneToOneField(PlayAlertSound, on_delete=models.CASCADE, null=True, default=None)
     sound_pos = models.OneToOneField(PlayAlertSoundPositional, on_delete=models.CASCADE, null=True, default=None)
-    # sound_custom
     icon = models.OneToOneField(MinimapIcon, on_delete=models.CASCADE, null=True, default=None)
-    beam = models.OneToOneField(PlayEffect, on_delete=models.CASCADE, null=True, default=None)
+    beam = models.OneToOneField(PlayEffect, on_delete=models.CASCADE, null=True, default=None)'''
+
+    section = models.ForeignKey(Section, on_delete=models.CASCADE, null=True, default=None)
+    subsection = models.ForeignKey(SubSection, on_delete=models.CASCADE, null=True, default=None)
+    block = models.CharField(max_length=100, null=True, default=None)
+    show_hide = models.CharField(max_length=100, null=True, default=None)
+    item_class = models.CharField(max_length=100, null=True, default=None)
+    base_type = models.CharField(max_length=100, null=True, default=None)
+    rarity = models.ForeignKey(Rarity, on_delete=models.CASCADE, null=True, default=None)
+    item_level = models.ForeignKey(ItemLevel, on_delete=models.CASCADE, null=True, default=None)
+    drop_level = models.ForeignKey(DropLevel, on_delete=models.CASCADE, null=True, default=None)
+    quality = models.ForeignKey(Quality, on_delete=models.CASCADE, null=True, default=None)
+    sockets = models.ForeignKey(Sockets, on_delete=models.CASCADE, null=True, default=None)
+    sockets_linked = models.ForeignKey(LinkedSockets, on_delete=models.CASCADE, null=True, default=None)
+    socket_group = models.CharField(max_length=100, null=True, default=None)
+    height = models.ForeignKey(Height, on_delete=models.CASCADE, null=True, default=None)
+    width = models.ForeignKey(Width, on_delete=models.CASCADE, null=True, default=None)
+    stack_size = models.ForeignKey(StackSize, on_delete=models.CASCADE, null=True, default=None)
+    gem_level = models.ForeignKey(GemLevel, on_delete=models.CASCADE, null=True, default=None)
+    identified = models.BooleanField(null=True, default=None)
+    corrupted = models.BooleanField(null=True, default=None)
+    elder_item = models.BooleanField(null=True, default=None)
+    shaper_item = models.BooleanField(null=True, default=None)
+    shaped_map = models.BooleanField(null=True, default=None)
+    map_tier = models.ForeignKey(MapTier, on_delete=models.CASCADE, null=True, default=None)
+    border_color = models.ForeignKey(SetBorderColor, on_delete=models.CASCADE, null=True, default=None)
+    text_color = models.ForeignKey(SetTextColor, on_delete=models.CASCADE, null=True, default=None)
+    background_color = models.ForeignKey(SetBackgroundColor, on_delete=models.CASCADE, null=True, default=None)
+    font_size = models.PositiveSmallIntegerField(default=32)
+    sound = models.ForeignKey(PlayAlertSound, on_delete=models.CASCADE, null=True, default=None)
+    sound_pos = models.ForeignKey(PlayAlertSoundPositional, on_delete=models.CASCADE, null=True, default=None)
+    icon = models.ForeignKey(MinimapIcon, on_delete=models.CASCADE, null=True, default=None)
+    beam = models.ForeignKey(BeamEffect, on_delete=models.CASCADE, null=True, default=None)
 
     def __str__(self):
-        return
+        return self.block
