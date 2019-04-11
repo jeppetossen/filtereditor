@@ -13,11 +13,10 @@ app = path.basename(path.abspath(path.join(__file__, '..', '..')))
 
 # Import each, assuming that e.g. Mymodel lives in models/mymodel.py
 for name in names:
-    mpath = "%s.models.%s" % (app, name)
+    mpath = f"{app}.models.{name}"
     mo = importlib.import_module(mpath)
     clsname = name.capitalize()
     try:
         globals()[clsname] = mo.__dict__[clsname]
     except KeyError:
-        # warnings.warn("No class named %s in %s.py" % (clsname, name))
         warnings.warn(f"No class named {clsname} in {name}.py")
