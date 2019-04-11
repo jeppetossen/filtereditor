@@ -14,6 +14,7 @@ import os
 import sys
 from django.core.exceptions import ImproperlyConfigured
 from dotenv import load_dotenv
+import psycopg2
 load_dotenv()
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -27,26 +28,23 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ['DEBUG']
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'rest_framework',
     'editor.apps.EditorConfig',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -93,9 +91,6 @@ DATABASES = {
         'PASSWORD': os.environ.get('DB_PASS', ''),
         'HOST': '',
         'PORT': '',
-    },
-    'heroku': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2'
     }
 }
 
@@ -135,21 +130,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+'''
 import django_heroku
 django_heroku.settings(locals())
 
 import dj_database_url
 import psycopg2
-
-# env = os.environ.copy()
-# db_url = env.get('DATABASE_URL', False)
-
-# if db_url is not False:
-#     DATABASES['default'] = dj_database_url.config()
 
 try:
     DATABASE_URL = os.environ['DATABASE_URL']
@@ -157,3 +143,4 @@ try:
     DATABASES['heroku'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 except KeyError:
     pass
+'''
