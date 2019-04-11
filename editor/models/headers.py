@@ -27,7 +27,7 @@ class HeaderBlockSection(models.Model):
 class HeaderBlock(models.Model):
     header_block = models.CharField(max_length=100, null=True, default=None)
     header_subsection = models.ForeignKey(HeaderSubSection, on_delete=models.CASCADE, null=True, default=None)
-    header_block_subsection = section = models.ForeignKey(HeaderBlockSection, on_delete=models.CASCADE, null=True, default=None)
+    header_block_subsection = models.ForeignKey(HeaderBlockSection, on_delete=models.CASCADE, null=True, default=None)
 
     def __unicode__(self):
         return self.header_block
