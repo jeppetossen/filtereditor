@@ -9,7 +9,7 @@ class Translator:
             for line in f:
                 if x == 0 and part in line:
                     return f"[[{part}]]"
-                elif x is not 0 and part in line:
+                elif x != 0 and part in line:
                     return f"[{part}]"
             f.close()
 
