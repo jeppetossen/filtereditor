@@ -28,7 +28,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ['DEBUG']
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1', 'filtereditor.herokuapp.com']
 
 
 # Application definition
@@ -40,10 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'rest_framework',
+    'corsheaders',
     'editor',
 ]
 
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,12 +61,12 @@ MIDDLEWARE = [
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.AllowAny',
     ],
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        #'rest_framework.permissions.AllowAny'
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
+    #'DEFAULT_AUTHENTICATION_CLASSES': [
+    #    'rest_framework.permissions.AllowAny'
+        #'rest_framework_simplejwt.authentication.JWTAuthentication',
+    #,
 }
 
 ROOT_URLCONF = 'filtereditor.urls'
@@ -90,11 +96,15 @@ WSGI_APPLICATION = 'filtereditor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', ''),
+        #'NAME': os.environ.get('DB_NAME', ''),
+        'NAME': 'postgres',
         'USER': os.environ.get('DB_USER', ''),
         #'PASSWORD': os.environ.get('DB_PASS', ''),
         'HOST': 'db',
         'PORT': '5432',
+    },
+    'heroku': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2'
     }
 }
 
@@ -131,15 +141,14 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
+try:
+    import django_heroku
+    django_heroku.settings(locals())
 
-'''
-import django_heroku
-django_heroku.settings(locals())
-
-import dj_database_url
-import psycopg2
+    import dj_database_url
+    import psycopg2
+except ImportError:
+    pass
 
 try:
     DATABASE_URL = os.environ['DATABASE_URL']
@@ -147,4 +156,3 @@ try:
     DATABASES['heroku'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 except KeyError:
     pass
-'''

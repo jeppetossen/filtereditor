@@ -14,9 +14,9 @@ from rest_framework.authtoken import views as drf_views
 app_name = 'editor'
 urlpatterns = [
     #path('api/auth/', drf_views.obtain_auth_token, name="home"),
-    path('api/headers/', views.HeadersRequest.as_view()),
-    url('api/', get_schema_view()),
-    url('api/auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url('api/auth/token/obtain/$', TokenObtainPairView.as_view()),
-    url('api/auth/token/refresh/$', TokenRefreshView.as_view()),
+    path('api/headers/', views.HeadersRequest.as_view(), name="api_headers"),
+    #url('api/', get_schema_view()),
+    #url('api/auth/', include('rest_framework.urls', namespace='rest_framework')),
+    #url('api/auth/token/obtain/$', TokenObtainPairView.as_view()),
+    #url('api/auth/token/refresh/$', TokenRefreshView.as_view()),
 ]

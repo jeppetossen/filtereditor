@@ -2,7 +2,7 @@
 .idea
 .env
 local_settings.py
-venv
+virtual_env
 __pycache__
 staticfiles
 editor/ttd
