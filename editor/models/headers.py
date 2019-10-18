@@ -2,32 +2,37 @@ from django.db import models
 
 
 class HeaderSection(models.Model):
-    header_section = models.CharField(max_length=100, null=True, default=None)
+    section = models.CharField(max_length=100, null=True, default=None)
 
     def __unicode__(self):
         return self.header_section
 
 
 class HeaderSubSection(models.Model):
-    header_subsection = models.CharField(max_length=100, null=True, default=None)
-    header_section = models.ForeignKey(HeaderSection, on_delete=models.CASCADE, null=True, default=None)
+    subsection = models.CharField(max_length=100, null=True, default=None)
+    parent = models.ForeignKey(HeaderSection, on_delete=models.CASCADE, null=True, default=None)
 
     def __unicode__(self):
-        return self.header_subsection
+        return self.subsection
 
 
 class HeaderBlockSection(models.Model):
-    header_block_section = models.CharField(max_length=100, null=True, default=None)
-    header_subsection = models.ForeignKey(HeaderSubSection, on_delete=models.CASCADE, null=True, default=None)
+    blocksection = models.CharField(max_length=100, null=True, default=None)
+    domain = models.ForeignKey(HeaderSection, on_delete=models.CASCADE, null=True, default=None)
+    #parent = models.ForeignKey(HeaderSubSection, on_delete=models.CASCADE, null=True, default=None)
 
     def __unicode__(self):
-        return self.header_block_section
+        return self.blocksection
 
 
 class HeaderBlock(models.Model):
-    header_block = models.CharField(max_length=100, null=True, default=None)
-    header_subsection = models.ForeignKey(HeaderSubSection, on_delete=models.CASCADE, null=True, default=None)
-    header_block_subsection = models.ForeignKey(HeaderBlockSection, on_delete=models.CASCADE, null=True, default=None)
+    block = models.CharField(max_length=100, null=True, default=None)
+    #domain = models.CharField(max_length=100, null=True, default=None)
+    domain = models.ForeignKey(HeaderSection, on_delete=models.CASCADE, null=True, default=None)
+
+    
+    #parent = models.ForeignKey(HeaderSubSection, on_delete=models.CASCADE, null=True, default=None)
+    #parent = models.ForeignKey(HeaderBlockSection, on_delete=models.CASCADE, null=True, default=None)
 
     def __unicode__(self):
-        return self.header_block
+        return self.block
